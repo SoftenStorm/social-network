@@ -33,15 +33,15 @@
       null,
       null
     ],
-    "editingPageID": "26645199",
+    "editingPageID": "index",
     "editingComponentID": "566e307a",
     "editingPopupID": null,
     "pages": [
       {
         "id": "index",
-        "name": "Home",
+        "name": "StackBlend Studio",
         "path": "/",
-        "state": "create"
+        "state": "update"
       },
       {
         "id": "26645199",
@@ -327,9 +327,9 @@
     },
     "index": {
       "id": "index",
-      "name": "Home",
+      "name": "StackBlend Studio",
       "path": "/",
-      "state": "create",
+      "state": "update",
       "head": {
         "fonts": {
           "Roboto": true
@@ -643,8 +643,10 @@
         "",
         "",
         "",
+        "",
+        "",
         "    <link internal-fsb-link=\"true\" href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap\" rel=\"stylesheet\" class=\"internal-fsb-font\">",
-        "    <link internal-fsb-link=\"true\" href=\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,100;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,300;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,400;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,500;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,700;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,900&amp;display=swap\" rel=\"stylesheet\" class=\"internal-fsb-font\">",
+        "    <link internal-fsb-link=\"true\" href=\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,100;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,300;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,400;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,500;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,700;1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,900&amp;display=swap\" rel=\"stylesheet\" class=\"internal-fsb-font\">",
         "</body>"
       ],
       "accessories": {
@@ -652,7 +654,7 @@
         "currentCursorWalkPath": [
           "0",
           0,
-          1,
+          4,
           null
         ]
       },
@@ -692,7 +694,7 @@
   "frontEndComponentsBlobSHADict": {},
   "viewBlobSHADict": {
     "26645199": "a01d224dda3a98d9af21cecfd475fb69f57d9137",
-    "index": "965b70d4810af91d9d849821ca2454910cfd97ef"
+    "index": "0b333d74583b051e02f9993e82f1d2ffa77ff209"
   },
   "currentPersistingFiles": [
     "src/controllers/components/guide/development_process/_26645199.ts",
