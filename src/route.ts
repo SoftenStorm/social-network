@@ -10,6 +10,8 @@ const route = (app: any) => {
  app.post("/guide/development_process", homeController._26645199);
  app.get("/guide/testing_and_deployment", homeController._08d99631);
  app.post("/guide/testing_and_deployment", homeController._08d99631);
+ app.get("/guide/html5_and_css3_tutorial", homeController._6c6c35a0);
+ app.post("/guide/html5_and_css3_tutorial", homeController._6c6c35a0);
 }
 
 export default route;
