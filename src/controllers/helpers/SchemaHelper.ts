@@ -65,8 +65,8 @@ const SchemaHelper = {
   	    if (Object.keys(table.keys).length == 0)
   	      throw new Error(`There was an error verifying data schema (missing a primary key: ${JSON.stringify(table)}).`);
   	    
-  	    if (table.modifyingPermission) SchemaHelper.verifyPermission(table.modifyingPermission);
-  	    if (table.retrievingPermission) SchemaHelper.verifyPermission(table.retrievingPermission);
+  	    if (table.modifyingPermission) SchemaHelper.verifyPermission(table.group, table.modifyingPermission);
+  	    if (table.retrievingPermission) SchemaHelper.verifyPermission(table.group, table.retrievingPermission);
   	    
   	    for (const primaryKey in table.keys) {
 	        if (table.keys.hasOwnProperty(primaryKey)) {
@@ -76,8 +76,8 @@ const SchemaHelper = {
 	          CodeHelper.assertOfPresent(column.fieldType, primaryKey, `There was an error verifying data schema (missing a kind of value: ${JSON.stringify(column)}).`);
 	          CodeHelper.assertEquals(column.name, primaryKey, primaryKey, `There was an error verifying data schema (key name is mismatched: ${JSON.stringify(column)}).`);
 	        	
-		        if (column.modifyingPermission) SchemaHelper.verifyPermission(column.modifyingPermission);
-	  	    	if (column.retrievingPermission) SchemaHelper.verifyPermission(column.retrievingPermission);
+		        if (column.modifyingPermission) SchemaHelper.verifyPermission(table.group, column.modifyingPermission);
+	  	    	if (column.retrievingPermission) SchemaHelper.verifyPermission(table.group, column.retrievingPermission);
 	        }
 	      }
   	    for (const columnKey in table.columns) {
@@ -88,8 +88,8 @@ const SchemaHelper = {
 	          CodeHelper.assertOfPresent(column.fieldType, columnKey, `There was an error verifying data schema (missing a kind of value: ${JSON.stringify(column)}).`);
 	          CodeHelper.assertEquals(column.name, columnKey, columnKey, `There was an error verifying data schema (column name is mismatched: ${JSON.stringify(column)}).`);
 	        	
-		        if (column.modifyingPermission) SchemaHelper.verifyPermission(column.modifyingPermission);
-	  	    	if (column.retrievingPermission) SchemaHelper.verifyPermission(column.retrievingPermission);
+		        if (column.modifyingPermission) SchemaHelper.verifyPermission(table.group, column.modifyingPermission);
+	  	    	if (column.retrievingPermission) SchemaHelper.verifyPermission(table.group, column.retrievingPermission);
 	        }
 	      }
   	    
@@ -111,39 +111,37 @@ const SchemaHelper = {
   	  }
 	  }
 	},
-	verifyPermission: (permission: Permission, data: DataSchema=ProjectConfigurationHelper.getDataSchema()) => {
+	verifyPermission: (group: string, permission: Permission, data: DataSchema=ProjectConfigurationHelper.getDataSchema()) => {
+		CodeHelper.assertOfNotUndefined(group, 'group');
 		CodeHelper.assertOfNotUndefined(permission, 'permission');
 		
 		if (permission == null) return true;
 		
+		CodeHelper.assertOfPresent(data.tables[group], 'group', `There was an error verifying data schema (target group unavailable: ${JSON.stringify(permission.relationModeSourceGroup)}; choices are ${Object.keys(data.tables).join(", ")}).`);
+		
 		switch (permission.mode) {
 			case "relation":
-				if (permission.relationModeSourceGroup === undefined || permission.relationModeSourceGroup === null || permission.relationModeSourceGroup.trim() === "")
-					throw new Error(`There was an error verifying permission settings (missing a source group name: ${JSON.stringify(data)}).`);
-				if (permission.relationModeSourceEntity === undefined || permission.relationModeSourceEntity === null || permission.relationModeSourceEntity.trim() === "")
-					throw new Error(`There was an error verifying permission settings (missing a source entity name: ${JSON.stringify(data)}).`);
+				CodeHelper.assertOfPresent(permission.relationModeSourceGroup, 'permission', `There was an error verifying permission settings (missing a source group name: ${JSON.stringify(data)}).`);
+				CodeHelper.assertOfPresent(permission.relationModeSourceEntity, 'permission', `There was an error verifying permission settings (missing a source entity name: ${JSON.stringify(data)}).`);
 				
-				if (!data.tables[permission.relationModeSourceGroup])
-    	    throw new Error(`There was an error verifying data schema (source group unavailable: ${JSON.stringify(permission.relationModeSourceGroup)}; choices are ${Object.keys(data.tables).join(", ")}).`);
-    	  if (!data.tables[permission.relationModeSourceGroup].keys[permission.relationModeSourceEntity] && !data.tables[permission.relationModeSourceGroup].columns[permission.relationModeSourceEntity])
-    	    throw new Error(`There was an error verifying data schema (source entity unavailable: ${JSON.stringify(permission.relationModeSourceEntity)}; choices are ${[...Object.keys(data.tables[permission.relationModeSourceGroup].keys), ...Object.keys(data.tables[permission.relationModeSourceGroup].columns)].join(", ")}).`);
+				CodeHelper.assertOfPresent(data.tables[permission.relationModeSourceGroup], 'permission', `There was an error verifying data schema (source group unavailable: ${JSON.stringify(permission.relationModeSourceGroup)}; choices are ${Object.keys(data.tables).join(", ")}).`);
+				CodeHelper.assertOfPresent(data.tables[permission.relationModeSourceGroup].keys[permission.relationModeSourceEntity] || data.tables[permission.relationModeSourceGroup].columns[permission.relationModeSourceEntity],
+					'permission', `There was an error verifying data schema (source entity unavailable: ${JSON.stringify(permission.relationModeSourceEntity)}; choices are ${[...Object.keys(data.tables[permission.relationModeSourceGroup].keys), ...Object.keys(data.tables[permission.relationModeSourceGroup].columns)].join(", ")}).`);
+				
+				CodeHelper.assertNotEquals(SchemaHelper.findShortestPathOfRelations(data.tables[group], data.tables[permission.relationModeSourceGroup], data).length, 0, 'permission', `There was an error verifying permission settings (no any possible path; please connect them through relations).`);
 				
 				switch (permission.relationMatchingMode) {
 					case "session":
-						if (permission.relationMatchingSessionName === undefined || permission.relationMatchingSessionName === null || permission.relationMatchingSessionName.trim() === "")
-							throw new Error(`There was an error verifying permission settings (missing a session name: ${JSON.stringify(data)}).`);
+						CodeHelper.assertOfPresent(permission.relationMatchingSessionName, 'permission', `There was an error verifying permission settings (missing a session name: ${JSON.stringify(data)}).`);
 						break;
 					default:
-						if (permission.relationMatchingConstantValue === undefined || permission.relationMatchingConstantValue === null || permission.relationMatchingConstantValue.trim() === "")
-							throw new Error(`There was an error verifying permission settings (missing a constant value: ${JSON.stringify(data)}).`);
+						CodeHelper.assertOfPresent(permission.relationMatchingConstantValue, 'permission', `There was an error verifying permission settings (missing a constant value: ${JSON.stringify(data)}).`);
 						break;
 				}
 				break;
 			case "session":
-				if (permission.sessionMatchingSessionName === undefined || permission.sessionMatchingSessionName === null || permission.sessionMatchingSessionName.trim() === "")
-					throw new Error(`There was an error verifying permission settings (missing a session name: ${JSON.stringify(data)}).`);
-				if (permission.sessionMatchingConstantValue === undefined || permission.sessionMatchingConstantValue === null || permission.sessionMatchingConstantValue.trim() === "")
-					throw new Error(`There was an error verifying permission settings (missing a constant value: ${JSON.stringify(data)}).`);
+				CodeHelper.assertOfPresent(permission.sessionMatchingSessionName, 'permission', `There was an error verifying permission settings (missing a session name: ${JSON.stringify(data)}).`);
+				CodeHelper.assertOfPresent(permission.sessionMatchingConstantValue, 'permission', `There was an error verifying permission settings (missing a constant value: ${JSON.stringify(data)}).`);
 				break;
 			default:
 				break;
@@ -287,6 +285,8 @@ const SchemaHelper = {
 				const table = data.tables[key];
 				const _walked = Object.assign({}, walked);
 				const _results = [];
+				
+				if (!table) continue;
 				
 				const found = SchemaHelper.recursiveFindShortestPathOfRelations(table, to, _results, _walked, data);
 				

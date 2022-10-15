@@ -63,6 +63,9 @@ const CodeHelper = {
 	assertEquals: (obj: any, value: any, name: string='parameter', message: string=`must be '${value}'.`, info: any=null) => {
 		assert(CodeHelper.equals(obj, value), `${name} ${message}${CodeHelper.generateInfo(info)}`);
 	},
+	assertNotEquals: (obj: any, value: any, name: string='parameter', message: string=`must be '${value}'.`, info: any=null) => {
+		assert(!CodeHelper.equals(obj, value), `${name} ${message}${CodeHelper.generateInfo(info)}`);
+	},
   clone: (obj: any) => {
   	// TODO: to support Infinity, NaN, RegEX (, undefined)
     //

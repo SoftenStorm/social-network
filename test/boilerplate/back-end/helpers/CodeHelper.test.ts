@@ -442,6 +442,12 @@ describe('equals', () => {
 		
 		expect(() => { CodeHelper.assertEquals('Abc123', 'Abc123'); }).not.toThrow();
 		expect(() => { CodeHelper.assertEquals('Abc123', '123'); }).toThrow();
+		
+		expect(() => { CodeHelper.assertNotEquals('', ''); }).toThrow();
+		expect(() => { CodeHelper.assertNotEquals('', 'Abc'); }).not.toThrow();
+		
+		expect(() => { CodeHelper.assertNotEquals('Abc123', 'Abc123'); }).toThrow();
+		expect(() => { CodeHelper.assertNotEquals('Abc123', '123'); }).not.toThrow();
 	});
 });
 
