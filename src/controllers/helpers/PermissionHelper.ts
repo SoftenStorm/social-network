@@ -99,7 +99,7 @@ const PermissionHelper = {
 						
 						for (const schema of unitedShortestPath) {
 							if (currentSource != null && (currentSource != schema.source || currentSource != SourceType.Relational)) {
-								if (currentSource) separatedSourceShortestPath.push(currentSourceShortestPath);
+								if (separatedSourceShortestPath.length != 0) separatedSourceShortestPath.push(currentSourceShortestPath);
 								currentSourceShortestPath = [];
 								currentSource = null;
 							}
@@ -108,7 +108,7 @@ const PermissionHelper = {
 							currentSource = schema.source;
 						}
 						
-						if (currentSource) separatedSourceShortestPath.push(currentSourceShortestPath);
+						if (separatedSourceShortestPath.length != 0) separatedSourceShortestPath.push(currentSourceShortestPath);
 						
 						let flag = true;
 						let lastSourceGroup = null;
