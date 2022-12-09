@@ -370,7 +370,7 @@ class Controller extends Base {
   	
 	  // <---Auto[MergingBegin]
 	  // Auto[Merging]--->
-    RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","53063929","5a318376"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "Button 2"});
+    RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "Button 2"});
 		RequestHelper.registerInput('53063929', "document", "Post", "message");
 		ValidationHelper.registerInput('53063929', "message", true, "คุณลืมเขียนข้อความ", undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '53063929')) {
@@ -397,6 +397,16 @@ class Controller extends Base {
       // Override data parsing and manipulation of Hidden 2 here:
       // 
       input.value = this.request.session.uid;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('4d487443', "document", "@!Post.User", "id");
+		ValidationHelper.registerInput('4d487443', "User.id", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '4d487443')) {
+    
+      // Override data parsing and manipulation of Hidden 2 here:
+      // 
+      input.value = null;
       
       if (input != null) data.push(input);
     }
