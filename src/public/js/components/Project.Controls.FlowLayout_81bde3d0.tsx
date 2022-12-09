@@ -222,11 +222,11 @@ class FlowLayout_81bde3d0 extends Base {
                   .col-7.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="1b97772a")
                     input.form-control.form-control-sm(style={'display': 'block', 'width': '100%'}, type="text")
         if !this.state.isLoggingIn
-          Button.btn.btn-primary.btn-sm.col-6.internal-fsb-element.offset-3(style={'marginBottom': '10px', 'marginTop': '5px'}, onClick=((event) => { window.internalFsbSubmit('9bc4e00b', '', event, ((results) => { this.manipulate('9bc4e00b', '', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="9bc4e00b")
+          Button.btn.btn-primary.btn-sm.col-6.internal-fsb-element.offset-3(style={'marginBottom': '10px', 'marginTop': '5px'}, onClick=((event) => { window.internalFsbSubmit('9bc4e00b', 'User', event, ((results) => { this.manipulate('9bc4e00b', 'User', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="9bc4e00b")
             .internal-fsb-element(internal-fsb-guid="9bc4e00b-text")
               | สมัครสมาชิก
         if this.state.isLoggingIn
-          Button.btn.btn-primary.btn-sm.col-6.internal-fsb-element.offset-3(style={'marginBottom': '10px', 'marginTop': '5px'}, onClick=((event) => { window.internalFsbSubmit('37c296b4', '', event, ((results) => { this.manipulate('37c296b4', '', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="37c296b4")
+          Button.btn.btn-primary.btn-sm.col-6.internal-fsb-element.offset-3(style={'marginBottom': '10px', 'marginTop': '5px'}, onClick=((event) => { window.internalFsbSubmit('37c296b4', 'User', event, ((results) => { this.manipulate('37c296b4', 'User', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="37c296b4")
             .internal-fsb-element(internal-fsb-guid="ca890b23")
               | เข้าสู่ระบบ
         .internal-fsb-element(style={'fontSize': '14px', 'paddingLeft': '30px', 'paddingRight': '30px', 'width': '100%'}, internal-fsb-guid="85b46570")
