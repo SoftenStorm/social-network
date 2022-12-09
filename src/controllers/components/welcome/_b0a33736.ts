@@ -294,7 +294,7 @@ class Controller extends Base {
             });
             break;
           default:
-            resolve({});
+            resolve([]);
             break;
         }
       } catch(error) {
