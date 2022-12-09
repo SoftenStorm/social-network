@@ -429,7 +429,7 @@ class Controller extends Base {
       if (input != null) data.push(input);
     }
 		RequestHelper.registerInput('53da3716', "document", "User", "password");
-		ValidationHelper.registerInput('53da3716', "Password", false, "กรุณากรอกรหัสผ่านให้ถูกต้อง", "password", null);
+		ValidationHelper.registerInput('53da3716', "Password", false, "กรุณากรอกรหัสผ่านให้ถูกต้อง", "string", null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '53da3716')) {
     
       // Override data parsing and manipulation of Password here:
@@ -438,7 +438,7 @@ class Controller extends Base {
       if (input != null) data.push(input);
     }
 		RequestHelper.registerInput('1b97772a', "document", "User", "password");
-		ValidationHelper.registerInput('1b97772a', "Confirm Password", false, "กรุณากรอกรหัสผ่านให้ตรงกัน", "password", null);
+		ValidationHelper.registerInput('1b97772a', "Confirm Password", false, "กรุณากรอกรหัสผ่านให้ตรงกัน", "string", null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '1b97772a')) {
     
       // Override data parsing and manipulation of Confirm Password here:

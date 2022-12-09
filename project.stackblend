@@ -3,7 +3,7 @@
   "backEndControllerBlobSHADict": {
     "01e32c22": "71e08e4d7276f5069c898374f200414f0a27b5b1#1494785206",
     "b0a33736": "7230af51bc6900b93d04270c4f25c75a97b941dd#1042321121",
-    "index": "5105d9e938c5488768d29a730bf8a50a20070a6e#-1070960762"
+    "index": "00f7a1bcc1a4bde9ba3fc7d9e874d18d1f84719b#1288192370"
   },
   "components": {},
   "controllerBlobSHA": "2c5959392a2624779359336c0c3424ba420b2b10#-1144681990",
@@ -500,7 +500,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "094515fbbfb31acd41f502eb98dcaf55c577c2e4#-1428879142",
+  "footerBlobSHA": "fa1b14cf2ec33cb4ba0ae1d3c5a52684b1fc1bea#-269680808",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "3152e44ee16368decd5d2c650187702a572803cc#1861303745",
     "Project.Controls.FlowLayout_81bde3d0": "1de156701784410a41a31b186222a06268895587#1832301719"
@@ -1803,12 +1803,12 @@ b0a33736    },
           "sourceType": "document",
           "validationFormat": null
         },
-        "5490448441895335": {
+        "5270844283100770": {
           "required": null,
           "sourceColumn": "password",
           "sourceName": "User",
           "sourceType": "document",
-          "validationFormat": "password"
+          "validationFormat": "string"
         },
         "5530252484561856": {
           "required": null,
@@ -2018,7 +2018,7 @@ b0a33736    },
         "    internal-fsb-event-no-propagate=\"1\"",
         "    style=\"-fsb-empty\"",
         "    internal-fsb-class=\"Textbox\"",
-        "    internal-fsb-data-validation-format=\"password\"",
+        "    internal-fsb-data-validation-format=\"string\"",
         "    internal-fsb-data-validation-message=\"กรุณากรอกรหัสผ่านให้ถูกต้อง\">",
         "<input",
         "    type=\"password\"",
@@ -2068,7 +2068,7 @@ b0a33736    },
         "    internal-fsb-event-no-propagate=\"1\"",
         "    style=\"-fsb-empty\"",
         "    internal-fsb-class=\"Textbox\"",
-        "    internal-fsb-data-validation-format=\"password\"",
+        "    internal-fsb-data-validation-format=\"string\"",
         "    internal-fsb-data-validation-message=\"กรุณากรอกรหัสผ่านให้ตรงกัน\">",
         "<input",
         "    type=\"password\"",
