@@ -3,7 +3,7 @@
   "backEndControllerBlobSHADict": {
     "01e32c22": "71e08e4d7276f5069c898374f200414f0a27b5b1#1494785206",
     "b0a33736": "7230af51bc6900b93d04270c4f25c75a97b941dd#1042321121",
-    "index": "00f7a1bcc1a4bde9ba3fc7d9e874d18d1f84719b#1288192370"
+    "index": "8085389bb231276e2aa1cb319a96653b6d7e53ea#-1519273559"
   },
   "components": {},
   "controllerBlobSHA": "2c5959392a2624779359336c0c3424ba420b2b10#-1144681990",
@@ -500,7 +500,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "fa1b14cf2ec33cb4ba0ae1d3c5a52684b1fc1bea#-269680808",
+  "footerBlobSHA": "2516304e0d7e308efe6ae9aef832c28758381b86#794306085",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "3152e44ee16368decd5d2c650187702a572803cc#1861303745",
     "Project.Controls.FlowLayout_81bde3d0": "1de156701784410a41a31b186222a06268895587#1832301719"
@@ -2545,6 +2545,7 @@ b0a33736    },
           "            if (password != confirmPassword) throw new Error('ต้องกรอกรหัสผ่านให้ตรงกัน');",
           "            ",
           "            dataset = await DatabaseHelper.insert(@{",
+          "                'User.id': null,",
           "                'User.email': email,",
           "                'User.password': bcrypt.hashSync(password, 10),",
           "                'User.createdAt': new Date(),",

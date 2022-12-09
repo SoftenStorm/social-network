@@ -385,6 +385,7 @@ class Controller extends Base {
             if (password != confirmPassword) throw new Error('ต้องกรอกรหัสผ่านให้ตรงกัน');
             
             dataset = await DatabaseHelper.insert(RequestHelper.createInputs({
+                'User.id': null,
                 'User.email': email,
                 'User.password': bcrypt.hashSync(password, 10),
                 'User.createdAt': new Date(),
