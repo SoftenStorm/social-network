@@ -211,7 +211,7 @@ class FlowLayout_81bde3d0 extends Base {
                 .col-4.internal-fsb-element.offset-0(style={'textAlign': 'right'}, internal-fsb-guid="7a8498de")
                   | รหัสผ่าน
                 .col-7.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="53da3716")
-                  input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'display': 'block', 'width': '100%'}, type="text")
+                  input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'display': 'block', 'width': '100%'}, type="password")
         if !this.state.isLoggingIn
           label.col-12.internal-fsb-element(internal-fsb-guid="7ad4652c")
             .container-fluid
@@ -220,7 +220,7 @@ class FlowLayout_81bde3d0 extends Base {
                   .col-4.internal-fsb-element.offset-0(style={'textAlign': 'right'}, internal-fsb-guid="38be5754")
                     | ยืนยันรหัสผ่าน
                   .col-7.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="1b97772a")
-                    input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'display': 'block', 'width': '100%'}, type="text")
+                    input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'display': 'block', 'width': '100%'}, type="password")
         if !this.state.isLoggingIn
           Button.btn.btn-primary.btn-sm.col-6.internal-fsb-element.offset-3(style={'FsbCodeLock': '1', 'marginBottom': '10px', 'marginTop': '5px'}, onClick=((event) => { window.internalFsbSubmit('9bc4e00b', 'User', event, ((results) => { this.manipulate('9bc4e00b', 'User', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="9bc4e00b")
             .internal-fsb-element(internal-fsb-guid="9bc4e00b-text")

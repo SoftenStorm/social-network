@@ -500,10 +500,10 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "fb552bf4cf2a04788266bbc7956c47662ad70c60#1498751414",
+  "footerBlobSHA": "094515fbbfb31acd41f502eb98dcaf55c577c2e4#-1428879142",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "3152e44ee16368decd5d2c650187702a572803cc#1861303745",
-    "Project.Controls.FlowLayout_81bde3d0": "3fa860173acae64c895f8f753891cf533a9dff42#-1272586665"
+    "Project.Controls.FlowLayout_81bde3d0": "1de156701784410a41a31b186222a06268895587#1832301719"
   },
   "globalSettings": {
     "colorSwatches": [
@@ -2021,7 +2021,7 @@ b0a33736    },
         "    internal-fsb-data-validation-format=\"password\"",
         "    internal-fsb-data-validation-message=\"กรุณากรอกรหัสผ่านให้ถูกต้อง\">",
         "<input",
-        "    type=\"text\"",
+        "    type=\"password\"",
         "    style=\"-fsb-code-lock: 1; -fsb-for-children: true; display: block; width: 100%\"",
         "    class=\"form-control form-control-sm\"",
         "    internal-fsb-data-source-type=\"document\"",
@@ -2071,7 +2071,7 @@ b0a33736    },
         "    internal-fsb-data-validation-format=\"password\"",
         "    internal-fsb-data-validation-message=\"กรุณากรอกรหัสผ่านให้ตรงกัน\">",
         "<input",
-        "    type=\"text\"",
+        "    type=\"password\"",
         "    style=\"-fsb-code-lock: 1; -fsb-for-children: true; display: block; width: 100%\"",
         "    class=\"form-control form-control-sm\"",
         "    internal-fsb-data-source-type=\"document\"",
