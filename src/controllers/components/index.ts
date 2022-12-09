@@ -20,6 +20,7 @@ let Base: typeof $Base = $Base;
 
 // Import additional modules here:
 //
+const bcrypt = require( 'bcrypt' );
 
 // Auto[Declare]--->
 /*enum SourceType {
@@ -352,6 +353,53 @@ class Controller extends Base {
         // data = RequestHelper.createInputs({...});
         // schema = SchemaHelper.getDataTableSchemaFromNotation('collection');
         // 
+        let email, password, confirmPassword;
+        
+        switch (name) {
+          case 'signin':
+            email = data.filter(input => input.name == 'Email').value;
+            password = data.filter(input => input.name == 'Password').value;
+            
+            const dataset = await DatabaseHelper.retrieve(RequestHelper.createInputs({
+                'User.email': email
+              }), ProjectConfigurationHelper.getDataSchema().tables['User'],
+              this.request.session,   // session variables
+              false,                  // real-time updates
+              false                   // skip permission settings
+            );
+            
+            if (dataset['User'].rows.length == 0 ||
+              bcrypt.compareSync(password, dataset['User'].rows[0].columns['password'])) throw new Error('อีเมล์และรหัสผ่านไม่ตรงกันกับที่มีในระบบ');
+            
+            this.request.session.uid = dataset['User'].rows[0].columns['id'];
+            this.request.session.save(() => {
+              resolve('/welcome');
+            });
+            break;
+          case 'signup':
+            email = data.filter(input => input.name == 'Email').value;
+            password = data.filter(input => input.name == 'Password').value;
+            confirmPassword = data.filter(input => input.name == 'Confirm Password').value;
+            
+            if (password != confirmPassword) throw new Error('ต้องกรอกรหัสผ่านให้ตรงกัน');
+            
+            const dataset = await DatabaseHelper.insert(RequestHelper.createInputs({
+                'User.email': email,
+                'User.password': bcrypt.hashSync(password, 10),
+                'User.createdAt': new Date(),
+                'User.updatedAt': new Date()
+              }), ProjectConfigurationHelper.getDataSchema().tables['User'],
+              false,                  // recusive upsert in sub-collection
+              this.request.session,   // session variables
+              false                   // skip permission settings
+            );
+            
+            this.request.session.uid = dataset['User'].rows[0].columns['id'];
+            this.request.session.save(() => {
+              resolve('/welcome');
+            });
+            break;
+        }
         
         resolve('/');
       } catch(error) {
@@ -368,6 +416,35 @@ class Controller extends Base {
   	
 	  // <---Auto[MergingBegin]
 	  // Auto[Merging]--->
+    RequestHelper.registerSubmit("index", "9bc4e00b", "navigate", ["1565c651","1b97772a","53da3716"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "signup"});
+    RequestHelper.registerSubmit("index", "37c296b4", "navigate", ["1565c651","53da3716"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "signin"});
+		RequestHelper.registerInput('1565c651', undefined, undefined, undefined);
+		ValidationHelper.registerInput('1565c651', "Email", false, "กรุณากรอกอีเมล์ให้ถูกต้อง", "email", null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '1565c651')) {
+    
+      // Override data parsing and manipulation of Email here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('53da3716', undefined, undefined, undefined);
+		ValidationHelper.registerInput('53da3716', "Password", false, "กรุณากรอกรหัสผ่านให้ถูกต้อง", "password", null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '53da3716')) {
+    
+      // Override data parsing and manipulation of Password here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('1b97772a', undefined, undefined, undefined);
+		ValidationHelper.registerInput('1b97772a', "Confirm Password", false, "กรุณากรอกรหัสผ่านให้ตรงกัน", "password", null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '1b97772a')) {
+    
+      // Override data parsing and manipulation of Confirm Password here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
 
 	  // <---Auto[Merging]
 	  

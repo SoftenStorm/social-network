@@ -4,6 +4,7 @@
 import {Project, DeclarationHelper} from './helpers/DeclarationHelper';
 import {HTMLHelper} from './helpers/HTMLHelper';
 import {EventHelper} from './helpers/EventHelper';
+import './components/Project.Controls.FlowLayout_81bde3d0';
 
 declare let React: any;
 declare let ReactDOM: any;
