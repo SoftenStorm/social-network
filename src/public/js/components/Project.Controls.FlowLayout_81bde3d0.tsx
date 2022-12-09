@@ -230,17 +230,17 @@ class FlowLayout_81bde3d0 extends Base {
             .internal-fsb-element(internal-fsb-guid="ca890b23")
               | เข้าสู่ระบบ
         .internal-fsb-element(style={'fontSize': '14px', 'paddingLeft': '30px', 'paddingRight': '30px', 'width': '100%'}, internal-fsb-guid="85b46570")
-          if !this.state.isLoggingIn
-            .internal-fsb-element(style={'display': 'inline-block'}, internal-fsb-guid="8138a7c8")
+          if this.state.isLoggingIn
+            .internal-fsb-element(style={'display': 'inline-block', 'marginRight': '5px'}, internal-fsb-guid="8138a7c8")
               | ยังไม่มีสมาชิก?
-          if !this.state.isLoggingIn
+          if this.state.isLoggingIn
             a.internal-fsb-element(style={'display': 'inline-block'}, href="javascript:void(0)", onMouseDown=this.onLinkMouseDown_b011a65a.bind(this), internal-fsb-guid="b011a65a")
               .internal-fsb-element(internal-fsb-guid="b011a65a-text")
                 | สมัครเลย
-          if this.state.isLoggingIn
-            .internal-fsb-element(style={'display': 'inline-block'}, internal-fsb-guid="982c997c")
+          if !this.state.isLoggingIn
+            .internal-fsb-element(style={'display': 'inline-block', 'marginRight': '5px'}, internal-fsb-guid="982c997c")
               | มีสมาชิกอยู่แล้ว?
-          if this.state.isLoggingIn
+          if !this.state.isLoggingIn
             a.internal-fsb-element(style={'display': 'inline-block'}, href="javascript:void(0)", onMouseDown=this.onLinkMouseDown_0cb8b093.bind(this), internal-fsb-guid="0cb8b093")
               .internal-fsb-element(internal-fsb-guid="4890b3d6")
                 | เข้าสู่ระบบแทน
