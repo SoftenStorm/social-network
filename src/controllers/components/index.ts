@@ -353,14 +353,14 @@ class Controller extends Base {
         // data = RequestHelper.createInputs({...});
         // schema = SchemaHelper.getDataTableSchemaFromNotation('collection');
         // 
-        let email, password, confirmPassword;
+        let email, password, confirmPassword, dataset;
         
         switch (name) {
           case 'signin':
-            email = data.filter(input => input.name == 'Email').value;
-            password = data.filter(input => input.name == 'Password').value;
+            email = data.filter(input => input.name == 'Email')[0].value;
+            password = data.filter(input => input.name == 'Password')[0].value;
             
-            const dataset = await DatabaseHelper.retrieve(RequestHelper.createInputs({
+            dataset = await DatabaseHelper.retrieve(RequestHelper.createInputs({
                 'User.email': email
               }), ProjectConfigurationHelper.getDataSchema().tables['User'],
               this.request.session,   // session variables
@@ -378,13 +378,13 @@ class Controller extends Base {
             });
             break;
           case 'signup':
-            email = data.filter(input => input.name == 'Email').value;
-            password = data.filter(input => input.name == 'Password').value;
-            confirmPassword = data.filter(input => input.name == 'Confirm Password').value;
+            email = data.filter(input => input.name == 'Email')[0].value;
+            password = data.filter(input => input.name == 'Password')[0].value;
+            confirmPassword = data.filter(input => input.name == 'Confirm Password')[0].value;
             
             if (password != confirmPassword) throw new Error('ต้องกรอกรหัสผ่านให้ตรงกัน');
             
-            const dataset = await DatabaseHelper.insert(RequestHelper.createInputs({
+            dataset = await DatabaseHelper.insert(RequestHelper.createInputs({
                 'User.email': email,
                 'User.password': bcrypt.hashSync(password, 10),
                 'User.createdAt': new Date(),

@@ -161,21 +161,14 @@ class Controller extends Base {
   
   protected async get(data: Input[]): Promise<{[Identifier: string]: HierarchicalDataTable}> {
     return new Promise(async (resolve, reject) => {
-      /* try {
+      try {
         resolve(await DatabaseHelper.retrieve(RequestHelper.createInputs({
-            'collection.column': 'abc',
-            'collection.column': 123,
-            'collection.collection.column': null
-          }), ProjectConfigurationHelper.getDataSchema().tables['collection'],
+            'Post.active': true
+          }), ProjectConfigurationHelper.getDataSchema().tables['Post'],
           this.request.session,   // session variables
-          false,                  // real-time updates
+          true,                   // real-time updates
           false                   // skip permission settings
         ));
-      } catch(error) {
-        reject(error);
-      } */
-      try {
-        resolve(await super.get(data));
       } catch(error) {
         reject(error);
       }
@@ -376,6 +369,56 @@ class Controller extends Base {
   	
 	  // <---Auto[MergingBegin]
 	  // Auto[Merging]--->
+    RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","18091a36","382a7358","53063929","5a318376"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "Button 2"});
+		RequestHelper.registerInput('53063929', "document", "Post", "message");
+		ValidationHelper.registerInput('53063929', "message", false, "คุณลืมเขียนข้อความ", "title", null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '53063929')) {
+    
+      // Override data parsing and manipulation of firstname here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('18091a36', "document", "Post", "uid");
+		ValidationHelper.registerInput('18091a36', "uid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '18091a36')) {
+    
+      // Override data parsing and manipulation of Hidden 2 here:
+      // 
+      input.value = this.request.session.uid;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('5a318376', "document", "Post", "createdAt");
+		ValidationHelper.registerInput('5a318376', "createdAt", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '5a318376')) {
+    
+      // Override data parsing and manipulation of createdAt here:
+      // 
+      input.value = new Date();
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('382a7358', "document", "Post", "updatedAt");
+		ValidationHelper.registerInput('382a7358', "updatedAt", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '382a7358')) {
+    
+      // Override data parsing and manipulation of updatedAt here:
+      // 
+      input.value = new Date();
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('03168663', "document", "Post", "active");
+		ValidationHelper.registerInput('03168663', "active", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '03168663')) {
+    
+      // Override data parsing and manipulation of active here:
+      // 
+      input.value = true;
+      
+      if (input != null) data.push(input);
+    }
 
 	  // <---Auto[Merging]
 	  
