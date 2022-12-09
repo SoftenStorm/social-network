@@ -3,7 +3,7 @@
   "backEndControllerBlobSHADict": {
     "01e32c22": "71e08e4d7276f5069c898374f200414f0a27b5b1#1494785206",
     "b0a33736": "7230af51bc6900b93d04270c4f25c75a97b941dd#1042321121",
-    "index": "7c48000a89b5e5d9841739912d91c38b85f0d1db#1475188618"
+    "index": "5248dc949ca03685a7486d54a4e10307715717d6#-725484103"
   },
   "components": {},
   "controllerBlobSHA": "2c5959392a2624779359336c0c3424ba420b2b10#-1144681990",
@@ -500,7 +500,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "c5970a8c8e3f03cd648fb215bb0a2b9628ec1250#191126933",
+  "footerBlobSHA": "9be4604e46f6a58459e1838ccfdb86d635509666#-1674547345",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "3152e44ee16368decd5d2c650187702a572803cc#1861303745",
     "Project.Controls.FlowLayout_81bde3d0": "1de156701784410a41a31b186222a06268895587#1832301719"
@@ -2531,7 +2531,7 @@ b0a33736    },
           "            if (dataset['User'].rows.length == 0 ||",
           "              !bcrypt.compareSync(password, dataset['User'].rows[0].columns['password'])) throw new Error('อีเมล์และรหัสผ่านไม่ตรงกันกับที่มีในระบบ');",
           "            ",
-          "            this.request.session.uid = dataset['User'].rows[0].columns['id'];",
+          "            this.request.session.uid = dataset['User'].rows[0].keys['id'];",
           "            this.request.session.skip = !!dataset['User'].rows[0].columns['firstname'] || undefined;",
           "            this.request.session.save(() => {",
           "              resolve('/welcome');",

@@ -371,7 +371,7 @@ class Controller extends Base {
             if (dataset['User'].rows.length == 0 ||
               !bcrypt.compareSync(password, dataset['User'].rows[0].columns['password'])) throw new Error('อีเมล์และรหัสผ่านไม่ตรงกันกับที่มีในระบบ');
             
-            this.request.session.uid = dataset['User'].rows[0].columns['id'];
+            this.request.session.uid = dataset['User'].rows[0].keys['id'];
             this.request.session.skip = !!dataset['User'].rows[0].columns['firstname'] || undefined;
             this.request.session.save(() => {
               resolve('/welcome');
