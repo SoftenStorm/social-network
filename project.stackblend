@@ -1,0 +1,122 @@
+{
+  "animations": {},
+  "backEndControllerBlobSHADict": {
+    "index": "6dddd92c86a4b12cd0e8a7c8b1a7061375ea0917#1963384947"
+  },
+  "components": {},
+  "controllerBlobSHA": "ef3d9477e50fedf8d224facaee2f0097978d5551#-1799608659",
+  "currentPersistingFiles": [
+    "src/controllers/components/index.ts",
+    "views/home/index.pug"
+  ],
+  "flows": {
+    "schema": {}
+  },
+  "footerBlobSHA": "d4a4a3d0d7fffa49beb0b8ac87bd5d491e6799c7#-1090982941",
+  "frontEndComponentsBlobSHADict": {},
+  "globalSettings": {
+    "colorSwatches": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "components": [],
+    "currentActiveLayerHidden": false,
+    "currentActiveLayerRemovable": true,
+    "currentActiveLayerToolAvailable": true,
+    "currentMode": "site",
+    "customLocalizedStrings": "",
+    "editingAnimationID": null,
+    "editingComponentID": null,
+    "editingKeyframeID": null,
+    "editingPageID": "index",
+    "editingPopupID": null,
+    "editingProperties": null,
+    "editingSelector": null,
+    "externalLibraries": "react@16",
+    "pages": [
+      {
+        "id": "index",
+        "name": "Home",
+        "path": "/",
+        "state": "create"
+      }
+    ],
+    "popups": [],
+    "preview": null
+  },
+  "headerBlobSHA": "3c8997c28041a327262ce371c6c896ebc6dd84a8#1125085493",
+  "popups": {},
+  "properties": {},
+  "routeBlobSHA": "e5afd1310d6a1fa94af240cb77c732926748b771#1897328852",
+  "services": {},
+  "siteBundleBlobSHA": "1cb967e5702909b784bc78fe78dc8998435a803e#-1631957651",
+  "sites": {
+    "index": {
+      "accessories": {},
+      "automaticSchemata": {
+        "version": "1.1"
+      },
+      "body": [
+        "<body",
+        "    class=\"internal-fsb-guide-on\">",
+        "<div",
+        "    class=\"container-fluid internal-fsb-begin\"",
+        "    internal-fsb-guid=\"0\">",
+        "<div",
+        "    class=\"internal-fsb-allow-cursor internal-fsb-begin-layout internal-fsb-strict-layout row\"",
+        "    internal-fsb-event-no-propagate=\"1\">",
+        "<div",
+        "    contenteditable=\"true\"",
+        "    class=\"col-12 internal-fsb-element\"",
+        "    internal-fsb-guid=\"ad234338\"",
+        "    internal-fsb-name=\"TextElement 1\"",
+        "    internal-fsb-event-no-propagate=\"1\"",
+        "    internal-fsb-class=\"TextElement\">Hello world!</div>",
+        "</div>",
+        "</div>",
+        "</body>"
+      ],
+      "extensions": {},
+      "head": {
+        "fonts": {}
+      },
+      "id": "index",
+      "name": "Home",
+      "notations": {},
+      "path": "/",
+      "references": [],
+      "state": "create"
+    }
+  },
+  "stylesheets": {},
+  "version": 1.3,
+  "viewBlobSHADict": {
+    "index": "fc7b96667535c36e03ca3d925d291afc78274ca1#-1413382436"
+  }
+}
