@@ -1,7 +1,7 @@
 {
   "animations": {},
   "backEndControllerBlobSHADict": {
-    "01e32c22": "71e08e4d7276f5069c898374f200414f0a27b5b1#1494785206",
+    "01e32c22": "c61699e635990e0e0817ba980e4d8bf60dbdf29e#-1323428487",
     "b0a33736": "7230af51bc6900b93d04270c4f25c75a97b941dd#1042321121",
     "index": "a6e69148f54121109cabf6f585b3154b716b7b3d#1240875528"
   },
@@ -501,9 +501,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "4691053d11029b3374cde2c1ad0e2f747b7031aa#1052463667",
+  "footerBlobSHA": "941894e5a54427381821715fb82cbc612c3c5790#-734112007",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "00a7b9a75deb8a14f4d053f5c845baa55547fd22#-295941168",
+    "Project.Controls.FlowLayout_45655143": "914a6d75224992c13767c73db1abc8a9e466468e#115423884",
     "Project.Controls.FlowLayout_5d3e6156": "9f3f109ad5040a169e170a33f71102f8bb08c431#-64915114",
     "Project.Controls.FlowLayout_81bde3d0": "84f60c041de2b83963dd2b06b47e94b3a26a7fef#2072732675"
   },
@@ -603,6 +603,13 @@ b1b17b71          }
 01e32c22          "sourceName": "Post",
 01e32c22          "sourceType": "document",
 01e32c22          "validationFormat": "title"
+01e32c22        },
+01e32c22        "5568636227923070": {
+01e32c22          "required": null,
+01e32c22          "sourceColumn": "id",
+01e32c22          "sourceName": "Post",
+01e32c22          "sourceType": "document",
+01e32c22          "validationFormat": null
 01e32c22        },
 01e32c22        "6002674900317289": {
 01e32c22          "required": null,
@@ -752,6 +759,24 @@ b1b17b71          }
 01e32c22        "    type=\"hidden\"",
 01e32c22        "    class=\"col-12 internal-fsb-element\"",
 01e32c22        "    internal-fsb-guid=\"18091a36\"",
+01e32c22        "    internal-fsb-name=\"id\"",
+01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
+01e32c22        "    internal-fsb-class=\"Hidden\"",
+01e32c22        "    internal-fsb-data-source-type=\"document\"",
+01e32c22        "    internal-fsb-data-source-name=\"Post\"",
+01e32c22        "    internal-fsb-data-source-column=\"id\"",
+01e32c22        "    internal-fsb-data-code=\"",
+01e32c22        "    ",
+01e32c22        "      // Override data parsing and manipulation of Hidden 2 here:",
+01e32c22        "      // ",
+01e32c22        "      input.value = null;",
+01e32c22        "      ",
+01e32c22        "      \"",
+01e32c22        "    style=\"-fsb-code-lock: 1\">",
+01e32c22        "<input",
+01e32c22        "    type=\"hidden\"",
+01e32c22        "    class=\"col-12 internal-fsb-element\"",
+01e32c22        "    internal-fsb-guid=\"13c65096\"",
 01e32c22        "    internal-fsb-name=\"uid\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"Hidden\"",
@@ -830,7 +855,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-class=\"Button\"",
 01e32c22        "    style=\"-fsb-code-lock: 1; display: none\"",
 01e32c22        "    internal-fsb-react-id=\"submit\"",
-01e32c22        "    internal-fsb-data-controls=\"03168663 18091a36 382a7358 53063929 5a318376\"",
+01e32c22        "    internal-fsb-data-controls=\"03168663 13c65096 18091a36 382a7358 53063929 5a318376\"",
 01e32c22        "    internal-fsb-data-wizard-type=\"insert\"",
 01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"Post\">",
 01e32c22        "<div",
