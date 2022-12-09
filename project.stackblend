@@ -13,6 +13,7 @@
     "src/controllers/components/welcome/_b0a33736.ts",
     "src/public/js/components/Project.Controls.FlowLayout_81bde3d0.tsx",
     "src/public/js/components/Project.Controls.FlowLayout_45655143.tsx",
+    "src/public/js/components/Project.Controls.FlowLayout_5d3e6156.tsx",
     "views/home/index.pug",
     "views/home/welcome/_b0a33736.pug",
     "views/home/home/feed/_01e32c22.pug"
@@ -500,10 +501,11 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "8e9f1d656d36f0badd34e1fc9f3c87649a99429a#-1863738258",
+  "footerBlobSHA": "93d0d3fe07e2151f70efbee103e43522fc09fbdd#1243662169",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "3152e44ee16368decd5d2c650187702a572803cc#1861303745",
-    "Project.Controls.FlowLayout_81bde3d0": "1de156701784410a41a31b186222a06268895587#1832301719"
+    "Project.Controls.FlowLayout_45655143": "88caf0b264094c13a54881e0cc935853248aeb90#1395350369",
+    "Project.Controls.FlowLayout_5d3e6156": "9f3f109ad5040a169e170a33f71102f8bb08c431#-64915114",
+    "Project.Controls.FlowLayout_81bde3d0": "84f60c041de2b83963dd2b06b47e94b3a26a7fef#2072732675"
   },
   "globalSettings": {
     "colorSwatches": [
@@ -585,12 +587,12 @@ b1b17b71          }
     "popups": [],
     "preview": null
   },
-  "headerBlobSHA": "d2be984f02c89156ed3996f9e8a548ee3a4ce901#1493248037",
+  "headerBlobSHA": "f1c484d9e27213d060459d8a322e61e21c880235#-672483163",
   "popups": {},
   "properties": {},
   "routeBlobSHA": "8d906bb18694942a235490cb6d2bb27fdf4669b6#-780131728",
   "services": {},
-  "siteBundleBlobSHA": "4d1feaea8265861d2e85ae236f75db4686b0c135#1410225457",
+  "siteBundleBlobSHA": "2686f6059f1cd700a05fe50be0bde11d6733fd20#1331962728",
   "sites": {
 01e32c22    "01e32c22": {
 01e32c22      "accessories": {},
@@ -671,7 +673,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 2\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"color: rgba(0, 43, 255, 1); font-size: 18px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; text-align: center\">ชื่อ Social Network</div>",
+01e32c22        "    style=\"color: rgba(0, 43, 255, 1); font-size: 18px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; text-align: center\">Social Quote</div>",
 01e32c22        "</div>",
 01e32c22        "<div",
 01e32c22        "    class=\"internal-fsb-allow-cursor internal-fsb-element internal-fsb-stretch internal-fsb-strict-layout\"",
@@ -1288,7 +1290,8 @@ b0a33736        "    internal-fsb-guid=\"5d3e6156\"",
 b0a33736        "    internal-fsb-name=\"FlowLayout 3\"",
 b0a33736        "    internal-fsb-event-no-propagate=\"1\"",
 b0a33736        "    internal-fsb-class=\"FlowLayout\"",
-b0a33736        "    style=\"margin-top: 100px; padding-left: 0px; padding-right: 0px\">",
+b0a33736        "    style=\"margin-top: 100px; padding-left: 0px; padding-right: 0px\"",
+b0a33736        "    internal-fsb-react-mode=\"Document\">",
 b0a33736        "<div",
 b0a33736        "    contenteditable=\"true\"",
 b0a33736        "    class=\"col-12 internal-fsb-element\"",
@@ -1296,7 +1299,7 @@ b0a33736        "    internal-fsb-guid=\"8b875b88\"",
 b0a33736        "    internal-fsb-name=\"TextElement 2\"",
 b0a33736        "    internal-fsb-event-no-propagate=\"1\"",
 b0a33736        "    internal-fsb-class=\"TextElement\"",
-b0a33736        "    style=\"color: rgba(0, 43, 255, 1); font-size: 24px; margin-bottom: 10px; margin-top: 10px; text-align: center\">ชื่อ Social Network</div>",
+b0a33736        "    style=\"color: rgba(0, 43, 255, 1); font-size: 24px; margin-bottom: 10px; margin-top: 10px; text-align: center\">Social Quote</div>",
 b0a33736        "<div",
 b0a33736        "    contenteditable=\"true\"",
 b0a33736        "    class=\"col-12 internal-fsb-element\"",
@@ -1304,7 +1307,7 @@ b0a33736        "    internal-fsb-guid=\"5756d266\"",
 b0a33736        "    internal-fsb-name=\"TextElement 5\"",
 b0a33736        "    internal-fsb-event-no-propagate=\"1\"",
 b0a33736        "    internal-fsb-class=\"TextElement\"",
-b0a33736        "    style=\"margin-bottom: 30px; text-align: left\">&nbsp; &nbsp; &nbsp; การใช้ Social Network นี้ คุณจะต้องยินยอมว่าข้อความของคุณจะไม่มีการนำเนื้อหาใดๆ ที่ทำให้ผู้อื่นรู้สึกโกรธอย่างรุนแรง, ไม่เห็นถึงจิตใจของผู้อื่น, ก่อให้เกิดความรำคาญ, หรือก่อความไม่สงบเรียบร้อย อาทิเช่น<div>",
+b0a33736        "    style=\"margin-bottom: 30px; text-align: left\">&nbsp; &nbsp; &nbsp; การใช้ Social Quote นี้ คุณจะต้องยินยอมว่าข้อความของคุณจะไม่มีการนำเนื้อหาใดๆ ที่ทำให้ผู้อื่นรู้สึกโกรธอย่างรุนแรง, ไม่เห็นถึงจิตใจของผู้อื่น, ก่อให้เกิดความรำคาญ, หรือก่อความไม่สงบเรียบร้อย อาทิเช่น<div>",
 b0a33736        "<br>",
 b0a33736        "<div>- เนื้อหาที่นำไปสู่การทำให้ชื่อเสียงผู้อื่นเสียหาย, ทำให้ถูกดูหมิ่น, หรือก่อให้เกิดความลำเอียง</div>",
 b0a33736        "<div>- ชักจูงให้เกิดความรุนแรงและการประทุษร้าย</div>",
@@ -1935,7 +1938,7 @@ b0a33736    },
         "    internal-fsb-name=\"TextElement 2\"",
         "    internal-fsb-event-no-propagate=\"1\"",
         "    internal-fsb-class=\"TextElement\"",
-        "    style=\"color: rgba(0, 43, 255, 1); font-size: 24px; margin-bottom: 10px; margin-top: 10px; text-align: center\">ชื่อ Social Network</div>",
+        "    style=\"color: rgba(0, 43, 255, 1); font-size: 24px; margin-bottom: 10px; margin-top: 10px; text-align: center\">Social Quote</div>",
         "<label",
         "    class=\"col-12 internal-fsb-element\"",
         "    internal-fsb-guid=\"c0ee5854\"",
@@ -2614,7 +2617,7 @@ b0a33736    },
   "version": 1.3,
   "viewBlobSHADict": {
     "01e32c22": "862a7960f4330b05728c7f0db599a6ea5c269839#-414860916",
-    "b0a33736": "864f0a1daa3d270de3d4cc5dfd83ad2080c57e7b#832870728",
+    "b0a33736": "d67f2704b1314eb9fa844a6b9c8fe9419f12b769#-656107250",
     "index": "7b1d23c498f76d2d16ed3eec75bb06fde65f5828#931942136"
   }
 }
