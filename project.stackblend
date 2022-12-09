@@ -3,7 +3,7 @@
   "backEndControllerBlobSHADict": {
     "01e32c22": "71e08e4d7276f5069c898374f200414f0a27b5b1#1494785206",
     "b0a33736": "7230af51bc6900b93d04270c4f25c75a97b941dd#1042321121",
-    "index": "5248dc949ca03685a7486d54a4e10307715717d6#-725484103"
+    "index": "a6e69148f54121109cabf6f585b3154b716b7b3d#1240875528"
   },
   "components": {},
   "controllerBlobSHA": "2c5959392a2624779359336c0c3424ba420b2b10#-1144681990",
@@ -500,7 +500,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "9be4604e46f6a58459e1838ccfdb86d635509666#-1674547345",
+  "footerBlobSHA": "8e9f1d656d36f0badd34e1fc9f3c87649a99429a#-1863738258",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "3152e44ee16368decd5d2c650187702a572803cc#1861303745",
     "Project.Controls.FlowLayout_81bde3d0": "1de156701784410a41a31b186222a06268895587#1832301719"
@@ -2562,8 +2562,6 @@ b0a33736    },
           "            });",
           "            break;",
           "        }",
-          "        ",
-          "        resolve('/');",
           "      } catch(error) {",
           "        reject(error);",
           "      }",

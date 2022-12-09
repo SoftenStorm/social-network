@@ -402,8 +402,6 @@ class Controller extends Base {
             });
             break;
         }
-        
-        resolve('/');
       } catch(error) {
         reject(error);
       }
