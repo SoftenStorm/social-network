@@ -501,9 +501,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "93d0d3fe07e2151f70efbee103e43522fc09fbdd#1243662169",
+  "footerBlobSHA": "4691053d11029b3374cde2c1ad0e2f747b7031aa#1052463667",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "88caf0b264094c13a54881e0cc935853248aeb90#1395350369",
+    "Project.Controls.FlowLayout_45655143": "00a7b9a75deb8a14f4d053f5c845baa55547fd22#-295941168",
     "Project.Controls.FlowLayout_5d3e6156": "9f3f109ad5040a169e170a33f71102f8bb08c431#-64915114",
     "Project.Controls.FlowLayout_81bde3d0": "84f60c041de2b83963dd2b06b47e94b3a26a7fef#2072732675"
   },
@@ -587,7 +587,7 @@ b1b17b71          }
     "popups": [],
     "preview": null
   },
-  "headerBlobSHA": "f1c484d9e27213d060459d8a322e61e21c880235#-672483163",
+  "headerBlobSHA": "d2be984f02c89156ed3996f9e8a548ee3a4ce901#1493248037",
   "popups": {},
   "properties": {},
   "routeBlobSHA": "8d906bb18694942a235490cb6d2bb27fdf4669b6#-780131728",
@@ -731,7 +731,7 @@ b1b17b71          }
 01e32c22        "    // ",
 01e32c22        "    const keyboardEvent = event as KeyboardEvent;",
 01e32c22        "    ",
-01e32c22        "    if (keyboardEvent.keyCode == 13) {",
+01e32c22        "    if (keyboardEvent.which == 13) {",
 01e32c22        "      const control1 = ReactDOM.findDOMNode(this.refs.submit);",
 01e32c22        "      control1.click();",
 01e32c22        "    }",
