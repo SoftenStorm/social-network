@@ -372,7 +372,7 @@ class Controller extends Base {
 	  // Auto[Merging]--->
     RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","53063929","5a318376"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "Button 2"});
 		RequestHelper.registerInput('53063929', "document", "Post", "message");
-		ValidationHelper.registerInput('53063929', "message", true, "คุณลืมเขียนข้อความ", "title", null);
+		ValidationHelper.registerInput('53063929', "message", true, "คุณลืมเขียนข้อความ", undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '53063929')) {
     
       // Override data parsing and manipulation of firstname here:
