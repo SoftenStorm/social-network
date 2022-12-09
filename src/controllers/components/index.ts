@@ -384,7 +384,7 @@ class Controller extends Base {
             
             if (password != confirmPassword) throw new Error('ต้องกรอกรหัสผ่านให้ตรงกัน');
             
-            dataset = await DatabaseHelper.insert(RequestHelper.createInputs({
+            const rows = await DatabaseHelper.insert(RequestHelper.createInputs({
                 'User.id': null,
                 'User.email': email,
                 'User.password': bcrypt.hashSync(password, 10),
@@ -396,7 +396,7 @@ class Controller extends Base {
               false                   // skip permission settings
             );
             
-            this.request.session.uid = dataset['User'].rows[0].columns['id'];
+            this.request.session.uid = rows[0].columns['id'];
             this.request.session.save(() => {
               resolve('/welcome');
             });
