@@ -53,7 +53,7 @@ html(lang=headers && headers.language || 'en')
                   .col-4.internal-fsb-element.offset-0(style={'text-align': 'right'}, internal-fsb-guid="5dd2b04a")
                     | ลงชื่อ
                   .col-5.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="a2e5b0b3")
-                    input.form-control.form-control-sm(style={'display': 'block', 'width': '100%'}, type="text")
+                    input.form-control.form-control-sm(style={'-fsb-code-lock': '1', 'display': 'block', 'width': '100%'}, type="text")
           label.col-12.internal-fsb-element(internal-fsb-guid="18b2136a")
             .container-fluid
               .internal-fsb-strict-layout.row
@@ -61,11 +61,11 @@ html(lang=headers && headers.language || 'en')
                   .col-4.internal-fsb-element.offset-0(style={'text-align': 'right'}, internal-fsb-guid="b23102ca")
                     | นามสกุล
                   .col-5.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="18d7036a")
-                    input.form-control.form-control-sm(style={'display': 'block', 'width': '100%'}, type="text")
+                    input.form-control.form-control-sm(style={'-fsb-code-lock': '1', 'display': 'block', 'width': '100%'}, type="text")
                   .col-5.internal-fsb-element.offset-4(style={'font-size': '14px', 'margin-top': '5px', 'padding-left': '0px', 'padding-right': '0px'}, internal-fsb-guid="989e002d")
                     | มีเพียงชื่อที่จะนำไปแสดงในพื้นที่สาธารณะ
           input.col-12.internal-fsb-element(type="hidden", internal-fsb-guid="bd54e2da")
-          button.btn.btn-primary.btn-sm.col-6.internal-fsb-element.offset-3(style={'margin-bottom': '10px', 'margin-top': '5px'}, onClick="internalFsbSubmit('759b7c95', null, event, null)", type="button", internal-fsb-guid="759b7c95")
+          button.btn.btn-primary.btn-sm.col-6.internal-fsb-element.offset-3(style={'-fsb-code-lock': '1', 'margin-bottom': '10px', 'margin-top': '5px'}, onClick="internalFsbSubmit('759b7c95', null, event, null)", type="button", internal-fsb-guid="759b7c95")
             .internal-fsb-element(internal-fsb-guid="09992e70")
               | เริ่มใช้งาน
     script(type="text/javascript" src="/js/libraries/polyfills/polyfill.io.js")
