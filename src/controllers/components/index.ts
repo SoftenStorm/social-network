@@ -365,11 +365,11 @@ class Controller extends Base {
               }), ProjectConfigurationHelper.getDataSchema().tables['User'],
               this.request.session,   // session variables
               false,                  // real-time updates
-              false                   // skip permission settings
+              true                    // skip permission settings
             );
             
             if (dataset['User'].rows.length == 0 ||
-              !(await bcrypt.compare(password, dataset['User'].rows[0].columns['password']))) throw new Error('อีเมล์และรหัสผ่านไม่ตรงกันกับที่มีในระบบ');
+              !bcrypt.compareSync(password, dataset['User'].rows[0].columns['password'])) throw new Error('อีเมล์และรหัสผ่านไม่ตรงกันกับที่มีในระบบ');
             
             this.request.session.uid = dataset['User'].rows[0].columns['id'];
             this.request.session.skip = !!dataset['User'].rows[0].columns['firstname'] || undefined;
