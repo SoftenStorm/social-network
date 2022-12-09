@@ -175,6 +175,8 @@ class FlowLayout_45655143 extends Base {
     if (keyboardEvent.which == 13) {
       const control1 = ReactDOM.findDOMNode(this.refs.submit);
       control1.click();
+      
+      return EventHelper.cancel(event);
     }
     
   }

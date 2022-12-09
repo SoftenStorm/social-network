@@ -501,9 +501,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "941894e5a54427381821715fb82cbc612c3c5790#-734112007",
+  "footerBlobSHA": "4dc374fb2b9452ac10f41b68b2d7dbe85d21ed6e#1686222562",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "914a6d75224992c13767c73db1abc8a9e466468e#115423884",
+    "Project.Controls.FlowLayout_45655143": "7860eb49ec7625d8263723f8357e27e1a3438fb9#1618580890",
     "Project.Controls.FlowLayout_5d3e6156": "9f3f109ad5040a169e170a33f71102f8bb08c431#-64915114",
     "Project.Controls.FlowLayout_81bde3d0": "84f60c041de2b83963dd2b06b47e94b3a26a7fef#2072732675"
   },
@@ -741,6 +741,8 @@ b1b17b71          }
 01e32c22        "    if (keyboardEvent.which == 13) {",
 01e32c22        "      const control1 = ReactDOM.findDOMNode(this.refs.submit);",
 01e32c22        "      control1.click();",
+01e32c22        "      ",
+01e32c22        "      return EventHelper.cancel(event);",
 01e32c22        "    }",
 01e32c22        "    ",
 01e32c22        "    \">",
