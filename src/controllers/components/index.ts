@@ -357,8 +357,8 @@ class Controller extends Base {
         
         switch (name) {
           case 'signin':
-            email = data.filter(input => input.name == 'Email')[0].value;
-            password = data.filter(input => input.name == 'Password')[0].value;
+            email = data.filter(input => input.validation.name == 'Email')[0].value;
+            password = data.filter(input => input.validation.name == 'Password')[0].value;
             
             dataset = await DatabaseHelper.retrieve(RequestHelper.createInputs({
                 'User.email': email
@@ -378,9 +378,9 @@ class Controller extends Base {
             });
             break;
           case 'signup':
-            email = data.filter(input => input.name == 'Email')[0].value;
-            password = data.filter(input => input.name == 'Password')[0].value;
-            confirmPassword = data.filter(input => input.name == 'Confirm Password')[0].value;
+            email = data.filter(input => input.validation.name == 'Email')[0].value;
+            password = data.filter(input => input.validation.name == 'Password')[0].value;
+            confirmPassword = data.filter(input => input.validation.name == 'Confirm Password')[0].value;
             
             if (password != confirmPassword) throw new Error('ต้องกรอกรหัสผ่านให้ตรงกัน');
             

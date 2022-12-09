@@ -164,9 +164,9 @@ class FlowLayout_81bde3d0 extends Base {
   }
   
   // Auto[Merging]--->
-  protected onLinkClick_b011a65a(event: Event) {
+  protected onLinkMouseDown_b011a65a(event: Event) {
 
-    // Handle the event of onLinkClick (Link 2) here:
+    // Handle the event of onLinkMouseDown (Link 2) here:
     // 
     // const target = EventHelper.getCurrentElement(event); /* current invoking element */
     // const element1 = HTMLHelper.getElementById('ID');    /* accessing an element */
@@ -176,9 +176,9 @@ class FlowLayout_81bde3d0 extends Base {
     
   }
 
-  protected onLinkClick_0cb8b093(event: Event) {
+  protected onLinkMouseDown_0cb8b093(event: Event) {
 
-    // Handle the event of onLinkClick (Link 2) here:
+    // Handle the event of onLinkMouseDown (Link 2) here:
     // 
     // const target = EventHelper.getCurrentElement(event); /* current invoking element */
     // const element1 = HTMLHelper.getElementById('ID');    /* accessing an element */
@@ -234,14 +234,14 @@ class FlowLayout_81bde3d0 extends Base {
             .internal-fsb-element(style={'display': 'inline-block'}, internal-fsb-guid="8138a7c8")
               | ยังไม่มีสมาชิก?
           if !this.state.isLoggingIn
-            a.internal-fsb-element(style={'display': 'inline-block', 'marginLeft': '15px', 'marginRight': '10px'}, href="javascript:void(0)", onClick=this.onLinkClick_b011a65a.bind(this), internal-fsb-guid="b011a65a")
+            a.internal-fsb-element(style={'display': 'inline-block'}, href="javascript:void(0)", onMouseDown=this.onLinkMouseDown_b011a65a.bind(this), internal-fsb-guid="b011a65a")
               .internal-fsb-element(internal-fsb-guid="b011a65a-text")
                 | สมัครเลย
           if this.state.isLoggingIn
             .internal-fsb-element(style={'display': 'inline-block'}, internal-fsb-guid="982c997c")
               | มีสมาชิกอยู่แล้ว?
           if this.state.isLoggingIn
-            a.internal-fsb-element(style={'display': 'inline-block', 'marginLeft': '15px', 'marginRight': '10px'}, href="javascript:void(0)", onClick=this.onLinkClick_0cb8b093.bind(this), internal-fsb-guid="0cb8b093")
+            a.internal-fsb-element(style={'display': 'inline-block'}, href="javascript:void(0)", onMouseDown=this.onLinkMouseDown_0cb8b093.bind(this), internal-fsb-guid="0cb8b093")
               .internal-fsb-element(internal-fsb-guid="4890b3d6")
                 | เข้าสู่ระบบแทน
         label.col-12.internal-fsb-element(internal-fsb-guid="96a954e4")
