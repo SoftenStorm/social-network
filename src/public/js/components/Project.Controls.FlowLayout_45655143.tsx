@@ -164,7 +164,7 @@ class FlowLayout_45655143 extends Base {
     return super.getDataFromNotation(notation, inArray, always);
   }
   
-  private isUser(uid): boolean => {
+  private isUser(uid): boolean {
     return uid == this.getDataFromNotation('Info.uid');
   }
   
@@ -240,7 +240,7 @@ class FlowLayout_45655143 extends Base {
                         img(style={'display': 'block', 'height': '100%', 'padding': '0px', 'ratio': '1:1', 'width': '100%'}, internalFsbRatioFit="true")
                         img(style={'display': 'none'}, internalFsbRatioExpand="true", src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC")
                     .internal-fsb-element.internal-fsb-stretch.internal-fsb-strict-layout(style={'WebkitAlignContent': 'space-between', 'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'alignContent': 'space-between', 'flexBasis': '0px', 'flexGrow': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="247b6c15")
-                      .internal-fsb-element.internal-fsb-strict-layout(style={'minHeight': '75px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="b2ae447c")
+                      .internal-fsb-element.internal-fsb-strict-layout(style={'marginBottom': '5px', 'minHeight': '75px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="b2ae447c")
                         .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingLeft': '15px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].message")))}, internal-fsb-guid="62369e5c")
                         .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="887e3d09")
                           .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'paddingLeft': '15px', 'paddingRight': '0px'}, internal-fsb-guid="29674a6c")
@@ -250,7 +250,7 @@ class FlowLayout_45655143 extends Base {
                             Button.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px', 'paddingBottom': '0px', 'paddingLeft': '0px', 'paddingRight': '0px', 'paddingTop': '0px'}, onClick=((event) => { window.internalFsbSubmit('281067ca', 'Post', event, ((results) => { this.manipulate('281067ca', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="281067ca")
                               .internal-fsb-element(internal-fsb-guid="281067ca-text")
                                 | ลบ
-                      .internal-fsb-element.internal-fsb-strict-layout(style={'background': 'rgba(247, 247, 247, 1)', 'paddingBottom': '15px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '10px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="bb841183")
+                      .internal-fsb-element.internal-fsb-strict-layout(style={'WebkitBorderRadius': '4px 4px 4px 4px', 'background': 'rgba(247, 247, 247, 1)', 'borderRadius': '4px 4px 4px 4px', 'paddingBottom': '15px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '10px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="bb841183")
                         each data, j in this.getDataFromNotation("Post[" + i + "].Reply", true, false)
                           .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || j), data-fsb-index=j, internal-fsb-class="FlowLayout", internal-fsb-guid="d766b7e5")
                             .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingLeft': '0px', 'paddingRight': '0px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Reply[" + j + "].message")))}, internal-fsb-guid="58566a77")

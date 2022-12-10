@@ -795,9 +795,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "7ce1dd4411ba59f032cd56bd66953ead35e02533#-488089568",
+  "footerBlobSHA": "f761e03685851392f1d77cbb2b0bdfbf515eb92a#-926121486",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "75c4d538af4098c217f89b5dab449b085ea63610#1557089473",
+    "Project.Controls.FlowLayout_45655143": "973c10ba983034d214ee81c37a071e652106dcef#-1528781214",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
     "Project.Controls.FlowLayout_81bde3d0": "5febba5123fcb826dfafb426bef65ed0e88534d0#6264584"
   },
@@ -881,7 +881,7 @@ b1b17b71          }
     "popups": [],
     "preview": null
   },
-  "headerBlobSHA": "f1c484d9e27213d060459d8a322e61e21c880235#-672483163",
+  "headerBlobSHA": "d2be984f02c89156ed3996f9e8a548ee3a4ce901#1493248037",
   "popups": {},
   "properties": {},
   "routeBlobSHA": "8d906bb18694942a235490cb6d2bb27fdf4669b6#-780131728",
@@ -1072,7 +1072,7 @@ b1b17b71          }
 01e32c22        "    return super.getDataFromNotation(notation, inArray, always);",
 01e32c22        "  }",
 01e32c22        "  ",
-01e32c22        "  private isUser(uid): boolean => {",
+01e32c22        "  private isUser(uid): boolean {",
 01e32c22        "    return uid == this.getDataFromNotation('Info.uid');",
 01e32c22        "  }",
 01e32c22        "  ",
@@ -1357,7 +1357,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"FlowLayout 4\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"FlowLayout\"",
-01e32c22        "    style=\"min-height: 75px; padding-left: 0px; padding-right: 0px\">",
+01e32c22        "    style=\"margin-bottom: 5px; min-height: 75px; padding-left: 0px; padding-right: 0px\">",
 01e32c22        "<div",
 01e32c22        "    contenteditable=\"true\"",
 01e32c22        "    class=\"col-12 internal-fsb-element\"",
@@ -1425,7 +1425,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"FlowLayout 2\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"FlowLayout\"",
-01e32c22        "    style=\"background: rgba(247, 247, 247, 1); padding-bottom: 15px; padding-left: 15px; padding-right: 15px; padding-top: 10px\">",
+01e32c22        "    style=\"-webkit-border-radius: 4px 4px 4px 4px; background: rgba(247, 247, 247, 1); border-radius: 4px 4px 4px 4px; padding-bottom: 15px; padding-left: 15px; padding-right: 15px; padding-top: 10px\">",
 01e32c22        "<div",
 01e32c22        "    class=\"internal-fsb-allow-cursor internal-fsb-element internal-fsb-strict-layout\"",
 01e32c22        "    internal-fsb-guid=\"d766b7e5\"",
