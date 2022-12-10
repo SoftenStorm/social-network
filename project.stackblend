@@ -1353,9 +1353,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "6c695f15672863cd5c7ac2e0fbb5c1c1d39055e6#-552292906",
+  "footerBlobSHA": "d84889a2f33601f59ec567eb3f1e1366c9455324#676288351",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "f0bf9134d56193bc83e42f980b1d024bf2906e6c#-391811646",
+    "Project.Controls.FlowLayout_45655143": "6fce07543e19169829c96b1fa85de6d26522d088#878655902",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
     "Project.Controls.FlowLayout_81bde3d0": "5febba5123fcb826dfafb426bef65ed0e88534d0#6264584"
   },
@@ -2431,7 +2431,7 @@ b1b17b71          }
 01e32c22        "    const target = EventHelper.getCurrentElement(event);",
 01e32c22        "    ",
 01e32c22        "    if (keyboardEvent.which == 13) {",
-01e32c22        "      this.state.currentCommentBoxPID = target.('data-pid');",
+01e32c22        "      this.state.currentCommentBoxPID = target.getAttribute('data-pid');",
 01e32c22        "      ",
 01e32c22        "      const control1 = ReactDOM.findDOMNode(this.refs.reply);",
 01e32c22        "      control1.click();",
@@ -2837,7 +2837,7 @@ b1b17b71          }
 01e32c22        "    const target = EventHelper.getCurrentElement(event);",
 01e32c22        "    ",
 01e32c22        "    if (keyboardEvent.which == 13) {",
-01e32c22        "      this.state.currentReplyBoxCID = target.getAttibute('data-cid');",
+01e32c22        "      this.state.currentReplyBoxCID = target.getAttribute('data-cid');",
 01e32c22        "      ",
 01e32c22        "      const control1 = ReactDOM.findDOMNode(this.refs.reply);",
 01e32c22        "      control1.click();",
