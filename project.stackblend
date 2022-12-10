@@ -258,7 +258,9 @@
       "    internal-fsb-name=\"DocumentTable 1\"",
       "    internal-fsb-event-no-propagate=\"1\"",
       "    internal-fsb-class=\"DocumentTable\"",
-      "    style=\"left: 571px; top: 271px; width: 150px;\">",
+      "    style=\"left: 571px; top: 271px; width: 150px;\"",
+      "    data-forward-option=\"multiple\"",
+      "    data-forwarding-table=\"Post\">",
       "<div",
       "    class=\"internal-fsb-dragging-handle internal-fsb-title\">Reply</div>",
       "<div",
@@ -398,7 +400,9 @@
       "    internal-fsb-name=\"DocumentTable 2\"",
       "    internal-fsb-event-no-propagate=\"1\"",
       "    internal-fsb-class=\"DocumentTable\"",
-      "    style=\"left: 809px; top: 103px; width: 150px;\">",
+      "    style=\"left: 809px; top: 103px; width: 150px;\"",
+      "    data-forward-option=\"multiple\"",
+      "    data-forwarding-table=\"Post\">",
       "<div",
       "    class=\"internal-fsb-dragging-handle internal-fsb-title\">Action</div>",
       "<div",
@@ -518,7 +522,13 @@
 90402359            "verb": null
 90402359          }
         },
-        "forward": null,
+        "forward": {
+          "forwardingPrefix": null,
+          "forwardingTable": "Post",
+          "mode": "collection",
+          "option": "multiple",
+          "recursive": false
+        },
         "group": "Action",
         "guid": "32378534",
         "keys": {
@@ -751,7 +761,13 @@ acd3cb0b          },
 09080630            "verb": null
 09080630          }
         },
-        "forward": null,
+        "forward": {
+          "forwardingPrefix": null,
+          "forwardingTable": "Post",
+          "mode": "collection",
+          "option": "multiple",
+          "recursive": false
+        },
         "group": "Reply",
         "guid": "b4e8b657",
         "keys": {
@@ -959,7 +975,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "af8631c65835fd8521528c1e96a8a7b0d339b6e2#1582618975",
+  "footerBlobSHA": "866049e9bc79f4052e657780641ae3b447f04a7b#1306465058",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "973c10ba983034d214ee81c37a071e652106dcef#-1528781214",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
