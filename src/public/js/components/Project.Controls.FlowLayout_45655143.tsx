@@ -98,6 +98,8 @@ class FlowLayout_45655143 extends Base {
         
     DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
     DataManipulationHelper.register("281067ca", "delete", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
+    DataManipulationHelper.register("2d118a73", "delete", ["d8e0e5e5"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
+    DataManipulationHelper.register("1e7a237e", "insert", ["056d8987","3279b55a","44b75d96","503dd98d","5e9d4311","833bdb5e","99046765"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post[\" + (i) + \"].Reply\""); }});
   }
   // <---Auto[ClassBegin]
   
@@ -162,6 +164,10 @@ class FlowLayout_45655143 extends Base {
     return super.getDataFromNotation(notation, inArray, always);
   }
   
+  private isUser(uid): boolean => {
+    return uid == this.getDataFromNotation('Info.uid');
+  }
+  
   // Auto[Merging]--->
   protected onTextboxKeyPress_53063929(event: Event) {
 
@@ -174,7 +180,26 @@ class FlowLayout_45655143 extends Base {
     const keyboardEvent = event as KeyboardEvent;
     
     if (keyboardEvent.which == 13) {
-      const control1 = ReactDOM.findDOMNode(this.refs.submit);
+      const control1 = ReactDOM.findDOMNode(this.refs.post);
+      control1.click();
+      
+      return EventHelper.cancel(event);
+    }
+    
+  }
+
+  protected onTextboxKeyPress_056d8987(event: Event) {
+
+    // Handle the event of onTextboxKeyPress (firstname) here:
+    // 
+    // const target = EventHelper.getCurrentElement(event); /* current invoking element */
+    // const element1 = HTMLHelper.getElementById('ID');    /* accessing an element */
+    // const control1 = ReactDOM.findDOMNode(this.refs.ID); /* accessing a component */
+    // 
+    const keyboardEvent = event as KeyboardEvent;
+    
+    if (keyboardEvent.which == 13) {
+      const control1 = ReactDOM.findDOMNode(this.refs.reply);
       control1.click();
       
       return EventHelper.cancel(event);
@@ -203,25 +228,51 @@ class FlowLayout_45655143 extends Base {
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="5a318376")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="382a7358")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="03168663")
-              Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="submit", onClick=((event) => { window.internalFsbSubmit('66766b99', 'Post', event, ((results) => { this.manipulate('66766b99', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="66766b99")
+              Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="post", onClick=((event) => { window.internalFsbSubmit('66766b99', 'Post', event, ((results) => { this.manipulate('66766b99', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="66766b99")
                 .internal-fsb-element(internal-fsb-guid="66766b99-text")
                   | Submit
-            .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ac036c3a")
+            .internal-fsb-element.internal-fsb-strict-layout(style={'MsFlexDirection': 'row-reverse', 'WebkitFlexDirection': 'row-reverse', 'flexDirection': 'row-reverse', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ac036c3a")
               each data, i in this.getDataFromNotation("Post", true, false)
-                .internal-fsb-element.internal-fsb-strict-layout(style={'marginBottom': '15px', 'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || i), data-fsb-index=i, internal-fsb-class="FlowLayout", internal-fsb-guid="166e6ba0")
-                  .internal-fsb-element(style={'MsOverflowX': 'hidden', 'MsOverflowY': 'hidden', 'WebkitBorderRadius': '100px 100px 100px 100px', 'background': 'rgba(245, 245, 245, 1)', 'borderRadius': '100px 100px 100px 100px', 'height': '75px', 'overflowX': 'hidden', 'overflowY': 'hidden', 'paddingLeft': '0px', 'paddingRight': '0px', 'width': '75px'}, internal-fsb-guid="8d2ed478")
-                    .internal-fsb-element(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="cc344be8")
-                      img(style={'display': 'block', 'height': '100%', 'padding': '0px', 'ratio': '1:1', 'width': '100%'}, internalFsbRatioFit="true")
-                      img(style={'display': 'none'}, internalFsbRatioExpand="true", src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC")
-                  .internal-fsb-element.internal-fsb-stretch.internal-fsb-strict-layout(style={'WebkitAlignContent': 'space-between', 'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'alignContent': 'space-between', 'flexBasis': '0px', 'flexGrow': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="247b6c15")
-                    .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingLeft': '15px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].message")))}, internal-fsb-guid="62369e5c")
-                    .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="887e3d09")
-                      .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'paddingLeft': '15px', 'paddingRight': '0px'}, internal-fsb-guid="29674a6c")
-                        | #{this.getDataFromNotation("Post[" + i + "].User.firstname")}
-                      input.col-12.internal-fsb-element(type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="5469cbc2")
-                      Button.btn.btn-sm.internal-fsb-element(style={'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px', 'paddingBottom': '0px', 'paddingLeft': '0px', 'paddingRight': '0px', 'paddingTop': '0px'}, onClick=((event) => { window.internalFsbSubmit('281067ca', 'Post', event, ((results) => { this.manipulate('281067ca', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="281067ca")
-                        .internal-fsb-element(internal-fsb-guid="281067ca-text")
-                          | ลบ
+                .internal-fsb-element.internal-fsb-strict-layout(style={'marginBottom': '20px', 'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || i), data-fsb-index=i, internal-fsb-class="FlowLayout", internal-fsb-guid="166e6ba0")
+                  .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="0713c8ad")
+                    .internal-fsb-element(style={'MsOverflowX': 'hidden', 'MsOverflowY': 'hidden', 'WebkitBorderRadius': '100px 100px 100px 100px', 'background': 'rgba(245, 245, 245, 1)', 'borderRadius': '100px 100px 100px 100px', 'height': '75px', 'overflowX': 'hidden', 'overflowY': 'hidden', 'paddingLeft': '0px', 'paddingRight': '0px', 'width': '75px'}, internal-fsb-guid="8d2ed478")
+                      .internal-fsb-element(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="cc344be8")
+                        img(style={'display': 'block', 'height': '100%', 'padding': '0px', 'ratio': '1:1', 'width': '100%'}, internalFsbRatioFit="true")
+                        img(style={'display': 'none'}, internalFsbRatioExpand="true", src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC")
+                    .internal-fsb-element.internal-fsb-stretch.internal-fsb-strict-layout(style={'WebkitAlignContent': 'space-between', 'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'alignContent': 'space-between', 'flexBasis': '0px', 'flexGrow': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="247b6c15")
+                      .internal-fsb-element.internal-fsb-strict-layout(style={'minHeight': '75px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="b2ae447c")
+                        .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingLeft': '15px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].message")))}, internal-fsb-guid="62369e5c")
+                        .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="887e3d09")
+                          .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'paddingLeft': '15px', 'paddingRight': '0px'}, internal-fsb-guid="29674a6c")
+                            | #{this.getDataFromNotation("Post[" + i + "].User.firstname")} #{this.getDataFromNotation("Post[" + i + "].createdAt")}
+                          input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="5469cbc2")
+                          if this.isUser(data.columns["uid"])
+                            Button.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px', 'paddingBottom': '0px', 'paddingLeft': '0px', 'paddingRight': '0px', 'paddingTop': '0px'}, onClick=((event) => { window.internalFsbSubmit('281067ca', 'Post', event, ((results) => { this.manipulate('281067ca', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="281067ca")
+                              .internal-fsb-element(internal-fsb-guid="281067ca-text")
+                                | ลบ
+                      .internal-fsb-element.internal-fsb-strict-layout(style={'background': 'rgba(247, 247, 247, 1)', 'paddingBottom': '15px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '10px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="bb841183")
+                        each data, j in this.getDataFromNotation("Post[" + i + "].Reply", true, false)
+                          .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || j), data-fsb-index=j, internal-fsb-class="FlowLayout", internal-fsb-guid="d766b7e5")
+                            .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingLeft': '0px', 'paddingRight': '0px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Reply[" + j + "].message")))}, internal-fsb-guid="58566a77")
+                            .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="5d3c67d6")
+                              .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-guid="6dee4a09")
+                                | #{this.getDataFromNotation("Post[" + i + "].Reply[" + j + "].User.firstname")} #{this.getDataFromNotation("Post[" + i + "].Reply[" + j + "].createdAt")}
+                              input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].Reply[" + j + "].id"), internal-fsb-guid="d8e0e5e5")
+                              if this.isUser(data.columns["uid"])
+                                Button.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px', 'paddingBottom': '0px', 'paddingLeft': '0px', 'paddingRight': '0px', 'paddingTop': '0px'}, onClick=((event) => { window.internalFsbSubmit('2d118a73', 'Reply', event, ((results) => { this.manipulate('2d118a73', 'Reply', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="2d118a73")
+                                  .internal-fsb-element(internal-fsb-guid="6984244d")
+                                    | ลบ
+                        input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="503dd98d")
+                        input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="44b75d96")
+                        input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="3279b55a")
+                        input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="99046765")
+                        input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="5e9d4311")
+                        input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="833bdb5e")
+                        .col-12.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="056d8987")
+                          input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'display': 'block', 'marginTop': '15px', 'width': '100%'}, onKeyPress=this.onTextboxKeyPress_056d8987.bind(this), placeholder="คุณมีความเห็นอย่างไร?", required=true, type="text")
+                        Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="reply", onClick=((event) => { window.internalFsbSubmit('1e7a237e', 'Reply', event, ((results) => { this.manipulate('1e7a237e', 'Reply', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="1e7a237e")
+                          .internal-fsb-element(internal-fsb-guid="2b90cb54")
+                            | Submit
     `
   }
 }
