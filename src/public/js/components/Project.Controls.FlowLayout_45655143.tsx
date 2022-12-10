@@ -260,7 +260,7 @@ class FlowLayout_45655143 extends Base {
     // 
     const element = document.getElementById('comment-box-pid-' + this.state.currentCommentBoxPID);
     if (element) {
-      element.firstElementChild.value = '';
+      (element.firstElementChild as any).value = '';
     }
     
   }
@@ -301,7 +301,7 @@ class FlowLayout_45655143 extends Base {
     // 
     const element = document.getElementById('reply-box-cid-' + this.state.currentReplyBoxCID);
     if (element) {
-      element.firstElementChild.value = '';
+      (element.firstElementChild as any).value = '';
     }
     
   }
