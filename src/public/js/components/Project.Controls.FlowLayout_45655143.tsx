@@ -236,7 +236,7 @@ class FlowLayout_45655143 extends Base {
     const target = EventHelper.getCurrentElement(event);
     
     if (keyboardEvent.which == 13) {
-      this.state.currentCommentBoxPID = target.getAttribute('data-pid');
+      this.state.currentCommentBoxPID = target.('data-pid');
       
       const control1 = ReactDOM.findDOMNode(this.refs.reply);
       control1.click();
@@ -260,7 +260,7 @@ class FlowLayout_45655143 extends Base {
     // 
     const element = HTMLHelper.getElementByAttributeNameAndValue('data-pid', this.state.currentCommentBoxPID);
     if (element) {
-      element.value = '';
+      element.firstElementChild.value = '';
     }
     
   }
@@ -301,7 +301,7 @@ class FlowLayout_45655143 extends Base {
     // 
     const element = HTMLHelper.getElementByAttributeNameAndValue('data-cid', this.state.currentReplyBoxCID);
     if (element) {
-      element.value = '';
+      element.firstElementChild.value = '';
     }
     
   }
