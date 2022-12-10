@@ -1073,7 +1073,7 @@ const DatabaseHelper = {
   			const list = DatabaseHelper.prepareData(data, ActionType.Insert, baseSchema, crossRelationUpsert);
 	  		const results = [];
 	  		
-  			if (!transaction) transaction = await CreateTransaction({share: PermissionHelper.hasPermissionDefining(ActionType.Insert, list)});
+  			if (!transaction) transaction = await CreateTransaction({share: !PermissionHelper.hasPermissionDefining(ActionType.Insert, list)});
   		  
   		  for (const key in list) {
   		  	if (list.hasOwnProperty(key)) {
@@ -1279,7 +1279,7 @@ const DatabaseHelper = {
   			const list = DatabaseHelper.prepareData(data, ActionType.Upsert, baseSchema, true);
 	  		const results = [];
 	  		
-  			if (!transaction) transaction = await CreateTransaction({share: PermissionHelper.hasPermissionDefining(ActionType.Upsert, list)});
+  			if (!transaction) transaction = await CreateTransaction({share: !PermissionHelper.hasPermissionDefining(ActionType.Upsert, list)});
   		  
   		  for (const key in list) {
   		  	if (list.hasOwnProperty(key)) {
@@ -1499,7 +1499,7 @@ const DatabaseHelper = {
   			const list = DatabaseHelper.prepareData(data, ActionType.Update, baseSchema, crossRelationUpsert);
 	  		const results = [];
 	  		
-  			if (!transaction) transaction = await CreateTransaction({share: PermissionHelper.hasPermissionDefining(ActionType.Update, list)});
+  			if (!transaction) transaction = await CreateTransaction({share: !PermissionHelper.hasPermissionDefining(ActionType.Update, list)});
   		  
 	  		for (const key in list) {
   		  	if (list.hasOwnProperty(key)) {
@@ -2064,7 +2064,7 @@ const DatabaseHelper = {
   			const list = DatabaseHelper.prepareData(data, ActionType.Delete, baseSchema);
   		  const results = [];
 	  		
-  			if (!transaction) transaction = await CreateTransaction({share: PermissionHelper.hasPermissionDefining(ActionType.Delete, list)});
+  			if (!transaction) transaction = await CreateTransaction({share: !PermissionHelper.hasPermissionDefining(ActionType.Delete, list)});
   		  
   		  for (const key in list) {
   		  	if (list.hasOwnProperty(key)) {
