@@ -1354,9 +1354,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "be9797913829ca4c247a1bd428f3a0f4e63e38e6#688773824",
+  "footerBlobSHA": "1dd7b3048c39b7540e0e728663271796d1fbc92c#2002810949",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "29bb39f00dc01a6a0e1b4e854c297a7b141c940e#105163308",
+    "Project.Controls.FlowLayout_45655143": "10d1452cfc39e2a23bceb26b12a832580cda6b9c#2097234294",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
     "Project.Controls.FlowLayout_81bde3d0": "5febba5123fcb826dfafb426bef65ed0e88534d0#6264584"
   },
@@ -1440,7 +1440,7 @@ b1b17b71          }
     "popups": [],
     "preview": null
   },
-  "headerBlobSHA": "cab073859c176cd497d4cad789d74a353b8b7645#1433314930",
+  "headerBlobSHA": "d6587cf73c4a9ed703ef6ec9bbdf74c342f42988#1861343154",
   "popups": {},
   "properties": {},
   "routeBlobSHA": "8d906bb18694942a235490cb6d2bb27fdf4669b6#-780131728",
@@ -1979,7 +1979,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-react-id=\"post\"",
 01e32c22        "    internal-fsb-data-controls=\"03168663 13c65096 18091a36 382a7358 4d487443 53063929 5a318376 ea9b0569\"",
 01e32c22        "    internal-fsb-data-wizard-type=\"insert\"",
-01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"Post\"",
+01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"\"",
 01e32c22        "    onfsbsuccess=\"{&quot;event&quot;:true}\"",
 01e32c22        "    internal-fsb-react-code-onfsbsuccess=\"",
 01e32c22        "",
@@ -2111,7 +2111,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-class=\"Button\"",
 01e32c22        "    internal-fsb-data-controls=\"5469cbc2\"",
 01e32c22        "    internal-fsb-data-wizard-type=\"delete\"",
-01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"Post\"",
+01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"\"",
 01e32c22        "    internal-fsb-react-display-logic=\"statement\"",
 01e32c22        "    internal-fsb-react-display-statement=\"this.isUser(data.columns[&quot;uid&quot;])\"",
 01e32c22        "    internal-fsb-reusable-preset-name=\"v1_button\">",
@@ -2586,7 +2586,7 @@ b1b17b71          }
 01e32c22        "    style=\"-fsb-code-lock: 1; -fsb-inherited-presets: 281067ca; -webkit-flex-basis: 50px; flex-basis: 50px; font-size: 13px; margin-right: 20px\"",
 01e32c22        "    internal-fsb-data-controls=\"53b67855\"",
 01e32c22        "    internal-fsb-data-wizard-type=\"delete\"",
-01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"Post\"",
+01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"\"",
 01e32c22        "    internal-fsb-react-display-logic=\"statement\"",
 01e32c22        "    internal-fsb-react-display-statement=\"this.isUser(data.columns[&quot;uid&quot;])\">",
 01e32c22        "<div",
@@ -2664,7 +2664,7 @@ b1b17b71          }
 01e32c22        "    style=\"-fsb-code-lock: 1; -fsb-inherited-presets: 281067ca; -webkit-flex-basis: 50px; flex-basis: 50px; font-size: 13px\"",
 01e32c22        "    internal-fsb-data-controls=\"924b8199\"",
 01e32c22        "    internal-fsb-data-wizard-type=\"delete\"",
-01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"Post[i].Comment[j].Reply\"",
+01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"\"",
 01e32c22        "    internal-fsb-react-display-logic=\"statement\"",
 01e32c22        "    internal-fsb-react-display-statement=\"this.isUser(data.columns[&quot;uid&quot;])\">",
 01e32c22        "<div",
