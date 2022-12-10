@@ -1353,9 +1353,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "e77c0b1ac4c346ce527cc90e16d2c9c346ecb6b9#1572931066",
+  "footerBlobSHA": "b5045c8017cd2b2b15f041acb979c37c07d0fe85#572514869",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "7bf3e39e689394dfe0d66686a1738a029cff270d#1132386089",
+    "Project.Controls.FlowLayout_45655143": "8d12cac86b31c0e5960cb7f80148a114ee7c54ad#1292033372",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
     "Project.Controls.FlowLayout_81bde3d0": "5febba5123fcb826dfafb426bef65ed0e88534d0#6264584"
   },
@@ -1717,7 +1717,7 @@ b1b17b71          }
 01e32c22        "  ",
 01e32c22        "  private hasFondOf(i: number): boolean {",
 01e32c22        "    const uid = this.getDataFromNotation('Info.uid');",
-01e32c22        "    return this.getDataFromNotation('Post[' + i + '].Action', true).filter(row => row.columns['uid'] == uid).length != 0;",
+01e32c22        "    return this.getDataFromNotation('Post[' + i + '].Action', true).some(row => row.keys['uid'] == uid &amp;&amp; row.columns['type'] == 1);",
 01e32c22        "  }",
 01e32c22        "  ",
 01e32c22        "  private getTotalAction(type: number, i: number): boolean {",
@@ -2159,6 +2159,7 @@ b1b17b71          }
 01e32c22        "    style=\"-fsb-code-lock: 1\">",
 01e32c22        "<input",
 01e32c22        "    type=\"hidden\"",
+01e32c22        "    value=\"{this.hasFondOf(i) ? '0' : '1'}\"",
 01e32c22        "    class=\"col-12 internal-fsb-element\"",
 01e32c22        "    internal-fsb-guid=\"82728a83\"",
 01e32c22        "    internal-fsb-name=\"[action] type\"",
@@ -2168,8 +2169,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-data-source-name=\"Action\"",
 01e32c22        "    internal-fsb-data-source-column=\"type\"",
 01e32c22        "    internal-fsb-react-data=\"\"",
-01e32c22        "    style=\"-fsb-code-lock: 1\"",
-01e32c22        "    value=\"1\">",
+01e32c22        "    style=\"-fsb-code-lock: 1\">",
 01e32c22        "<input",
 01e32c22        "    type=\"hidden\"",
 01e32c22        "    class=\"col-12 internal-fsb-element\"",
@@ -2245,7 +2245,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 8\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 13px; line-height: 26px; padding-left: 8px; padding-right: 0px\">จำนวนผู้ที่ชื่นชอบ #{this.getTotalAction(0, i)}</div>",
+01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 13px; line-height: 26px; padding-left: 8px; padding-right: 0px\">จำนวนผู้ที่ชื่นชอบ #{this.getTotalAction(1, i)}</div>",
 01e32c22        "</div>",
 01e32c22        "</div>",
 01e32c22        "",
