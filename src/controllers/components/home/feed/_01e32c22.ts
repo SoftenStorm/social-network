@@ -384,6 +384,7 @@ class Controller extends Base {
 	  // Auto[Merging]--->
     RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] create"});
     RequestHelper.registerSubmit("01e32c22", "281067ca", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] delete"});
+    RequestHelper.registerSubmit("01e32c22", "cc4b29ed", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] delete"});
     RequestHelper.registerSubmit("01e32c22", "2d118a73", "delete", ["d8e0e5e5"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] delete"});
     RequestHelper.registerSubmit("01e32c22", "1e7a237e", "insert", ["056d8987","3279b55a","44b75d96","503dd98d","5e9d4311","833bdb5e","99046765"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] create"});
 		RequestHelper.registerInput('53063929', "document", "Post", "message");
