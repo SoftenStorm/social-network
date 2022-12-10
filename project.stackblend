@@ -1,7 +1,7 @@
 {
   "animations": {},
   "backEndControllerBlobSHADict": {
-    "01e32c22": "398a1777f9489b05bc15aa9cbd9a1624caa5d3c0#2012252716",
+    "01e32c22": "877c766b28fa2b17395b9c576600d2f2e3e96854#-1853998026",
     "b0a33736": "7230af51bc6900b93d04270c4f25c75a97b941dd#1042321121",
     "index": "a6e69148f54121109cabf6f585b3154b716b7b3d#1240875528"
   },
@@ -1344,7 +1344,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "9defd99270b3b18b33df83b32328988eb5735441#-1327584891",
+  "footerBlobSHA": "7349624ba36b75a1b5fd373fd6508dced58dc3e8#1238361047",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "2326438daba1f9065d8db81a31bffe9ced7470e9#-621502309",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
@@ -1538,13 +1538,6 @@ b1b17b71          }
 01e32c22          "sourceType": "document",
 01e32c22          "validationFormat": null
 01e32c22        },
-01e32c22        "6530425698254805": {
-01e32c22          "required": null,
-01e32c22          "sourceColumn": "uid",
-01e32c22          "sourceName": "Reply",
-01e32c22          "sourceType": "document",
-01e32c22          "validationFormat": null
-01e32c22        },
 01e32c22        "6868536795081891": {
 01e32c22          "required": null,
 01e32c22          "sourceColumn": "active",
@@ -1570,20 +1563,6 @@ b1b17b71          }
 01e32c22          "required": null,
 01e32c22          "sourceColumn": "createdAt",
 01e32c22          "sourceName": "Comment",
-01e32c22          "sourceType": "document",
-01e32c22          "validationFormat": null
-01e32c22        },
-01e32c22        "8178015076038297": {
-01e32c22          "required": null,
-01e32c22          "sourceColumn": "uid",
-01e32c22          "sourceName": "Comment",
-01e32c22          "sourceType": "document",
-01e32c22          "validationFormat": null
-01e32c22        },
-01e32c22        "8391656872944368": {
-01e32c22          "required": null,
-01e32c22          "sourceColumn": "uid",
-01e32c22          "sourceName": "Post",
 01e32c22          "sourceType": "document",
 01e32c22          "validationFormat": null
 01e32c22        },
@@ -1840,10 +1819,11 @@ b1b17b71          }
 01e32c22        "    ",
 01e32c22        "      // Override data parsing and manipulation of Hidden 2 here:",
 01e32c22        "      // ",
-01e32c22        "      input.value = this.request.session.uid;",
 01e32c22        "      ",
 01e32c22        "      \"",
-01e32c22        "    style=\"-fsb-code-lock: 1\">",
+01e32c22        "    style=\"-fsb-code-lock: 1\"",
+01e32c22        "    internal-fsb-data-value-source=\"session\"",
+01e32c22        "    internal-fsb-data-session-name=\"uid\">",
 01e32c22        "<input",
 01e32c22        "    type=\"hidden\"",
 01e32c22        "    class=\"col-12 internal-fsb-element\"",
@@ -2200,7 +2180,6 @@ b1b17b71          }
 01e32c22        "    ",
 01e32c22        "      // Override data parsing and manipulation of Hidden 2 here:",
 01e32c22        "      // ",
-01e32c22        "      input.value = null;",
 01e32c22        "      ",
 01e32c22        "      \"",
 01e32c22        "    style=\"-fsb-code-lock: 1\"",
@@ -2219,10 +2198,11 @@ b1b17b71          }
 01e32c22        "    ",
 01e32c22        "      // Override data parsing and manipulation of Hidden 2 here:",
 01e32c22        "      // ",
-01e32c22        "      input.value = this.request.session.uid;",
 01e32c22        "      ",
 01e32c22        "      \"",
-01e32c22        "    style=\"-fsb-code-lock: 1\">",
+01e32c22        "    style=\"-fsb-code-lock: 1\"",
+01e32c22        "    internal-fsb-data-value-source=\"session\"",
+01e32c22        "    internal-fsb-data-session-name=\"uid\">",
 01e32c22        "",
 01e32c22        "<input",
 01e32c22        "    type=\"hidden\"",
@@ -2602,7 +2582,6 @@ b1b17b71          }
 01e32c22        "    ",
 01e32c22        "      // Override data parsing and manipulation of Hidden 2 here:",
 01e32c22        "      // ",
-01e32c22        "      input.value = null;",
 01e32c22        "      ",
 01e32c22        "      \"",
 01e32c22        "    style=\"-fsb-code-lock: 1\"",
@@ -2621,10 +2600,11 @@ b1b17b71          }
 01e32c22        "    ",
 01e32c22        "      // Override data parsing and manipulation of Hidden 2 here:",
 01e32c22        "      // ",
-01e32c22        "      input.value = this.request.session.uid;",
 01e32c22        "      ",
 01e32c22        "      \"",
-01e32c22        "    style=\"-fsb-code-lock: 1\">",
+01e32c22        "    style=\"-fsb-code-lock: 1\"",
+01e32c22        "    internal-fsb-data-value-source=\"session\"",
+01e32c22        "    internal-fsb-data-session-name=\"uid\">",
 01e32c22        "",
 01e32c22        "<input",
 01e32c22        "    type=\"hidden\"",

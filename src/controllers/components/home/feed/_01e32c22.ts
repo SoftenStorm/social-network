@@ -416,10 +416,10 @@ class Controller extends Base {
 		RequestHelper.registerInput('13c65096', "document", "Post", "uid");
 		ValidationHelper.registerInput('13c65096', "[post] uid", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '13c65096')) {
+      if (input) input.value = request.session['uid'];
     
       // Override data parsing and manipulation of Hidden 2 here:
       // 
-      input.value = this.request.session.uid;
       
       if (input != null) data.push(input);
     }
@@ -498,17 +498,16 @@ class Controller extends Base {
     
       // Override data parsing and manipulation of Hidden 2 here:
       // 
-      input.value = null;
       
       if (input != null) data.push(input);
     }
 		RequestHelper.registerInput('063e86b6', "document", "Comment", "uid");
 		ValidationHelper.registerInput('063e86b6', "[comment] uid", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '063e86b6')) {
+      if (input) input.value = request.session['uid'];
     
       // Override data parsing and manipulation of Hidden 2 here:
       // 
-      input.value = this.request.session.uid;
       
       if (input != null) data.push(input);
     }
@@ -605,17 +604,16 @@ class Controller extends Base {
     
       // Override data parsing and manipulation of Hidden 2 here:
       // 
-      input.value = null;
       
       if (input != null) data.push(input);
     }
 		RequestHelper.registerInput('bc8dc2a4', "document", "Reply", "uid");
 		ValidationHelper.registerInput('bc8dc2a4', "[reply] uid", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, 'bc8dc2a4')) {
+      if (input) input.value = request.session['uid'];
     
       // Override data parsing and manipulation of Hidden 2 here:
       // 
-      input.value = this.request.session.uid;
       
       if (input != null) data.push(input);
     }
