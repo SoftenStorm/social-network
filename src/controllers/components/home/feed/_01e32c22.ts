@@ -387,13 +387,13 @@ class Controller extends Base {
   	
 	  // <---Auto[MergingBegin]
 	  // Auto[Merging]--->
-    RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] create"});
+    RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","ea9b0569"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] create"});
     RequestHelper.registerSubmit("01e32c22", "281067ca", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] delete"});
-    RequestHelper.registerSubmit("01e32c22", "cc4b29ed", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] delete"});
-    RequestHelper.registerSubmit("01e32c22", "dc261964", "insert", ["063e86b6","0e6227b3","26652008","6c7eaab2","92426ec9","bec0942b","c43cb8c4"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] create"});
+    RequestHelper.registerSubmit("01e32c22", "cc4b29ed", "upsert", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] fond"});
+    RequestHelper.registerSubmit("01e32c22", "dc261964", "insert", ["063e86b6","0a824160","0e6227b3","26652008","6c7eaab2","92426ec9","b5b68759","bec0942b","c43cb8c4"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] create"});
     RequestHelper.registerSubmit("01e32c22", "5d65c9a9", "delete", ["53b67855"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] delete"});
     RequestHelper.registerSubmit("01e32c22", "47ebd056", "delete", ["924b8199"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] delete"});
-    RequestHelper.registerSubmit("01e32c22", "e0e69546", "insert", [], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] create"});
+    RequestHelper.registerSubmit("01e32c22", "e0e69546", "insert", ["25ac372b","302e6b73","56a26b1d","87379be8","bc8dc2a4","ccd6346a","e976813d","ec906022"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] create"});
 		RequestHelper.registerInput('53063929', "document", "Post", "message");
 		ValidationHelper.registerInput('53063929', "[post] message", true, "คุณลืมเขียนข้อความ", undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '53063929')) {
@@ -426,6 +426,16 @@ class Controller extends Base {
 		RequestHelper.registerInput('4d487443', "document", "@!Post.User", "id");
 		ValidationHelper.registerInput('4d487443', "[post] User.id", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '4d487443')) {
+    
+      // Override data parsing and manipulation of Hidden 2 here:
+      // 
+      input.value = null;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('ea9b0569', "document", "@!Post.Comment", "pid");
+		ValidationHelper.registerInput('ea9b0569', "[post] Comment.pid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'ea9b0569')) {
     
       // Override data parsing and manipulation of Hidden 2 here:
       // 
@@ -482,6 +492,16 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
+		RequestHelper.registerInput('b5b68759', "document", "Comment", "pid");
+		ValidationHelper.registerInput('b5b68759', "[comment] pid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'b5b68759')) {
+    
+      // Override data parsing and manipulation of Hidden 2 here:
+      // 
+      input.value = null;
+      
+      if (input != null) data.push(input);
+    }
 		RequestHelper.registerInput('063e86b6', "document", "Comment", "uid");
 		ValidationHelper.registerInput('063e86b6', "[comment] uid", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '063e86b6')) {
@@ -495,6 +515,16 @@ class Controller extends Base {
 		RequestHelper.registerInput('26652008', "document", "@!Comment.User", "id");
 		ValidationHelper.registerInput('26652008', "[comment] User.id", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '26652008')) {
+    
+      // Override data parsing and manipulation of Hidden 2 here:
+      // 
+      input.value = null;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('0a824160', "document", "@!Comment.Reply", "cid");
+		ValidationHelper.registerInput('0a824160', "[comment] Reply.pid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '0a824160')) {
     
       // Override data parsing and manipulation of Hidden 2 here:
       // 
@@ -562,6 +592,16 @@ class Controller extends Base {
 		RequestHelper.registerInput('25ac372b', "document", "Reply", "id");
 		ValidationHelper.registerInput('25ac372b', "[reply] id", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '25ac372b')) {
+    
+      // Override data parsing and manipulation of Hidden 2 here:
+      // 
+      input.value = null;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('e976813d', "document", "Reply", "cid");
+		ValidationHelper.registerInput('e976813d', "[reply] cid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'e976813d')) {
     
       // Override data parsing and manipulation of Hidden 2 here:
       // 

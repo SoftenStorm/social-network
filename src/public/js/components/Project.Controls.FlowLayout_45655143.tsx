@@ -96,13 +96,13 @@ class FlowLayout_45655143 extends Base {
     TestHelper.identify();
     function ready(a){"loading"!=document.readyState?a(new Event('ready')):document.addEventListener?document.addEventListener("DOMContentLoaded",a):(document.onreadystatechange=function(e){"complete"==document.readyState&&a(e)})};
         
-    DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
+    DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","ea9b0569"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
     DataManipulationHelper.register("281067ca", "delete", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
-    DataManipulationHelper.register("cc4b29ed", "delete", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
-    DataManipulationHelper.register("dc261964", "insert", ["063e86b6","0e6227b3","26652008","6c7eaab2","92426ec9","bec0942b","c43cb8c4"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post[\" + (i) + \"].Comment\""); }});
+    DataManipulationHelper.register("cc4b29ed", "upsert", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
+    DataManipulationHelper.register("dc261964", "insert", ["063e86b6","0a824160","0e6227b3","26652008","6c7eaab2","92426ec9","b5b68759","bec0942b","c43cb8c4"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post[\" + (i) + \"].Comment\""); }});
     DataManipulationHelper.register("5d65c9a9", "delete", ["53b67855"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
     DataManipulationHelper.register("47ebd056", "delete", ["924b8199"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post[\" + (i) + \"].Comment[\" + (j) + \"].Reply\""); }});
-    DataManipulationHelper.register("e0e69546", "insert", [], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post[\" + (i) + \"].Comment[\" + (i) + \"].Reply\""); }});
+    DataManipulationHelper.register("e0e69546", "insert", ["25ac372b","302e6b73","56a26b1d","87379be8","bc8dc2a4","ccd6346a","e976813d","ec906022"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post[\" + (i) + \"].Comment[\" + (i) + \"].Reply\""); }});
   }
   // <---Auto[ClassBegin]
   
@@ -260,6 +260,7 @@ class FlowLayout_45655143 extends Base {
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="18091a36")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="13c65096")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="4d487443")
+              input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="ea9b0569")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="5a318376")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="382a7358")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="03168663")
@@ -295,8 +296,10 @@ class FlowLayout_45655143 extends Base {
                             | จำนวนผู้ที่ชื่นชอบ #{this.getTotalAction(0, i)}
                       .-fsb-preset-bb841183.internal-fsb-element.internal-fsb-strict-layout(style={'FsbInheritedPresets': 'bb841183', 'paddingLeft': '15px', 'paddingRight': '15px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ed431ea8")
                         input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="bec0942b")
+                        input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="b5b68759")
                         input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="063e86b6")
                         input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="26652008")
+                        input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="0a824160")
                         input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="0e6227b3")
                         input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="c43cb8c4")
                         input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="92426ec9")
@@ -305,7 +308,7 @@ class FlowLayout_45655143 extends Base {
                         Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="reply", onClick=((event) => { window.internalFsbSubmit('dc261964', 'Comment', event, ((results) => { this.manipulate('dc261964', 'Comment', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="dc261964")
                           .internal-fsb-element(internal-fsb-guid="d68bb295")
                             | Submit
-                      if this.hasAnyReply(i)
+                      if !this.hasAnyReply(i)
                         .-fsb-self-bb841183.internal-fsb-element.internal-fsb-strict-layout.reply.v1(internal-fsb-class="FlowLayout", internal-fsb-guid="bb841183")
                           .col-12.internal-fsb-element(style={'fontSize': '13px', 'textAlign': 'center'}, internal-fsb-guid="c312e749")
                             | ตอนนี้ยังไม่มีความเห็นใดๆ
@@ -336,6 +339,7 @@ class FlowLayout_45655143 extends Base {
                                         | ลบ
                             .-fsb-preset-442b18b5.col-11.internal-fsb-element.internal-fsb-strict-layout.offset-1(style={'FsbInheritedPresets': '442b18b5', 'WebkitBorderRadius': '3px 3px 3px 3px', 'background': 'rgba(255, 255, 255, 1)', 'borderBottomColor': 'rgba(212, 212, 212, 1)', 'borderBottomStyle': 'solid', 'borderBottomWidth': '1px', 'borderLeftColor': 'rgba(212, 212, 212, 1)', 'borderLeftStyle': 'solid', 'borderLeftWidth': '1px', 'borderRadius': '3px 3px 3px 3px', 'borderRightColor': 'rgba(212, 212, 212, 1)', 'borderRightStyle': 'solid', 'borderRightWidth': '1px', 'borderTopColor': 'rgba(212, 212, 212, 1)', 'borderTopStyle': 'solid', 'borderTopWidth': '1px', 'paddingBottom': '0px', 'paddingLeft': '0px', 'paddingRight': '0px', 'paddingTop': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="004b6895")
                               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="25ac372b")
+                              input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].id"), internal-fsb-guid="e976813d")
                               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="bc8dc2a4")
                               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="302e6b73")
                               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="ccd6346a")
@@ -343,7 +347,7 @@ class FlowLayout_45655143 extends Base {
                               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="ec906022")
                               .col-12.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="87379be8")
                                 input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'borderBottomStyle': 'none', 'borderLeftStyle': 'none', 'borderRightStyle': 'none', 'borderTopStyle': 'none', 'display': 'block', 'width': '100%'}, onKeyPress=this.onTextboxKeyPress_87379be8.bind(this), placeholder="คุณมีความเห็นอย่างไร?", required=true, type="text")
-                              Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="reply", onClick=((event) => { window.internalFsbSubmit('e0e69546', 'Post', event, ((results) => { this.manipulate('e0e69546', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="e0e69546")
+                              Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="reply", onClick=((event) => { window.internalFsbSubmit('e0e69546', 'Reply', event, ((results) => { this.manipulate('e0e69546', 'Reply', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="e0e69546")
                                 .internal-fsb-element(internal-fsb-guid="97b6cd15")
                                   | Submit
     `
