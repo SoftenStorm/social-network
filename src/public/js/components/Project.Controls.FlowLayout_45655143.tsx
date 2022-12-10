@@ -98,7 +98,7 @@ class FlowLayout_45655143 extends Base {
         
     DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","ea9b0569"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
     DataManipulationHelper.register("281067ca", "delete", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
-    DataManipulationHelper.register("cc4b29ed", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
+    DataManipulationHelper.register("cc4b29ed", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("dc261964", "insert", ["063e86b6","0a824160","0e6227b3","26652008","6c7eaab2","92426ec9","b5b68759","bec0942b","c43cb8c4"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("5d65c9a9", "delete", ["53b67855"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
     DataManipulationHelper.register("47ebd056", "delete", ["924b8199"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post[\" + (i) + \"].Comment[\" + (j) + \"].Reply\""); }});
