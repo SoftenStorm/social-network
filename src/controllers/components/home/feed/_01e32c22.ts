@@ -389,7 +389,7 @@ class Controller extends Base {
 	  // Auto[Merging]--->
     RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","ea9b0569"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] create"});
     RequestHelper.registerSubmit("01e32c22", "281067ca", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] delete"});
-    RequestHelper.registerSubmit("01e32c22", "cc4b29ed", "upsert", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] fond"});
+    RequestHelper.registerSubmit("01e32c22", "cc4b29ed", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[action] fond"});
     RequestHelper.registerSubmit("01e32c22", "dc261964", "insert", ["063e86b6","0a824160","0e6227b3","26652008","6c7eaab2","92426ec9","b5b68759","bec0942b","c43cb8c4"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] create"});
     RequestHelper.registerSubmit("01e32c22", "5d65c9a9", "delete", ["53b67855"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] delete"});
     RequestHelper.registerSubmit("01e32c22", "47ebd056", "delete", ["924b8199"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] delete"});
@@ -479,6 +479,44 @@ class Controller extends Base {
     
       // Override data parsing and manipulation of [post] id here:
       // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('01e05bb0', "document", "Action", "uid");
+		ValidationHelper.registerInput('01e05bb0', "[action] uid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '01e05bb0')) {
+      if (input) input.value = request.session['uid'];
+    
+      // Override data parsing and manipulation of [action] uid here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('b32deb04', "document", "Action", "pid");
+		ValidationHelper.registerInput('b32deb04', "[action] pid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'b32deb04')) {
+    
+      // Override data parsing and manipulation of [action] pid here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('82728a83', "document", "Action", "type");
+		ValidationHelper.registerInput('82728a83', "[action] type", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '82728a83')) {
+    
+      // Override data parsing and manipulation of [action] type here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('96cba469', "document", "Action", "createdAt");
+		ValidationHelper.registerInput('96cba469', "[action] createdAt", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '96cba469')) {
+    
+      // Override data parsing and manipulation of [action] createdAt here:
+      // 
+      input.value = new Date();
       
       if (input != null) data.push(input);
     }

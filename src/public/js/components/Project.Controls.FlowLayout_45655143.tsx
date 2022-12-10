@@ -98,7 +98,7 @@ class FlowLayout_45655143 extends Base {
         
     DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","ea9b0569"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
     DataManipulationHelper.register("281067ca", "delete", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
-    DataManipulationHelper.register("cc4b29ed", "upsert", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
+    DataManipulationHelper.register("cc4b29ed", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
     DataManipulationHelper.register("dc261964", "insert", ["063e86b6","0a824160","0e6227b3","26652008","6c7eaab2","92426ec9","b5b68759","bec0942b","c43cb8c4"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post[\" + (i) + \"].Comment\""); }});
     DataManipulationHelper.register("5d65c9a9", "delete", ["53b67855"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
     DataManipulationHelper.register("47ebd056", "delete", ["924b8199"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post[\" + (i) + \"].Comment[\" + (j) + \"].Reply\""); }});
@@ -304,7 +304,11 @@ class FlowLayout_45655143 extends Base {
                               .-fsb-self-281067ca-text.internal-fsb-element(style={'FsbReusableId': '281067ca-text', 'FsbReusableName': '', 'borderBottomColor': 'rgba(212, 212, 212, 1)', 'borderBottomStyle': 'none', 'borderLeftColor': 'rgba(212, 212, 212, 1)', 'borderLeftStyle': 'none', 'borderRightColor': 'rgba(212, 212, 212, 1)', 'borderRightStyle': 'none', 'borderTopColor': 'rgba(212, 212, 212, 1)', 'borderTopStyle': 'none'}, internal-fsb-guid="281067ca-text")
                                 | ลบ
                         .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="64d4b2bb")
-                          Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexShrink': '1', 'flexShrink': '1', 'fontSize': '13px', 'marginLeft': '15px', 'paddingLeft': '10px', 'paddingRight': '10px', 'whiteSpace': 'nowrap'}, onClick=((event) => { window.internalFsbSubmit('cc4b29ed', 'Post', event, ((results) => { this.manipulate('cc4b29ed', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="cc4b29ed")
+                          input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="01e05bb0")
+                          input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="b32deb04")
+                          input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value="1", internal-fsb-guid="82728a83")
+                          input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="96cba469")
+                          Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexShrink': '1', 'flexShrink': '1', 'fontSize': '13px', 'marginLeft': '15px', 'paddingLeft': '10px', 'paddingRight': '10px', 'whiteSpace': 'nowrap'}, onClick=((event) => { window.internalFsbSubmit('cc4b29ed', 'Action', event, ((results) => { this.manipulate('cc4b29ed', 'Action', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="cc4b29ed")
                             .internal-fsb-element(style={'display': 'inline-block', color: (()=>{return (this.hasFondOf(i)) ? '#005eff' : undefined;})()}, internal-fsb-guid="38be6125")
                               | ชื่นชอบ
                             if this.hasFondOf(i)
