@@ -1353,9 +1353,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "850be82348d89b1a3a327f88a0305144b0ff02a1#1746591769",
+  "footerBlobSHA": "6f1c9cbf8477913363db8c4e9da114c94a7ad924#602604449",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "f8e4ce9fb19a03622a55f9bc76a41c57d6129dfe#-2081319533",
+    "Project.Controls.FlowLayout_45655143": "257c0a4474a08bbc7d054842c199b3697a100483#-1952591226",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
     "Project.Controls.FlowLayout_81bde3d0": "5febba5123fcb826dfafb426bef65ed0e88534d0#6264584"
   },
@@ -2200,7 +2200,11 @@ b1b17b71          }
 01e32c22        "    internal-fsb-data-controls=\"01e05bb0 82728a83 96cba469 b32deb04\"",
 01e32c22        "    internal-fsb-data-wizard-type=\"upsert\"",
 01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"\"",
-01e32c22        "    internal-fsb-react-display-statement=\"\">",
+01e32c22        "    internal-fsb-react-display-statement=\"\"",
+01e32c22        "    internal-fsb-react-style-border-top-color=\"CODE[return (this.hasFondOf(i)) ? '#005eff' : undefined;]\"",
+01e32c22        "    internal-fsb-react-style-border-right-color=\"CODE[return (this.hasFondOf(i)) ? '#005eff' : undefined;]\"",
+01e32c22        "    internal-fsb-react-style-border-bottom-color=\"CODE[return (this.hasFondOf(i)) ? '#005eff' : undefined;]\"",
+01e32c22        "    internal-fsb-react-style-border-left-color=\"CODE[return (this.hasFondOf(i)) ? '#005eff' : undefined;]\">",
 01e32c22        "<div",
 01e32c22        "    contenteditable=\"true\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
