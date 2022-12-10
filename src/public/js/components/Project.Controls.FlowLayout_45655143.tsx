@@ -204,6 +204,23 @@ class FlowLayout_45655143 extends Base {
     
   }
 
+  protected onButtonSuccess_66766b99(event: CustomEvent) {
+
+    // Handle the event of onButtonSuccess ([post] create) here:
+    // 
+    // const params = event.detail.params;                  /* manipulation parameters */
+    // const response = event.detail.response;              /* manipulation response */
+    // const target = EventHelper.getCurrentElement(event); /* current invoking element */
+    // const element1 = HTMLHelper.getElementById('ID');    /* accessing an element */
+    // const control1 = ReactDOM.findDOMNode(this.refs.ID); /* accessing a component */
+    // 
+    // return EventHelper.cancel(event);                    /* cancelling this manipulation */
+    // 
+    const control1 = ReactDOM.findDOMNode(this.refs.message);
+    control1.value = '';
+    
+  }
+
   protected onTextboxKeyPress_6c7eaab2(event: Event) {
 
     // Handle the event of onTextboxKeyPress (firstname) here:
@@ -256,7 +273,7 @@ class FlowLayout_45655143 extends Base {
           .col-9.internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '30px', 'paddingRight': '30px', 'paddingTop': '15px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="c6060bb4")
             .internal-fsb-element.internal-fsb-strict-layout(style={'marginBottom': '15px', 'paddingLeft': '0px', 'paddingRight': '0px', 'position': 'sticky', 'top': '0px', 'zIndex': '1000'}, internal-fsb-class="FlowLayout", internal-fsb-guid="3ae1734a")
               .col-12.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="53063929")
-                textarea.form-control.form-control-sm(style={'FsbCodeLock': '1', 'WebkitBorderRadius': '3px 3px 3px 3px', 'borderRadius': '3px 3px 3px 3px', 'display': 'block', 'width': '100%'}, onKeyPress=this.onTextboxKeyPress_53063929.bind(this), placeholder="คุณต้องการบอกอะไรกับชาวโลก?", required=true, rows="2", type="text")
+                textarea.form-control.form-control-sm(style={'FsbCodeLock': '1', 'WebkitBorderRadius': '3px 3px 3px 3px', 'borderRadius': '3px 3px 3px 3px', 'display': 'block', 'width': '100%'}, ref="message", onKeyPress=this.onTextboxKeyPress_53063929.bind(this), placeholder="คุณต้องการบอกอะไรกับชาวโลก?", required=true, rows="2", type="text")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="18091a36")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="13c65096")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="4d487443")
@@ -264,7 +281,7 @@ class FlowLayout_45655143 extends Base {
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="5a318376")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="382a7358")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="03168663")
-              Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="post", onClick=((event) => { window.internalFsbSubmit('66766b99', 'Post', event, ((results) => { this.manipulate('66766b99', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="66766b99")
+              Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="post", onClick=((event) => { window.internalFsbSubmit('66766b99', 'Post', event, ((results) => { this.manipulate('66766b99', 'Post', results); }).bind(this)); }).bind(this), type="button", onSuccess=this.onButtonSuccess_66766b99.bind(this), internal-fsb-guid="66766b99")
                 .internal-fsb-element(internal-fsb-guid="66766b99-text")
                   | Submit
             .internal-fsb-element.internal-fsb-strict-layout(style={'MsFlexDirection': 'row-reverse', 'WebkitFlexDirection': 'row-reverse', 'flexDirection': 'row-reverse', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ac036c3a")
