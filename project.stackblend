@@ -1353,9 +1353,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "7d97b0eb64e3588307910975d2b6915242dab32b#-1529735099",
+  "footerBlobSHA": "850be82348d89b1a3a327f88a0305144b0ff02a1#1746591769",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "74530151df312422fffe793da732b8c635e91e1a#-1327567047",
+    "Project.Controls.FlowLayout_45655143": "f8e4ce9fb19a03622a55f9bc76a41c57d6129dfe#-2081319533",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
     "Project.Controls.FlowLayout_81bde3d0": "5febba5123fcb826dfafb426bef65ed0e88534d0#6264584"
   },
@@ -2478,9 +2478,7 @@ b1b17b71          }
 01e32c22        "    // return EventHelper.cancel(event);                    /* cancelling this manipulation */",
 01e32c22        "    // ",
 01e32c22        "    const element = document.getElementById('comment-box-pid-' + this.state.currentCommentBoxPID);",
-01e32c22        "    if (element) {",
-01e32c22        "      (element.firstElementChild as any).value = '';",
-01e32c22        "    }",
+01e32c22        "    (element as any).value = '';",
 01e32c22        "    ",
 01e32c22        "    \">",
 01e32c22        "<div",
@@ -2885,9 +2883,7 @@ b1b17b71          }
 01e32c22        "    // return EventHelper.cancel(event);                    /* cancelling this manipulation */",
 01e32c22        "    // ",
 01e32c22        "    const element = document.getElementById('reply-box-cid-' + this.state.currentReplyBoxCID);",
-01e32c22        "    if (element) {",
-01e32c22        "      (element.firstElementChild as any).value = '';",
-01e32c22        "    }",
+01e32c22        "    (element as any).value = '';",
 01e32c22        "    ",
 01e32c22        "    \">",
 01e32c22        "<div",

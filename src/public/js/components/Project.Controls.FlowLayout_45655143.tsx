@@ -259,9 +259,7 @@ class FlowLayout_45655143 extends Base {
     // return EventHelper.cancel(event);                    /* cancelling this manipulation */
     // 
     const element = document.getElementById('comment-box-pid-' + this.state.currentCommentBoxPID);
-    if (element) {
-      (element.firstElementChild as any).value = '';
-    }
+    (element as any).value = '';
     
   }
 
@@ -300,9 +298,7 @@ class FlowLayout_45655143 extends Base {
     // return EventHelper.cancel(event);                    /* cancelling this manipulation */
     // 
     const element = document.getElementById('reply-box-cid-' + this.state.currentReplyBoxCID);
-    if (element) {
-      (element.firstElementChild as any).value = '';
-    }
+    (element as any).value = '';
     
   }
   // <---Auto[Merging]
