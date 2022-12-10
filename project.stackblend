@@ -1344,9 +1344,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "fd4c614f719ff8b380d472df45915d90b8baf65a#-829669000",
+  "footerBlobSHA": "7868cb7d5c78bb5de5fb9e004ef77ab135420e7d#-2095223123",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "c8b087c1e5636cc70d80037f91b408209b3231bd#-2019794669",
+    "Project.Controls.FlowLayout_45655143": "44ceb95de81badb397cdd9a6b77da52dfc97545c#1521727048",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
     "Project.Controls.FlowLayout_81bde3d0": "5febba5123fcb826dfafb426bef65ed0e88534d0#6264584"
   },
@@ -1703,7 +1703,7 @@ b1b17b71          }
 01e32c22        "  }",
 01e32c22        "  ",
 01e32c22        "  private hasAnyReply(i: number): boolean {",
-01e32c22        "    return this.getDataFromNotation('Post[' + i + '].Reply', true).length != 0;",
+01e32c22        "    return this.getDataFromNotation('Post[' + i + '].Comment', true).length != 0;",
 01e32c22        "  }",
 01e32c22        "  ",
 01e32c22        "  private hasFondOf(i: number): boolean {",

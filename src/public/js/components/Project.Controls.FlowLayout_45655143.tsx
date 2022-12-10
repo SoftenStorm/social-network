@@ -172,7 +172,7 @@ class FlowLayout_45655143 extends Base {
   }
   
   private hasAnyReply(i: number): boolean {
-    return this.getDataFromNotation('Post[' + i + '].Reply', true).length != 0;
+    return this.getDataFromNotation('Post[' + i + '].Comment', true).length != 0;
   }
   
   private hasFondOf(i: number): boolean {
