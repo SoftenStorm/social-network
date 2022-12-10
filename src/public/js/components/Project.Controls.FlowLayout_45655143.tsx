@@ -97,6 +97,7 @@ class FlowLayout_45655143 extends Base {
     function ready(a){"loading"!=document.readyState?a(new Event('ready')):document.addEventListener?document.addEventListener("DOMContentLoaded",a):(document.onreadystatechange=function(e){"complete"==document.readyState&&a(e)})};
         
     DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
+    DataManipulationHelper.register("281067ca", "delete", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return eval("\"Post\""); }});
   }
   // <---Auto[ClassBegin]
   
@@ -214,8 +215,13 @@ class FlowLayout_45655143 extends Base {
                       img(style={'display': 'none'}, internalFsbRatioExpand="true", src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC")
                   .internal-fsb-element.internal-fsb-stretch.internal-fsb-strict-layout(style={'WebkitAlignContent': 'space-between', 'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'alignContent': 'space-between', 'flexBasis': '0px', 'flexGrow': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="247b6c15")
                     .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingLeft': '15px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].message")))}, internal-fsb-guid="62369e5c")
-                    .col-12.internal-fsb-element(style={'fontSize': '13px', 'paddingRight': '0px', 'textAlign': 'right'}, internal-fsb-guid="29674a6c")
-                      | #{this.getDataFromNotation("Post[" + i + "].User.firstname")}
+                    .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="887e3d09")
+                      .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'paddingLeft': '15px', 'paddingRight': '0px'}, internal-fsb-guid="29674a6c")
+                        | #{this.getDataFromNotation("Post[" + i + "].User.firstname")}
+                      input.col-12.internal-fsb-element(type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="5469cbc2")
+                      Button.btn.btn-sm.internal-fsb-element(style={'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px', 'paddingBottom': '0px', 'paddingLeft': '0px', 'paddingRight': '0px', 'paddingTop': '0px'}, onClick=((event) => { window.internalFsbSubmit('281067ca', 'Post', event, ((results) => { this.manipulate('281067ca', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="281067ca")
+                        .internal-fsb-element(internal-fsb-guid="281067ca-text")
+                          | ลบ
     `
   }
 }

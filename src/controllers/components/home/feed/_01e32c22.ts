@@ -371,6 +371,7 @@ class Controller extends Base {
 	  // <---Auto[MergingBegin]
 	  // Auto[Merging]--->
     RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "Button 2"});
+    RequestHelper.registerSubmit("01e32c22", "281067ca", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "Button 1"});
 		RequestHelper.registerInput('53063929', "document", "Post", "message");
 		ValidationHelper.registerInput('53063929', "message", true, "คุณลืมเขียนข้อความ", undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '53063929')) {
@@ -437,6 +438,15 @@ class Controller extends Base {
       // Override data parsing and manipulation of active here:
       // 
       input.value = true;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('5469cbc2', "document", "Post", "id");
+		ValidationHelper.registerInput('5469cbc2', "id", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '5469cbc2')) {
+    
+      // Override data parsing and manipulation of id here:
+      // 
       
       if (input != null) data.push(input);
     }

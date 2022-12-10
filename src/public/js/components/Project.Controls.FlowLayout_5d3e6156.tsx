@@ -162,13 +162,28 @@ class FlowLayout_5d3e6156 extends Base {
   }
   
   // Auto[Merging]--->
+  protected onButtonSuccess_759b7c95(event: CustomEvent) {
+
+    // Handle the event of onButtonSuccess (begin) here:
+    // 
+    // const params = event.detail.params;                  /* manipulation parameters */
+    // const response = event.detail.response;              /* manipulation response */
+    // const target = EventHelper.getCurrentElement(event); /* current invoking element */
+    // const element1 = HTMLHelper.getElementById('ID');    /* accessing an element */
+    // const control1 = ReactDOM.findDOMNode(this.refs.ID); /* accessing a component */
+    // 
+    // return EventHelper.cancel(event);                    /* cancelling this manipulation */
+    // 
+    window.location = '/home/feed';
+    
+  }
   // <---Auto[Merging]
   
   // Auto[ClassEnd]--->
   protected render(): any {
     TestHelper.identify();
     return pug `
-      div(style=Object.assign({'marginTop': '100px', 'paddingLeft': '0px', 'paddingRight': '0px'}, this.props.forward && this.props.forward.styles || {}), internal-fsb-class="FlowLayout", className="col-10 internal-fsb-element internal-fsb-strict-layout offset-1 " + (this.props.forward && this.props.forward.classes || ''), internal-fsb-guid="5d3e6156")
+      div(style=Object.assign({'marginBottom': '100px', 'marginTop': '100px', 'paddingLeft': '0px', 'paddingRight': '0px'}, this.props.forward && this.props.forward.styles || {}), internal-fsb-class="FlowLayout", className="col-10 internal-fsb-element internal-fsb-strict-layout offset-1 " + (this.props.forward && this.props.forward.classes || ''), internal-fsb-guid="5d3e6156")
         .col-12.internal-fsb-element(style={'color': 'rgba(0, 43, 255, 1)', 'fontSize': '24px', 'marginBottom': '10px', 'marginTop': '10px', 'textAlign': 'center'}, internal-fsb-guid="8b875b88")
           | Social Quote
         .col-12.internal-fsb-element(style={'marginBottom': '30px', 'textAlign': 'left'}, internal-fsb-guid="5756d266")
@@ -209,7 +224,7 @@ class FlowLayout_5d3e6156 extends Base {
                   | มีเพียงชื่อที่จะนำไปแสดงในพื้นที่สาธารณะ
         input.col-12.internal-fsb-element(type="hidden", internal-fsb-guid="bd54e2da")
         if !this.state.isLoggingIn
-          Button.btn.btn-primary.btn-sm.col-6.internal-fsb-element.offset-3(style={'FsbCodeLock': '1', 'marginBottom': '10px', 'marginTop': '5px'}, onClick=((event) => { window.internalFsbSubmit('759b7c95', 'User', event, ((results) => { this.manipulate('759b7c95', 'User', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="759b7c95")
+          Button.btn.btn-primary.btn-sm.col-6.internal-fsb-element.offset-3(style={'FsbCodeLock': '1', 'marginBottom': '10px', 'marginTop': '5px'}, onClick=((event) => { window.internalFsbSubmit('759b7c95', 'User', event, ((results) => { this.manipulate('759b7c95', 'User', results); }).bind(this)); }).bind(this), type="button", onSuccess=this.onButtonSuccess_759b7c95.bind(this), internal-fsb-guid="759b7c95")
             .internal-fsb-element(internal-fsb-guid="09992e70")
               | เริ่มใช้งาน
     `
