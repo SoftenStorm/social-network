@@ -175,6 +175,11 @@ class FlowLayout_45655143 extends Base {
     return this.getDataFromNotation('Post[' + i + '].Reply', true).length != 0;
   }
   
+  private hasFondOf(i: number): boolean {
+    const uid = this.getDataFromNotation('Info.uid');
+    return this.getDataFromNotation('Post[' + i + '].Action', true).filter(row => row.columns['uid'] == uid).length != 0;
+  }
+  
   private getTotalAction(type: number, i: number): boolean {
     return this.getDataFromNotation('Post[' + i + '].Action', true).filter(row => row.columns['type'] == type).length;
   }
@@ -281,10 +286,11 @@ class FlowLayout_45655143 extends Base {
                               .-fsb-self-281067ca-text.internal-fsb-element(style={'FsbReusableId': '281067ca-text', 'FsbReusableName': '', 'borderBottomColor': 'rgba(212, 212, 212, 1)', 'borderBottomStyle': 'none', 'borderLeftColor': 'rgba(212, 212, 212, 1)', 'borderLeftStyle': 'none', 'borderRightColor': 'rgba(212, 212, 212, 1)', 'borderRightStyle': 'none', 'borderTopColor': 'rgba(212, 212, 212, 1)', 'borderTopStyle': 'none'}, internal-fsb-guid="281067ca-text")
                                 | ลบ
                         .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="64d4b2bb")
-                          if this.isUser(data.columns["uid"])
-                            Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px', 'marginLeft': '15px'}, onClick=((event) => { window.internalFsbSubmit('cc4b29ed', 'Post', event, ((results) => { this.manipulate('cc4b29ed', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="cc4b29ed")
-                              .internal-fsb-element(internal-fsb-guid="38be6125")
-                                | ชื่นชอบ
+                          Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexShrink': '1', 'flexShrink': '1', 'fontSize': '13px', 'marginLeft': '15px', 'paddingLeft': '10px', 'paddingRight': '10px', 'whiteSpace': 'nowrap'}, onClick=((event) => { window.internalFsbSubmit('cc4b29ed', 'Post', event, ((results) => { this.manipulate('cc4b29ed', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="cc4b29ed")
+                            .internal-fsb-element(style={'display': 'inline-block', color: (()=>{return (this.hasFondOf(i)) ? '#005eff' : undefined;})()}, internal-fsb-guid="38be6125")
+                              | ชื่นชอบ
+                            if this.hasFondOf(i)
+                              .internal-fsb-element(style={'color': 'rgba(0, 94, 255, 1)', 'display': 'inline-block', 'marginLeft': '5px', 'position': 'relative', 'top': '-2px'}, dangerouslySetInnerHTML={__html: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-box2-heart-fill\" viewBox=\"0 0 16 16\">\n<path d=\"M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM8.5 4h6l.5.667V5H1v-.333L1.5 4h6V1h1v3ZM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z\"/>\n</svg>"}, internal-fsb-guid="c4e84172")
                           .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'lineHeight': '26px', 'paddingLeft': '8px', 'paddingRight': '0px'}, internal-fsb-guid="ac71a3c1")
                             | จำนวนผู้ที่ชื่นชอบ #{this.getTotalAction(0, i)}
                       .-fsb-preset-bb841183.internal-fsb-element.internal-fsb-strict-layout(style={'FsbInheritedPresets': 'bb841183', 'paddingLeft': '15px', 'paddingRight': '15px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ed431ea8")
