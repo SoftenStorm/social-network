@@ -236,7 +236,7 @@ class FlowLayout_45655143 extends Base {
     const target = EventHelper.getCurrentElement(event);
     
     if (keyboardEvent.which == 13) {
-      this.state.currentCommentBoxPID = target.getAttribute('data-pid');
+      this.state.currentCommentBoxPID = target.dataset.pid;
       
       const control1 = ReactDOM.findDOMNode(this.refs.reply);
       control1.click();
@@ -258,7 +258,7 @@ class FlowLayout_45655143 extends Base {
     // 
     // return EventHelper.cancel(event);                    /* cancelling this manipulation */
     // 
-    const element = HTMLHelper.getElementByAttributeNameAndValue('data-pid', this.state.currentCommentBoxPID);
+    const element = document.getElementById('comment-box-pid-' + this.state.currentCommentBoxPID);
     if (element) {
       element.firstElementChild.value = '';
     }
@@ -277,7 +277,7 @@ class FlowLayout_45655143 extends Base {
     const target = EventHelper.getCurrentElement(event);
     
     if (keyboardEvent.which == 13) {
-      this.state.currentReplyBoxCID = target.getAttribute('data-cid');
+      this.state.currentReplyBoxCID = target.dataset.cid;
       
       const control1 = ReactDOM.findDOMNode(this.refs.reply);
       control1.click();
@@ -299,7 +299,7 @@ class FlowLayout_45655143 extends Base {
     // 
     // return EventHelper.cancel(event);                    /* cancelling this manipulation */
     // 
-    const element = HTMLHelper.getElementByAttributeNameAndValue('data-cid', this.state.currentReplyBoxCID);
+    const element = document.getElementById('reply-box-cid-' + this.state.currentReplyBoxCID);
     if (element) {
       element.firstElementChild.value = '';
     }
@@ -372,7 +372,7 @@ class FlowLayout_45655143 extends Base {
                         input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="c43cb8c4")
                         input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="92426ec9")
                         .col-12.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="6c7eaab2")
-                          input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'WebkitBorderRadius': '3px 3px 3px 3px', 'borderRadius': '3px 3px 3px 3px', 'display': 'block', 'width': '100%'}, data-pid=data.keys['id'], onKeyPress=this.onTextboxKeyPress_6c7eaab2.bind(this), placeholder="คุณมีความเห็นอย่างไร?", required=true, type="text")
+                          input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'WebkitBorderRadius': '3px 3px 3px 3px', 'borderRadius': '3px 3px 3px 3px', 'display': 'block', 'width': '100%'}, data-pid=data.keys['id'], id='comment-box-pid-' + data.keys['id'], onKeyPress=this.onTextboxKeyPress_6c7eaab2.bind(this), placeholder="คุณมีความเห็นอย่างไร?", required=true, type="text")
                         Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="reply", onClick=((event) => { window.internalFsbSubmit('dc261964', 'Comment', event, ((results) => { this.manipulate('dc261964', 'Comment', results); }).bind(this)); }).bind(this), type="button", onSuccess=this.onButtonSuccess_dc261964.bind(this), internal-fsb-guid="dc261964")
                           .internal-fsb-element(internal-fsb-guid="d68bb295")
                             | Submit
@@ -414,7 +414,7 @@ class FlowLayout_45655143 extends Base {
                               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="56a26b1d")
                               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="ec906022")
                               .col-12.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="87379be8")
-                                input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'borderBottomStyle': 'none', 'borderLeftStyle': 'none', 'borderRightStyle': 'none', 'borderTopStyle': 'none', 'display': 'block', 'width': '100%'}, data-cid=data.keys['id'], onKeyPress=this.onTextboxKeyPress_87379be8.bind(this), placeholder="คุณมีความเห็นอย่างไร?", required=true, type="text")
+                                input.form-control.form-control-sm(style={'FsbCodeLock': '1', 'borderBottomStyle': 'none', 'borderLeftStyle': 'none', 'borderRightStyle': 'none', 'borderTopStyle': 'none', 'display': 'block', 'width': '100%'}, data-cid=data.keys['id'], id='reply-box-cid-' + data.keys['id'], onKeyPress=this.onTextboxKeyPress_87379be8.bind(this), placeholder="คุณมีความเห็นอย่างไร?", required=true, type="text")
                               Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="reply", onClick=((event) => { window.internalFsbSubmit('e0e69546', 'Reply', event, ((results) => { this.manipulate('e0e69546', 'Reply', results); }).bind(this)); }).bind(this), type="button", onSuccess=this.onButtonSuccess_e0e69546.bind(this), internal-fsb-guid="e0e69546")
                                 .internal-fsb-element(internal-fsb-guid="97b6cd15")
                                   | Submit
