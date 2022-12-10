@@ -608,7 +608,7 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('53b67855', "document", "Reply", "id");
+		RequestHelper.registerInput('53b67855', "document", "Comment", "id");
 		ValidationHelper.registerInput('53b67855', "[comment] id", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '53b67855')) {
     
