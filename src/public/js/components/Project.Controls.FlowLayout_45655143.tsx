@@ -284,7 +284,7 @@ class FlowLayout_45655143 extends Base {
               Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="post", onClick=((event) => { window.internalFsbSubmit('66766b99', 'Post', event, ((results) => { this.manipulate('66766b99', 'Post', results); }).bind(this)); }).bind(this), type="button", onSuccess=this.onButtonSuccess_66766b99.bind(this), internal-fsb-guid="66766b99")
                 .internal-fsb-element(internal-fsb-guid="66766b99-text")
                   | Submit
-            .internal-fsb-element.internal-fsb-strict-layout(style={'MsFlexDirection': 'row-reverse', 'WebkitFlexDirection': 'row-reverse', 'flexDirection': 'row-reverse', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ac036c3a")
+            .internal-fsb-element.internal-fsb-inverse.internal-fsb-strict-layout(style={'MsFlexDirection': 'column-reverse', 'WebkitFlexDirection': 'column-reverse', 'flexDirection': 'column-reverse', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ac036c3a")
               each data, i in this.getDataFromNotation("Post", true, false)
                 .internal-fsb-element.internal-fsb-strict-layout(style={'marginBottom': '20px', 'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || i), data-fsb-index=i, internal-fsb-class="FlowLayout", internal-fsb-guid="166e6ba0")
                   .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="0713c8ad")
