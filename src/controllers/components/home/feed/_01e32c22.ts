@@ -385,8 +385,10 @@ class Controller extends Base {
     RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] create"});
     RequestHelper.registerSubmit("01e32c22", "281067ca", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] delete"});
     RequestHelper.registerSubmit("01e32c22", "cc4b29ed", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] delete"});
-    RequestHelper.registerSubmit("01e32c22", "5d65c9a9", "delete", [], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] delete"});
-    RequestHelper.registerSubmit("01e32c22", "dc261964", "insert", [], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] create"});
+    RequestHelper.registerSubmit("01e32c22", "dc261964", "insert", ["063e86b6","0e6227b3","26652008","6c7eaab2","92426ec9","bec0942b","c43cb8c4"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] create"});
+    RequestHelper.registerSubmit("01e32c22", "5d65c9a9", "delete", ["53b67855"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] delete"});
+    RequestHelper.registerSubmit("01e32c22", "47ebd056", "delete", ["924b8199"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] delete"});
+    RequestHelper.registerSubmit("01e32c22", "e0e69546", "insert", [], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] create"});
 		RequestHelper.registerInput('53063929', "document", "Post", "message");
 		ValidationHelper.registerInput('53063929', "[post] message", true, "คุณลืมเขียนข้อความ", undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '53063929')) {
@@ -465,17 +467,8 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('53b67855', "document", "Reply", "id");
-		ValidationHelper.registerInput('53b67855', "[reply] id", false, undefined, undefined, null);
-    for (let input of RequestHelper.getInputs(this.pageId, request, '53b67855')) {
-    
-      // Override data parsing and manipulation of [reply] id here:
-      // 
-      
-      if (input != null) data.push(input);
-    }
-		RequestHelper.registerInput('bec0942b', "document", "Reply", "id");
-		ValidationHelper.registerInput('bec0942b', "[reply] id", false, undefined, undefined, null);
+		RequestHelper.registerInput('bec0942b', "document", "Comment", "id");
+		ValidationHelper.registerInput('bec0942b', "[comment] id", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, 'bec0942b')) {
     
       // Override data parsing and manipulation of Hidden 2 here:
@@ -484,8 +477,8 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('063e86b6', "document", "Reply", "uid");
-		ValidationHelper.registerInput('063e86b6', "[reply] uid", false, undefined, undefined, null);
+		RequestHelper.registerInput('063e86b6', "document", "Comment", "uid");
+		ValidationHelper.registerInput('063e86b6', "[comment] uid", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '063e86b6')) {
     
       // Override data parsing and manipulation of Hidden 2 here:
@@ -494,8 +487,8 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('26652008', "document", "@!Reply.User", "id");
-		ValidationHelper.registerInput('26652008', "[reply] User.id", false, undefined, undefined, null);
+		RequestHelper.registerInput('26652008', "document", "@!Comment.User", "id");
+		ValidationHelper.registerInput('26652008', "[comment] User.id", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '26652008')) {
     
       // Override data parsing and manipulation of Hidden 2 here:
@@ -504,8 +497,8 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('0e6227b3', "document", "Reply", "createdAt");
-		ValidationHelper.registerInput('0e6227b3', "[reply] createdAt", false, undefined, undefined, null);
+		RequestHelper.registerInput('0e6227b3', "document", "Comment", "createdAt");
+		ValidationHelper.registerInput('0e6227b3', "[comment] createdAt", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '0e6227b3')) {
     
       // Override data parsing and manipulation of createdAt here:
@@ -514,8 +507,8 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('c43cb8c4', "document", "Reply", "updatedAt");
-		ValidationHelper.registerInput('c43cb8c4', "[reply] updatedAt", false, undefined, undefined, null);
+		RequestHelper.registerInput('c43cb8c4', "document", "Comment", "updatedAt");
+		ValidationHelper.registerInput('c43cb8c4', "[comment] updatedAt", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, 'c43cb8c4')) {
     
       // Override data parsing and manipulation of updatedAt here:
@@ -524,8 +517,8 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('92426ec9', "document", "Reply", "active");
-		ValidationHelper.registerInput('92426ec9', "[reply] active", false, undefined, undefined, null);
+		RequestHelper.registerInput('92426ec9', "document", "Comment", "active");
+		ValidationHelper.registerInput('92426ec9', "[comment] active", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '92426ec9')) {
     
       // Override data parsing and manipulation of active here:
@@ -534,9 +527,96 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('6c7eaab2', "document", "Reply", "message");
-		ValidationHelper.registerInput('6c7eaab2', "[reply] message", true, "คุณลืมเขียนข้อความ", undefined, null);
+		RequestHelper.registerInput('6c7eaab2', "document", "Comment", "message");
+		ValidationHelper.registerInput('6c7eaab2', "[comment] message", true, "คุณลืมเขียนข้อความ", undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '6c7eaab2')) {
+    
+      // Override data parsing and manipulation of firstname here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('53b67855', "document", "Reply", "id");
+		ValidationHelper.registerInput('53b67855', "[comment] id", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '53b67855')) {
+    
+      // Override data parsing and manipulation of [comment] id here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('924b8199', "document", "Reply", "id");
+		ValidationHelper.registerInput('924b8199', "[reply] id", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '924b8199')) {
+    
+      // Override data parsing and manipulation of [reply] id here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('25ac372b', "document", "Reply", "id");
+		ValidationHelper.registerInput('25ac372b', "[reply] id", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '25ac372b')) {
+    
+      // Override data parsing and manipulation of Hidden 2 here:
+      // 
+      input.value = null;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('bc8dc2a4', "document", "Reply", "uid");
+		ValidationHelper.registerInput('bc8dc2a4', "[reply] uid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'bc8dc2a4')) {
+    
+      // Override data parsing and manipulation of Hidden 2 here:
+      // 
+      input.value = this.request.session.uid;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('302e6b73', "document", "@!Reply.User", "id");
+		ValidationHelper.registerInput('302e6b73', "[reply] User.id", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '302e6b73')) {
+    
+      // Override data parsing and manipulation of Hidden 2 here:
+      // 
+      input.value = null;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('ccd6346a', "document", "Reply", "createdAt");
+		ValidationHelper.registerInput('ccd6346a', "[reply] createdAt", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'ccd6346a')) {
+    
+      // Override data parsing and manipulation of createdAt here:
+      // 
+      input.value = new Date();
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('56a26b1d', "document", "Reply", "updatedAt");
+		ValidationHelper.registerInput('56a26b1d', "[reply] updatedAt", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '56a26b1d')) {
+    
+      // Override data parsing and manipulation of updatedAt here:
+      // 
+      input.value = new Date();
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('ec906022', "document", "Reply", "active");
+		ValidationHelper.registerInput('ec906022', "[reply] active", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'ec906022')) {
+    
+      // Override data parsing and manipulation of active here:
+      // 
+      input.value = true;
+      
+      if (input != null) data.push(input);
+    }
+		RequestHelper.registerInput('87379be8', "document", "Reply", "message");
+		ValidationHelper.registerInput('87379be8', "[reply] message", true, "คุณลืมเขียนข้อความ", undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '87379be8')) {
     
       // Override data parsing and manipulation of firstname here:
       // 
