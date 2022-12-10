@@ -1,7 +1,7 @@
 {
   "animations": {},
   "backEndControllerBlobSHADict": {
-    "01e32c22": "2548deb411e6892fb1fcd2d1ac29db050d18b23d#-1351474694",
+    "01e32c22": "91fc017ff14843ce99177463e3091c1a5049d8c4#-124779102",
     "b0a33736": "7230af51bc6900b93d04270c4f25c75a97b941dd#1042321121",
     "index": "a6e69148f54121109cabf6f585b3154b716b7b3d#1240875528"
   },
@@ -55,7 +55,7 @@
       "    internal-fsb-class=\"DocumentTable\"",
       "    style=\"left: 319px; top: 86px; width: 150px;\"",
       "    data-forward-option=\"single\"",
-      "    data-forwarding-table=\"Post\">",
+      "    data-forwarding-table=\"Post,Action,Reply\">",
       "<div",
       "    class=\"internal-fsb-dragging-handle internal-fsb-title\">User</div>",
       "<div",
@@ -131,13 +131,26 @@
       "    class=\"internal-fsb-title\">profileURL</div>",
       "</div>",
       "<div",
+      "    data-title-name=\"activeAt\"",
+      "    class=\"col-12 internal-fsb-element\"",
+      "    internal-fsb-guid=\"85c5c0e7\"",
+      "    internal-fsb-name=\"DocumentNotation 6\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-rendering-condition-mode=\"block\"",
+      "    data-field-type=\"datetime\">",
+      "<div",
+      "    class=\"internal-fsb-title\">activeAt</div>",
+      "</div>",
+      "<div",
       "    data-title-name=\"createdAt\"",
       "    class=\"col-12 internal-fsb-element\"",
       "    internal-fsb-guid=\"d419d902\"",
       "    internal-fsb-name=\"DocumentNotation 6\"",
       "    internal-fsb-event-no-propagate=\"1\"",
       "    internal-fsb-class=\"DocumentNotation\"",
-      "    data-rendering-condition-mode=\"block\">",
+      "    data-rendering-condition-mode=\"block\"",
+      "    data-field-type=\"datetime\">",
       "<div",
       "    class=\"internal-fsb-title\">createdAt</div>",
       "</div>",
@@ -148,7 +161,8 @@
       "    internal-fsb-name=\"DocumentNotation 7\"",
       "    internal-fsb-event-no-propagate=\"1\"",
       "    internal-fsb-class=\"DocumentNotation\"",
-      "    data-rendering-condition-mode=\"block\">",
+      "    data-rendering-condition-mode=\"block\"",
+      "    data-field-type=\"datetime\">",
       "<div",
       "    class=\"internal-fsb-title\">updatedAt</div>",
       "</div>",
@@ -221,7 +235,8 @@
       "    internal-fsb-guid=\"45a3551a\"",
       "    internal-fsb-name=\"DocumentNotation 6\"",
       "    internal-fsb-event-no-propagate=\"1\"",
-      "    internal-fsb-class=\"DocumentNotation\">",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-field-type=\"datetime\">",
       "<div",
       "    class=\"internal-fsb-title\">createdAt</div>",
       "</div>",
@@ -231,7 +246,8 @@
       "    internal-fsb-guid=\"165dd68d\"",
       "    internal-fsb-name=\"DocumentNotation 7\"",
       "    internal-fsb-event-no-propagate=\"1\"",
-      "    internal-fsb-class=\"DocumentNotation\">",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-field-type=\"datetime\">",
       "<div",
       "    class=\"internal-fsb-title\">updatedAt</div>",
       "</div>",
@@ -245,14 +261,14 @@
       "    internal-fsb-name=\"Connection 1\"",
       "    internal-fsb-event-no-propagate=\"1\"",
       "    internal-fsb-class=\"Connection\"",
-      "    style=\"left: 511px; top: 93px; width: 150px;\"",
+      "    style=\"left: 513px; top: 85px; width: 150px;\"",
       "    data-source-group-name=\"User\"",
       "    data-source-entity-name=\"id\"",
       "    data-target-group-name=\"Post\"",
       "    data-target-entity-name=\"uid\">",
       "</div>",
       "<div",
-      "    data-title-name=\"Reply\"",
+      "    data-title-name=\"Comment\"",
       "    class=\"internal-fsb-element\"",
       "    internal-fsb-guid=\"b4e8b657\"",
       "    internal-fsb-name=\"DocumentTable 1\"",
@@ -260,9 +276,10 @@
       "    internal-fsb-class=\"DocumentTable\"",
       "    style=\"left: 571px; top: 271px; width: 150px;\"",
       "    data-forward-option=\"multiple\"",
-      "    data-forwarding-table=\"Post\">",
+      "    data-forwarding-table=\"Post\"",
+      "    data-forward-recursive=\"true\">",
       "<div",
-      "    class=\"internal-fsb-dragging-handle internal-fsb-title\">Reply</div>",
+      "    class=\"internal-fsb-dragging-handle internal-fsb-title\">Comment</div>",
       "<div",
       "    class=\"container-fluid\"",
       "    internal-fsb-event-no-propagate=\"1\">",
@@ -332,7 +349,8 @@
       "    internal-fsb-guid=\"80424246\"",
       "    internal-fsb-name=\"DocumentNotation 6\"",
       "    internal-fsb-event-no-propagate=\"1\"",
-      "    internal-fsb-class=\"DocumentNotation\">",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-field-type=\"datetime\">",
       "<div",
       "    class=\"internal-fsb-title\">createdAt</div>",
       "</div>",
@@ -342,7 +360,109 @@
       "    internal-fsb-guid=\"09080630\"",
       "    internal-fsb-name=\"DocumentNotation 7\"",
       "    internal-fsb-event-no-propagate=\"1\"",
-      "    internal-fsb-class=\"DocumentNotation\">",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-field-type=\"datetime\">",
+      "<div",
+      "    class=\"internal-fsb-title\">updatedAt</div>",
+      "</div>",
+      "</div>",
+      "</div>",
+      "</div>",
+      "<div",
+      "    data-title-name=\"Reply\"",
+      "    class=\"internal-fsb-element\"",
+      "    internal-fsb-guid=\"c20090b4\"",
+      "    internal-fsb-name=\"DocumentTable 1\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentTable\"",
+      "    style=\"left: 808px; top: 270px; width: 150px;\"",
+      "    data-forward-option=\"multiple\"",
+      "    data-forwarding-table=\"Comment\"",
+      "    data-forward-recursive=\"true\">",
+      "<div",
+      "    class=\"internal-fsb-dragging-handle internal-fsb-title\">Reply</div>",
+      "<div",
+      "    class=\"container-fluid\"",
+      "    internal-fsb-event-no-propagate=\"1\">",
+      "<div",
+      "    class=\"internal-fsb-allow-cursor internal-fsb-strict-layout row\">",
+      "<div",
+      "    data-title-name=\"id\"",
+      "    class=\"col-12 internal-fsb-element\"",
+      "    internal-fsb-guid=\"4632d3a1\"",
+      "    internal-fsb-name=\"DocumentNotation 1\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-column-type=\"primary\">",
+      "<div",
+      "    class=\"internal-fsb-title\">id</div>",
+      "</div>",
+      "<div",
+      "    data-title-name=\"uid\"",
+      "    class=\"col-12 internal-fsb-element\"",
+      "    internal-fsb-guid=\"e7e72662\"",
+      "    internal-fsb-name=\"DocumentNotation 2\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-required=\"true\"",
+      "    data-unique=\"true\">",
+      "<div",
+      "    class=\"internal-fsb-title\">uid</div>",
+      "</div>",
+      "<div",
+      "    data-title-name=\"cid\"",
+      "    class=\"col-12 internal-fsb-element\"",
+      "    internal-fsb-guid=\"55d8a795\"",
+      "    internal-fsb-name=\"DocumentNotation 3\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-required=\"true\"",
+      "    data-unique=\"true\">",
+      "<div",
+      "    class=\"internal-fsb-title\">cid</div>",
+      "</div>",
+      "<div",
+      "    data-title-name=\"message\"",
+      "    class=\"col-12 internal-fsb-element\"",
+      "    internal-fsb-guid=\"5342abdc\"",
+      "    internal-fsb-name=\"DocumentNotation 4\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-required=\"true\">",
+      "<div",
+      "    class=\"internal-fsb-title\">message</div>",
+      "</div>",
+      "<div",
+      "    data-title-name=\"active\"",
+      "    class=\"col-12 internal-fsb-element\"",
+      "    internal-fsb-guid=\"191cd8dd\"",
+      "    internal-fsb-name=\"DocumentNotation 5\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-field-type=\"boolean\"",
+      "    data-required=\"true\">",
+      "<div",
+      "    class=\"internal-fsb-title\">active</div>",
+      "</div>",
+      "<div",
+      "    data-title-name=\"createdAt\"",
+      "    class=\"col-12 internal-fsb-element\"",
+      "    internal-fsb-guid=\"d9ddb8e0\"",
+      "    internal-fsb-name=\"DocumentNotation 6\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-field-type=\"datetime\">",
+      "<div",
+      "    class=\"internal-fsb-title\">createdAt</div>",
+      "</div>",
+      "<div",
+      "    data-title-name=\"updatedAt\"",
+      "    class=\"col-12 internal-fsb-element\"",
+      "    internal-fsb-guid=\"63c40b56\"",
+      "    internal-fsb-name=\"DocumentNotation 7\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-field-type=\"datetime\">",
       "<div",
       "    class=\"internal-fsb-title\">updatedAt</div>",
       "</div>",
@@ -356,7 +476,20 @@
       "    internal-fsb-name=\"Connection 1\"",
       "    internal-fsb-event-no-propagate=\"1\"",
       "    internal-fsb-class=\"Connection\"",
-      "    style=\"left: 509px; top: 190px; width: 150px;\"",
+      "    style=\"left: 539px; top: 158px; width: 150px;\"",
+      "    data-source-group-name=\"User\"",
+      "    data-source-entity-name=\"id\"",
+      "    data-target-group-name=\"Comment\"",
+      "    data-target-entity-name=\"uid\">",
+      "</div>",
+      "<div",
+      "    data-title-name=\"\"",
+      "    class=\"internal-fsb-dragging-handle internal-fsb-element\"",
+      "    internal-fsb-guid=\"00d8a18a\"",
+      "    internal-fsb-name=\"Connection 1\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"Connection\"",
+      "    style=\"left: 751px; top: 261px; width: 150px;\"",
       "    data-source-group-name=\"User\"",
       "    data-source-entity-name=\"id\"",
       "    data-target-group-name=\"Reply\"",
@@ -369,11 +502,11 @@
       "    internal-fsb-name=\"Connection 1\"",
       "    internal-fsb-event-no-propagate=\"1\"",
       "    internal-fsb-class=\"Connection\"",
-      "    style=\"left: 746px; top: 207px; width: 150px;\"",
-      "    data-source-group-name=\"Post\"",
+      "    style=\"left: 752px; top: 297px; width: 150px;\"",
+      "    data-source-group-name=\"Comment\"",
       "    data-source-entity-name=\"id\"",
       "    data-target-group-name=\"Reply\"",
-      "    data-target-entity-name=\"pid\">",
+      "    data-target-entity-name=\"cid\">",
       "</div>",
       "<div",
       "    data-title-name=\"Info\"",
@@ -451,6 +584,17 @@
       "    class=\"internal-fsb-title\">type</div>",
       "</div>",
       "",
+      "<div",
+      "    data-title-name=\"createdAt\"",
+      "    class=\"col-12 internal-fsb-element\"",
+      "    internal-fsb-guid=\"de0604b7\"",
+      "    internal-fsb-name=\"DocumentNotation 6\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"DocumentNotation\"",
+      "    data-field-type=\"datetime\">",
+      "<div",
+      "    class=\"internal-fsb-title\">createdAt</div>",
+      "</div>",
       "</div>",
       "</div>",
       "</div>",
@@ -461,7 +605,7 @@
       "    internal-fsb-name=\"Connection 1\"",
       "    internal-fsb-event-no-propagate=\"1\"",
       "    internal-fsb-class=\"Connection\"",
-      "    style=\"left: 765px; top: 133px; width: 150px\"",
+      "    style=\"left: 756px; top: 91px; width: 150px;\"",
       "    data-source-group-name=\"Post\"",
       "    data-source-entity-name=\"id\"",
       "    data-target-group-name=\"Action\"",
@@ -474,7 +618,20 @@
       "    internal-fsb-name=\"Connection 1\"",
       "    internal-fsb-event-no-propagate=\"1\"",
       "    internal-fsb-class=\"Connection\"",
-      "    style=\"left: 765px; top: 65px; width: 150px;\"",
+      "    style=\"left: 502px; top: 159px; width: 150px;\"",
+      "    data-source-group-name=\"Post\"",
+      "    data-source-entity-name=\"id\"",
+      "    data-target-group-name=\"Comment\"",
+      "    data-target-entity-name=\"pid\">",
+      "</div>",
+      "<div",
+      "    data-title-name=\"\"",
+      "    class=\"internal-fsb-dragging-handle internal-fsb-element\"",
+      "    internal-fsb-guid=\"680a421a\"",
+      "    internal-fsb-name=\"Connection 1\"",
+      "    internal-fsb-event-no-propagate=\"1\"",
+      "    internal-fsb-class=\"Connection\"",
+      "    style=\"left: 756px; top: 62px; width: 150px;\"",
       "    data-source-group-name=\"User\"",
       "    data-source-entity-name=\"id\"",
       "    data-target-group-name=\"Action\"",
@@ -510,6 +667,17 @@
     "schema": {
       "Action": {
         "columns": {
+de0604b7          "createdAt": {
+de0604b7            "fieldType": "datetime",
+de0604b7            "guid": "de0604b7",
+de0604b7            "modifyingPermission": null,
+de0604b7            "name": "createdAt",
+de0604b7            "required": false,
+de0604b7            "retrievingPermission": null,
+de0604b7            "unique": false,
+de0604b7            "url": null,
+de0604b7            "verb": null
+de0604b7          },
 90402359          "type": {
 90402359            "fieldType": "number",
 90402359            "guid": "90402359",
@@ -565,134 +733,19 @@ dac7234b          }
 2cec49e3            "targetEntity": "id",
 2cec49e3            "targetGroup": "Post"
 2cec49e3          },
-26866832          "User": {
-26866832            "guid": "26866832",
-26866832            "name": "",
-26866832            "sourceEntity": "uid",
-26866832            "sourceGroup": "Action",
-26866832            "targetEntity": "id",
-26866832            "targetGroup": "User"
-26866832          }
+680a421a          "User": {
+680a421a            "guid": "680a421a",
+680a421a            "name": "",
+680a421a            "sourceEntity": "uid",
+680a421a            "sourceGroup": "Action",
+680a421a            "targetEntity": "id",
+680a421a            "targetGroup": "User"
+680a421a          }
         },
         "retrievingPermission": null,
         "source": "document"
       },
-      "Info": {
-        "columns": {},
-        "forward": null,
-        "group": "Info",
-        "guid": "57d169d7",
-        "keys": {},
-        "modifyingPermission": null,
-        "relations": {},
-        "retrievingPermission": null,
-        "source": "document"
-      },
-      "Post": {
-        "columns": {
-d29bbe62          "active": {
-d29bbe62            "fieldType": "boolean",
-d29bbe62            "guid": "d29bbe62",
-d29bbe62            "modifyingPermission": null,
-d29bbe62            "name": "active",
-d29bbe62            "required": true,
-d29bbe62            "retrievingPermission": null,
-d29bbe62            "unique": false,
-d29bbe62            "url": null,
-d29bbe62            "verb": null
-d29bbe62          },
-45a3551a          "createdAt": {
-45a3551a            "fieldType": null,
-45a3551a            "guid": "45a3551a",
-45a3551a            "modifyingPermission": null,
-45a3551a            "name": "createdAt",
-45a3551a            "required": false,
-45a3551a            "retrievingPermission": null,
-45a3551a            "unique": false,
-45a3551a            "url": null,
-45a3551a            "verb": null
-45a3551a          },
-acd3cb0b          "message": {
-acd3cb0b            "fieldType": null,
-acd3cb0b            "guid": "acd3cb0b",
-acd3cb0b            "modifyingPermission": null,
-acd3cb0b            "name": "message",
-acd3cb0b            "required": true,
-acd3cb0b            "retrievingPermission": null,
-acd3cb0b            "unique": false,
-acd3cb0b            "url": null,
-acd3cb0b            "verb": null
-acd3cb0b          },
-141a661b          "uid": {
-141a661b            "fieldType": null,
-141a661b            "guid": "141a661b",
-141a661b            "modifyingPermission": null,
-141a661b            "name": "uid",
-141a661b            "required": true,
-141a661b            "retrievingPermission": null,
-141a661b            "unique": false,
-141a661b            "url": null,
-141a661b            "verb": null
-141a661b          },
-165dd68d          "updatedAt": {
-165dd68d            "fieldType": null,
-165dd68d            "guid": "165dd68d",
-165dd68d            "modifyingPermission": null,
-165dd68d            "name": "updatedAt",
-165dd68d            "required": false,
-165dd68d            "retrievingPermission": null,
-165dd68d            "unique": false,
-165dd68d            "url": null,
-165dd68d            "verb": null
-165dd68d          }
-        },
-        "forward": null,
-        "group": "Post",
-        "guid": "9a921288",
-        "keys": {
-9a08e276          "id": {
-9a08e276            "fieldType": null,
-9a08e276            "guid": "9a08e276",
-9a08e276            "modifyingPermission": null,
-9a08e276            "name": "id",
-9a08e276            "required": false,
-9a08e276            "retrievingPermission": null,
-9a08e276            "unique": false,
-9a08e276            "url": null,
-9a08e276            "verb": null
-9a08e276          }
-        },
-        "modifyingPermission": null,
-2cec49e3        "relations": {
-2cec49e3          "Action": {
-2cec49e3            "guid": "2cec49e3",
-2cec49e3            "name": "",
-2cec49e3            "sourceEntity": "id",
-2cec49e3            "sourceGroup": "Post",
-2cec49e3            "targetEntity": "pid",
-2cec49e3            "targetGroup": "Action"
-2cec49e3          },
-2a24e3e0          "Reply": {
-2a24e3e0            "guid": "2a24e3e0",
-2a24e3e0            "name": "",
-2a24e3e0            "sourceEntity": "id",
-2a24e3e0            "sourceGroup": "Post",
-2a24e3e0            "targetEntity": "pid",
-2a24e3e0            "targetGroup": "Reply"
-2a24e3e0          },
-6e13ba34          "User": {
-6e13ba34            "guid": "6e13ba34",
-6e13ba34            "name": "",
-6e13ba34            "sourceEntity": "uid",
-6e13ba34            "sourceGroup": "Post",
-6e13ba34            "targetEntity": "id",
-6e13ba34            "targetGroup": "User"
-6e13ba34          }
-        },
-        "retrievingPermission": null,
-        "source": "document"
-      },
-      "Reply": {
+      "Comment": {
         "columns": {
 1c7de959          "active": {
 1c7de959            "fieldType": "boolean",
@@ -706,7 +759,7 @@ acd3cb0b          },
 1c7de959            "verb": null
 1c7de959          },
 80424246          "createdAt": {
-80424246            "fieldType": null,
+80424246            "fieldType": "datetime",
 80424246            "guid": "80424246",
 80424246            "modifyingPermission": null,
 80424246            "name": "createdAt",
@@ -750,7 +803,7 @@ acd3cb0b          },
 486c2a73            "verb": null
 486c2a73          },
 09080630          "updatedAt": {
-09080630            "fieldType": null,
+09080630            "fieldType": "datetime",
 09080630            "guid": "09080630",
 09080630            "modifyingPermission": null,
 09080630            "name": "updatedAt",
@@ -766,9 +819,9 @@ acd3cb0b          },
           "forwardingTable": "Post",
           "mode": "collection",
           "option": "multiple",
-          "recursive": false
+          "recursive": true
         },
-        "group": "Reply",
+        "group": "Comment",
         "guid": "b4e8b657",
         "keys": {
 5a466912          "id": {
@@ -784,20 +837,28 @@ acd3cb0b          },
 5a466912          }
         },
         "modifyingPermission": null,
-2a24e3e0        "relations": {
-2a24e3e0          "Post": {
+26866832        "relations": {
+26866832          "Post": {
+26866832            "guid": "26866832",
+26866832            "name": "",
+26866832            "sourceEntity": "pid",
+26866832            "sourceGroup": "Comment",
+26866832            "targetEntity": "id",
+26866832            "targetGroup": "Post"
+26866832          },
+2a24e3e0          "Reply": {
 2a24e3e0            "guid": "2a24e3e0",
 2a24e3e0            "name": "",
-2a24e3e0            "sourceEntity": "pid",
-2a24e3e0            "sourceGroup": "Reply",
-2a24e3e0            "targetEntity": "id",
-2a24e3e0            "targetGroup": "Post"
+2a24e3e0            "sourceEntity": "id",
+2a24e3e0            "sourceGroup": "Comment",
+2a24e3e0            "targetEntity": "cid",
+2a24e3e0            "targetGroup": "Reply"
 2a24e3e0          },
 850bb88e          "User": {
 850bb88e            "guid": "850bb88e",
 850bb88e            "name": "",
 850bb88e            "sourceEntity": "uid",
-850bb88e            "sourceGroup": "Reply",
+850bb88e            "sourceGroup": "Comment",
 850bb88e            "targetEntity": "id",
 850bb88e            "targetGroup": "User"
 850bb88e          }
@@ -805,10 +866,258 @@ acd3cb0b          },
         "retrievingPermission": null,
         "source": "document"
       },
+      "Info": {
+        "columns": {},
+        "forward": null,
+        "group": "Info",
+        "guid": "57d169d7",
+        "keys": {},
+        "modifyingPermission": null,
+        "relations": {},
+        "retrievingPermission": null,
+        "source": "document"
+      },
+      "Post": {
+        "columns": {
+d29bbe62          "active": {
+d29bbe62            "fieldType": "boolean",
+d29bbe62            "guid": "d29bbe62",
+d29bbe62            "modifyingPermission": null,
+d29bbe62            "name": "active",
+d29bbe62            "required": true,
+d29bbe62            "retrievingPermission": null,
+d29bbe62            "unique": false,
+d29bbe62            "url": null,
+d29bbe62            "verb": null
+d29bbe62          },
+45a3551a          "createdAt": {
+45a3551a            "fieldType": "datetime",
+45a3551a            "guid": "45a3551a",
+45a3551a            "modifyingPermission": null,
+45a3551a            "name": "createdAt",
+45a3551a            "required": false,
+45a3551a            "retrievingPermission": null,
+45a3551a            "unique": false,
+45a3551a            "url": null,
+45a3551a            "verb": null
+45a3551a          },
+acd3cb0b          "message": {
+acd3cb0b            "fieldType": null,
+acd3cb0b            "guid": "acd3cb0b",
+acd3cb0b            "modifyingPermission": null,
+acd3cb0b            "name": "message",
+acd3cb0b            "required": true,
+acd3cb0b            "retrievingPermission": null,
+acd3cb0b            "unique": false,
+acd3cb0b            "url": null,
+acd3cb0b            "verb": null
+acd3cb0b          },
+141a661b          "uid": {
+141a661b            "fieldType": null,
+141a661b            "guid": "141a661b",
+141a661b            "modifyingPermission": null,
+141a661b            "name": "uid",
+141a661b            "required": true,
+141a661b            "retrievingPermission": null,
+141a661b            "unique": false,
+141a661b            "url": null,
+141a661b            "verb": null
+141a661b          },
+165dd68d          "updatedAt": {
+165dd68d            "fieldType": "datetime",
+165dd68d            "guid": "165dd68d",
+165dd68d            "modifyingPermission": null,
+165dd68d            "name": "updatedAt",
+165dd68d            "required": false,
+165dd68d            "retrievingPermission": null,
+165dd68d            "unique": false,
+165dd68d            "url": null,
+165dd68d            "verb": null
+165dd68d          }
+        },
+        "forward": null,
+        "group": "Post",
+        "guid": "9a921288",
+        "keys": {
+9a08e276          "id": {
+9a08e276            "fieldType": null,
+9a08e276            "guid": "9a08e276",
+9a08e276            "modifyingPermission": null,
+9a08e276            "name": "id",
+9a08e276            "required": false,
+9a08e276            "retrievingPermission": null,
+9a08e276            "unique": false,
+9a08e276            "url": null,
+9a08e276            "verb": null
+9a08e276          }
+        },
+        "modifyingPermission": null,
+2cec49e3        "relations": {
+2cec49e3          "Action": {
+2cec49e3            "guid": "2cec49e3",
+2cec49e3            "name": "",
+2cec49e3            "sourceEntity": "id",
+2cec49e3            "sourceGroup": "Post",
+2cec49e3            "targetEntity": "pid",
+2cec49e3            "targetGroup": "Action"
+2cec49e3          },
+26866832          "Comment": {
+26866832            "guid": "26866832",
+26866832            "name": "",
+26866832            "sourceEntity": "id",
+26866832            "sourceGroup": "Post",
+26866832            "targetEntity": "pid",
+26866832            "targetGroup": "Comment"
+26866832          },
+6e13ba34          "User": {
+6e13ba34            "guid": "6e13ba34",
+6e13ba34            "name": "",
+6e13ba34            "sourceEntity": "uid",
+6e13ba34            "sourceGroup": "Post",
+6e13ba34            "targetEntity": "id",
+6e13ba34            "targetGroup": "User"
+6e13ba34          }
+        },
+        "retrievingPermission": null,
+        "source": "document"
+      },
+      "Reply": {
+        "columns": {
+191cd8dd          "active": {
+191cd8dd            "fieldType": "boolean",
+191cd8dd            "guid": "191cd8dd",
+191cd8dd            "modifyingPermission": null,
+191cd8dd            "name": "active",
+191cd8dd            "required": true,
+191cd8dd            "retrievingPermission": null,
+191cd8dd            "unique": false,
+191cd8dd            "url": null,
+191cd8dd            "verb": null
+191cd8dd          },
+55d8a795          "cid": {
+55d8a795            "fieldType": null,
+55d8a795            "guid": "55d8a795",
+55d8a795            "modifyingPermission": null,
+55d8a795            "name": "cid",
+55d8a795            "required": true,
+55d8a795            "retrievingPermission": null,
+55d8a795            "unique": true,
+55d8a795            "url": null,
+55d8a795            "verb": null
+55d8a795          },
+d9ddb8e0          "createdAt": {
+d9ddb8e0            "fieldType": "datetime",
+d9ddb8e0            "guid": "d9ddb8e0",
+d9ddb8e0            "modifyingPermission": null,
+d9ddb8e0            "name": "createdAt",
+d9ddb8e0            "required": false,
+d9ddb8e0            "retrievingPermission": null,
+d9ddb8e0            "unique": false,
+d9ddb8e0            "url": null,
+d9ddb8e0            "verb": null
+d9ddb8e0          },
+5342abdc          "message": {
+5342abdc            "fieldType": null,
+5342abdc            "guid": "5342abdc",
+5342abdc            "modifyingPermission": null,
+5342abdc            "name": "message",
+5342abdc            "required": true,
+5342abdc            "retrievingPermission": null,
+5342abdc            "unique": false,
+5342abdc            "url": null,
+5342abdc            "verb": null
+5342abdc          },
+e7e72662          "uid": {
+e7e72662            "fieldType": null,
+e7e72662            "guid": "e7e72662",
+e7e72662            "modifyingPermission": null,
+e7e72662            "name": "uid",
+e7e72662            "required": true,
+e7e72662            "retrievingPermission": null,
+e7e72662            "unique": true,
+e7e72662            "url": null,
+e7e72662            "verb": null
+e7e72662          },
+63c40b56          "updatedAt": {
+63c40b56            "fieldType": "datetime",
+63c40b56            "guid": "63c40b56",
+63c40b56            "modifyingPermission": null,
+63c40b56            "name": "updatedAt",
+63c40b56            "required": false,
+63c40b56            "retrievingPermission": null,
+63c40b56            "unique": false,
+63c40b56            "url": null,
+63c40b56            "verb": null
+63c40b56          }
+        },
+        "forward": {
+          "forwardingPrefix": null,
+          "forwardingTable": "Comment",
+          "mode": "collection",
+          "option": "multiple",
+          "recursive": true
+        },
+        "group": "Reply",
+        "guid": "c20090b4",
+        "keys": {
+4632d3a1          "id": {
+4632d3a1            "fieldType": null,
+4632d3a1            "guid": "4632d3a1",
+4632d3a1            "modifyingPermission": null,
+4632d3a1            "name": "id",
+4632d3a1            "required": false,
+4632d3a1            "retrievingPermission": null,
+4632d3a1            "unique": false,
+4632d3a1            "url": null,
+4632d3a1            "verb": null
+4632d3a1          }
+        },
+        "modifyingPermission": null,
+2a24e3e0        "relations": {
+2a24e3e0          "Comment": {
+2a24e3e0            "guid": "2a24e3e0",
+2a24e3e0            "name": "",
+2a24e3e0            "sourceEntity": "cid",
+2a24e3e0            "sourceGroup": "Reply",
+2a24e3e0            "targetEntity": "id",
+2a24e3e0            "targetGroup": "Comment"
+2a24e3e0          },
+00d8a18a          "User": {
+00d8a18a            "guid": "00d8a18a",
+00d8a18a            "name": "",
+00d8a18a            "sourceEntity": "uid",
+00d8a18a            "sourceGroup": "Reply",
+00d8a18a            "targetEntity": "id",
+00d8a18a            "targetGroup": "User"
+00d8a18a          }
+        },
+        "retrievingPermission": null,
+        "source": "document"
+      },
       "User": {
         "columns": {
+85c5c0e7          "activeAt": {
+85c5c0e7            "fieldType": "datetime",
+85c5c0e7            "guid": "85c5c0e7",
+85c5c0e7            "modifyingPermission": null,
+85c5c0e7            "name": "activeAt",
+85c5c0e7            "required": false,
+85c5c0e7            "retrievingPermission": {
+85c5c0e7              "mode": "block",
+85c5c0e7              "relationMatchingConstantValue": null,
+85c5c0e7              "relationMatchingMode": null,
+85c5c0e7              "relationMatchingSessionName": null,
+85c5c0e7              "relationModeSourceEntity": null,
+85c5c0e7              "relationModeSourceGroup": null,
+85c5c0e7              "sessionMatchingConstantValue": null,
+85c5c0e7              "sessionMatchingSessionName": null
+85c5c0e7            },
+85c5c0e7            "unique": false,
+85c5c0e7            "url": null,
+85c5c0e7            "verb": null
+85c5c0e7          },
 d419d902          "createdAt": {
-d419d902            "fieldType": null,
+d419d902            "fieldType": "datetime",
 d419d902            "guid": "d419d902",
 d419d902            "modifyingPermission": null,
 d419d902            "name": "createdAt",
@@ -901,7 +1210,7 @@ c6e8d64e          },
 36c3c9be            "verb": null
 36c3c9be          },
 b1b17b71          "updatedAt": {
-b1b17b71            "fieldType": null,
+b1b17b71            "fieldType": "datetime",
 b1b17b71            "guid": "b1b17b71",
 b1b17b71            "modifyingPermission": null,
 b1b17b71            "name": "updatedAt",
@@ -923,7 +1232,7 @@ b1b17b71          }
         },
         "forward": {
           "forwardingPrefix": null,
-          "forwardingTable": "Post",
+          "forwardingTable": "Post,Action,Reply",
           "mode": "collection",
           "option": "single",
           "recursive": false
@@ -944,15 +1253,23 @@ b1b17b71          }
 3c32bae0          }
         },
         "modifyingPermission": null,
-26866832        "relations": {
-26866832          "Action": {
-26866832            "guid": "26866832",
-26866832            "name": "",
-26866832            "sourceEntity": "id",
-26866832            "sourceGroup": "User",
-26866832            "targetEntity": "uid",
-26866832            "targetGroup": "Action"
-26866832          },
+680a421a        "relations": {
+680a421a          "Action": {
+680a421a            "guid": "680a421a",
+680a421a            "name": "",
+680a421a            "sourceEntity": "id",
+680a421a            "sourceGroup": "User",
+680a421a            "targetEntity": "uid",
+680a421a            "targetGroup": "Action"
+680a421a          },
+850bb88e          "Comment": {
+850bb88e            "guid": "850bb88e",
+850bb88e            "name": "",
+850bb88e            "sourceEntity": "id",
+850bb88e            "sourceGroup": "User",
+850bb88e            "targetEntity": "uid",
+850bb88e            "targetGroup": "Comment"
+850bb88e          },
 6e13ba34          "Post": {
 6e13ba34            "guid": "6e13ba34",
 6e13ba34            "name": "",
@@ -961,23 +1278,23 @@ b1b17b71          }
 6e13ba34            "targetEntity": "uid",
 6e13ba34            "targetGroup": "Post"
 6e13ba34          },
-850bb88e          "Reply": {
-850bb88e            "guid": "850bb88e",
-850bb88e            "name": "",
-850bb88e            "sourceEntity": "id",
-850bb88e            "sourceGroup": "User",
-850bb88e            "targetEntity": "uid",
-850bb88e            "targetGroup": "Reply"
-850bb88e          }
+00d8a18a          "Reply": {
+00d8a18a            "guid": "00d8a18a",
+00d8a18a            "name": "",
+00d8a18a            "sourceEntity": "id",
+00d8a18a            "sourceGroup": "User",
+00d8a18a            "targetEntity": "uid",
+00d8a18a            "targetGroup": "Reply"
+00d8a18a          }
         },
         "retrievingPermission": null,
         "source": "document"
       }
     }
   },
-  "footerBlobSHA": "5dd2cf318514f174efc7ce448670193dcb4157b1#881773408",
+  "footerBlobSHA": "7b8dc665099c7903ccfba563e61ea9e908ff3aa6#280277557",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "a2fe408c037701bbc671ae9929d634cafb81d1eb#2017643014",
+    "Project.Controls.FlowLayout_45655143": "0d0e291b2c13eb81917673918dcdd96684dbbf52#424930659",
     "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
     "Project.Controls.FlowLayout_81bde3d0": "5febba5123fcb826dfafb426bef65ed0e88534d0#6264584"
   },
@@ -1061,7 +1378,7 @@ b1b17b71          }
     "popups": [],
     "preview": null
   },
-  "headerBlobSHA": "aa192274e4cfc77af1cbdefc7adb15be5bc1b60a#-126421081",
+  "headerBlobSHA": "cab073859c176cd497d4cad789d74a353b8b7645#1433314930",
   "popups": {},
   "properties": {},
   "routeBlobSHA": "8d906bb18694942a235490cb6d2bb27fdf4669b6#-780131728",
@@ -2330,8 +2647,13 @@ b1b17b71          }
 01e32c22          "        resolve(Object.assign({}, await DatabaseHelper.retrieve(@{",
 01e32c22          "            'Post.active': true,",
 01e32c22          "            'Post.User.id': null,",
-01e32c22          "            'Post.Reply.pid': null,",
-01e32c22          "            'Post.Reply.User.id': null",
+01e32c22          "            'Post.Action.pid': null,",
+01e32c22          "            'Post.Comment.pid': null,",
+01e32c22          "            'Post.Comment.active': true,",
+01e32c22          "            'Post.Comment.User.id': null,",
+01e32c22          "            'Post.Comment.Reply.cid': null,",
+01e32c22          "            'Post.Comment.Reply.active': true,",
+01e32c22          "            'Post.Comment.Reply.User.id': null",
 01e32c22          "          }, 'Post',",
 01e32c22          "          this.request.session,   // session variables",
 01e32c22          "          true,                   // real-time updates",

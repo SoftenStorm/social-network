@@ -165,8 +165,13 @@ class Controller extends Base {
         resolve(Object.assign({}, await DatabaseHelper.retrieve(RequestHelper.createInputs({
             'Post.active': true,
             'Post.User.id': null,
-            'Post.Reply.pid': null,
-            'Post.Reply.User.id': null
+            'Post.Action.pid': null,
+            'Post.Comment.pid': null,
+            'Post.Comment.active': true,
+            'Post.Comment.User.id': null,
+            'Post.Comment.Reply.cid': null,
+            'Post.Comment.Reply.active': true,
+            'Post.Comment.Reply.User.id': null
           }), ProjectConfigurationHelper.getDataSchema().tables['Post'],
           this.request.session,   // session variables
           true,                   // real-time updates
