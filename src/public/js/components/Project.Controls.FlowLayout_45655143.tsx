@@ -165,8 +165,16 @@ class FlowLayout_45655143 extends Base {
     return super.getDataFromNotation(notation, inArray, always);
   }
   
-  private isUser(uid): boolean {
+  private isUser(uid: string): boolean {
     return uid == this.getDataFromNotation('Info.uid');
+  }
+  
+  private hasAnyReply(i: number): boolean {
+    return this.getDataFromNotation('Post[' + i + '].Reply', true).length != 0;
+  }
+  
+  private getTotalAction(type: number, i: number): boolean {
+    return this.getDataFromNotation('Post[' + i + '].Action', true).filter(row => row.columns['type'] == type).length;
   }
   
   // Auto[Merging]--->
@@ -213,7 +221,7 @@ class FlowLayout_45655143 extends Base {
   protected render(): any {
     TestHelper.identify();
     return pug `
-      div(style=Object.assign({'MsFlexDirection': 'column', 'WebkitFlexDirection': 'column', 'flexDirection': 'column', 'height': '100vh', 'paddingLeft': '0px', 'paddingRight': '0px'}, this.props.forward && this.props.forward.styles || {}), internal-fsb-class="FlowLayout", className="internal-fsb-element internal-fsb-inverse internal-fsb-strict-layout " + (this.props.forward && this.props.forward.classes || ''), internal-fsb-guid="45655143")
+      div(style=Object.assign({'MsFlexDirection': 'column', 'MsFlexWrap': 'nowrap', 'WebkitFlexDirection': 'column', 'WebkitFlexWrap': 'nowrap', 'flexDirection': 'column', 'flexWrap': 'nowrap', 'height': '100vh', 'paddingLeft': '0px', 'paddingRight': '0px'}, this.props.forward && this.props.forward.styles || {}), internal-fsb-class="FlowLayout", className="internal-fsb-element internal-fsb-inverse internal-fsb-stretch internal-fsb-strict-layout " + (this.props.forward && this.props.forward.classes || ''), internal-fsb-guid="45655143")
         .internal-fsb-element.internal-fsb-strict-layout(style={'FsbBackgroundType': 'linear', 'WebkitFlexShrink': '1', 'borderBottomColor': 'rgba(0, 43, 255, 1)', 'borderBottomStyle': 'solid', 'borderBottomWidth': '1px', 'flexShrink': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="837621b0")
           .internal-fsb-element(style={'color': 'rgba(0, 43, 255, 1)', 'fontSize': '18px', 'paddingBottom': '5px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '5px', 'textAlign': 'center'}, internal-fsb-guid="4d102860")
             | Social Quote
@@ -256,9 +264,11 @@ class FlowLayout_45655143 extends Base {
                             Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px', 'marginLeft': '15px'}, onClick=((event) => { window.internalFsbSubmit('cc4b29ed', 'Post', event, ((results) => { this.manipulate('cc4b29ed', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="cc4b29ed")
                               .internal-fsb-element(internal-fsb-guid="38be6125")
                                 | ชื่นชอบ
-                          .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'paddingLeft': '15px', 'paddingRight': '0px'}, internal-fsb-guid="ac71a3c1")
-                            | จำนวนผู้ที่ชื่นชอบ @{this.getTotalAction(i, 0)}
+                          .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'lineHeight': '26px', 'paddingLeft': '8px', 'paddingRight': '0px'}, internal-fsb-guid="ac71a3c1")
+                            | จำนวนผู้ที่ชื่นชอบ #{this.getTotalAction(0, i)}
                       .internal-fsb-element.internal-fsb-strict-layout(style={'WebkitBorderRadius': '4px 4px 4px 4px', 'background': 'rgba(247, 247, 247, 1)', 'borderRadius': '4px 4px 4px 4px', 'paddingBottom': '15px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '10px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="bb841183")
+                        if this.hasAnyReply(i)
+                          .col-12.internal-fsb-element(style={'fontSize': '13px', 'paddingLeft': '0px', 'paddingRight': '0px', 'textAlign': 'center'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].message")))}, internal-fsb-guid="c312e749")
                         each data, j in this.getDataFromNotation("Post[" + i + "].Reply", true, false)
                           .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || j), data-fsb-index=j, internal-fsb-class="FlowLayout", internal-fsb-guid="d766b7e5")
                             .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingLeft': '0px', 'paddingRight': '0px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Reply[" + j + "].message")))}, internal-fsb-guid="58566a77")
