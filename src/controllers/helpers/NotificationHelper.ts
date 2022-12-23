@@ -499,7 +499,7 @@ const NotificationHelper = {
   	// Heroku Session Affinity Reference: https://devcenter.heroku.com/articles/session-affinity
   	// 
 		if (process.env[process.env.VOLATILE_MEMORY_KEY]) {
-			const redisConnectionURL = new URL(process.env[process.env.VOLATILE_MEMORY_KEY]);
+			const redisConnectionURL = process.env[process.env.VOLATILE_MEMORY_KEY];
 			const pubClient = createClient(redisConnectionURL);
 			const subClient = pubClient.duplicate();
 			
