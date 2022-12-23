@@ -522,12 +522,17 @@ const NotificationHelper = {
 			      encode: (value) => { return value; }
 			    }
 			  },
-			  _onServerSideEmit: (message: any) => {
-		  		const action = ACTIONS[message.action];
-		  		const schema = SchemaHelper.getDataTableSchemaFromNotation(message.schema);
-		  		const results = message.results;
-		  		
-		  		NotificationHelper.notifyUpdatesUsingMultipleNodesOfSocketIO(action, schema, results);
+			  _onServerSideEmit: (_message: any) => {
+			    try {
+  			    const message = JSON.parse(message);
+  		  		const action = ACTIONS[message.action];
+  		  		const schema = SchemaHelper.getDataTableSchemaFromNotation(message.schema);
+  		  		const results = message.results;
+  		  		
+  		  		NotificationHelper.notifyUpdatesUsingMultipleNodesOfSocketIO(action, schema, results);
+  		  	} catch(error) {
+  		  	  console.log(error, _message);
+  		  	}
 		  	}
 			}, pubClient, subClient);
 		}
