@@ -524,7 +524,7 @@ const NotificationHelper = {
 			  },
 			  _onServerSideEmit: (_message: any) => {
 			    try {
-  			    const message = JSON.parse(message);
+  			    const message = JSON.parse(_message);
   		  		const action = ACTIONS[message.action];
   		  		const schema = SchemaHelper.getDataTableSchemaFromNotation(message.schema);
   		  		const results = message.results;
