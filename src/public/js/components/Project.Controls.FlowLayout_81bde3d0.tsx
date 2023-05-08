@@ -195,7 +195,7 @@ class FlowLayout_81bde3d0 extends Base {
     return pug `
       div(style=Object.assign({'WebkitBorderRadius': '3px 3px 3px 3px', 'borderBottomColor': 'rgba(0, 43, 255, 1)', 'borderBottomStyle': 'solid', 'borderBottomWidth': '1px', 'borderLeftColor': 'rgba(0, 43, 255, 1)', 'borderLeftStyle': 'solid', 'borderLeftWidth': '1px', 'borderRadius': '3px 3px 3px 3px', 'borderRightColor': 'rgba(0, 43, 255, 1)', 'borderRightStyle': 'solid', 'borderRightWidth': '1px', 'borderTopColor': 'rgba(0, 43, 255, 1)', 'borderTopStyle': 'solid', 'borderTopWidth': '1px', 'marginTop': '100px', 'paddingLeft': '0px', 'paddingRight': '0px'}, this.props.forward && this.props.forward.styles || {}), internal-fsb-class="FlowLayout", className="col-6 internal-fsb-element internal-fsb-strict-layout offset-3 " + (this.props.forward && this.props.forward.classes || ''), internal-fsb-guid="81bde3d0")
         .col-12.internal-fsb-element(style={'color': 'rgba(0, 43, 255, 1)', 'fontSize': '24px', 'marginTop': '10px', 'textAlign': 'center'}, internal-fsb-guid="dc3a5190")
-          | Social Quote
+          | MatchFlutter
         .col-12.internal-fsb-element(style={'color': 'rgba(0, 43, 255, 1)', 'fontSize': '14px', 'marginBottom': '20px', 'textAlign': 'center'}, internal-fsb-guid="b5c9b85d")
           | ที่แห่งใหม่สำหรับนักทำงาน
         label.col-12.internal-fsb-element(internal-fsb-guid="c0ee5854")

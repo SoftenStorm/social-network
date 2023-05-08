@@ -1376,11 +1376,11 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "5d927d9d9b5eae4ec2a939032f387fee9a677eed#-395396093",
+  "footerBlobSHA": "0ebd9a871c7e9b72a5e6d762865f201ff85db867#-1171868425",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "61baab7dc98433b26b84e7fa663208ea48c2e14f#-1212804259",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
-    "Project.Controls.FlowLayout_81bde3d0": "4afa97012f6c5b3039d0719a3a32b7efabf45e2b#748347474"
+    "Project.Controls.FlowLayout_81bde3d0": "92bf42acd4a3797496bd97ec43f955339ab06a9b#192378724"
   },
   "globalSettings": {
     "colorSwatches": [
@@ -4281,7 +4281,7 @@ b0a33736    },
         "    internal-fsb-name=\"TextElement 2\"",
         "    internal-fsb-event-no-propagate=\"1\"",
         "    internal-fsb-class=\"TextElement\"",
-        "    style=\"color: rgba(0, 43, 255, 1); font-size: 24px; margin-top: 10px; text-align: center\">Social Quote</div>",
+        "    style=\"color: rgba(0, 43, 255, 1); font-size: 24px; margin-top: 10px; text-align: center\">MatchFlutter</div>",
         "<div",
         "    contenteditable=\"true\"",
         "    class=\"col-12 internal-fsb-element\"",
