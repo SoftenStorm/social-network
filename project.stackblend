@@ -116,8 +116,7 @@
       "    internal-fsb-guid=\"c6e8d64e\"",
       "    internal-fsb-name=\"DocumentNotation 5\"",
       "    internal-fsb-event-no-propagate=\"1\"",
-      "    internal-fsb-class=\"DocumentNotation\"",
-      "    data-rendering-condition-mode=\"block\">",
+      "    internal-fsb-class=\"DocumentNotation\">",
       "<div",
       "    class=\"internal-fsb-title\">lastname</div>",
       "</div>",
@@ -1248,16 +1247,7 @@ c6e8d64e            "guid": "c6e8d64e",
 c6e8d64e            "modifyingPermission": null,
 c6e8d64e            "name": "lastname",
 c6e8d64e            "required": false,
-c6e8d64e            "retrievingPermission": {
-c6e8d64e              "mode": "block",
-c6e8d64e              "relationMatchingConstantValue": null,
-c6e8d64e              "relationMatchingMode": null,
-c6e8d64e              "relationMatchingSessionName": null,
-c6e8d64e              "relationModeSourceEntity": null,
-c6e8d64e              "relationModeSourceGroup": null,
-c6e8d64e              "sessionMatchingConstantValue": null,
-c6e8d64e              "sessionMatchingSessionName": null
-c6e8d64e            },
+c6e8d64e            "retrievingPermission": null,
 c6e8d64e            "unique": false,
 c6e8d64e            "url": null,
 c6e8d64e            "verb": null
@@ -1376,7 +1366,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "f7ac242f7f5559be6e40c01f88a8a84be6ec1ff9#-2124497884",
+  "footerBlobSHA": "175e7188aab48e660e33e90d115e6a957c263584#941140996",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "e008f6b2089471d02a99102574364e181b765420#1020520315",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
