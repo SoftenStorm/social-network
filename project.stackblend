@@ -1376,9 +1376,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "602fa9b1dc8494605c6506c1fb730d9064948bf2#1845045212",
+  "footerBlobSHA": "890b966a2338b5fb35c174f1e4ac424f39bd2721#1119096669",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "e433ca071d7ca19930ca4d07382ce18e99111c01#1488072167",
+    "Project.Controls.FlowLayout_45655143": "d0f18657060c67a7a2e3d2615391602be74c22cc#918749782",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
     "Project.Controls.FlowLayout_81bde3d0": "4afa97012f6c5b3039d0719a3a32b7efabf45e2b#748347474"
   },
@@ -1865,7 +1865,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 7\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"display: inline; font-weight: 600\"",
+01e32c22        "    style=\"color: rgba(66, 117, 255, 1); display: inline; font-weight: 600\"",
 01e32c22        "    internal-fsb-react-data=\"message\">ABC</div>",
 01e32c22        "<div",
 01e32c22        "    contenteditable=\"true\"",
@@ -1990,7 +1990,8 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 8\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; display: inline-block; flex-basis: 0px; flex-grow: 1; padding-left: 0px; padding-right: 0px\">#{this.getTotalAction(1, i)} คน</div>",
+01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; display: inline-block; flex-basis: 0px; flex-grow: 1; padding-left: 0px; padding-right: 0px\"",
+01e32c22        "    internal-fsb-react-style-color=\"CODE[return (this.hasFondOf(i)) ? '#005eff' : undefined;]\">#{this.getTotalAction(1, i)} คน</div>",
 01e32c22        "<div",
 01e32c22        "    class=\"internal-fsb-element\"",
 01e32c22        "    internal-fsb-guid=\"e4a375ea\"",
