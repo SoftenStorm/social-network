@@ -209,7 +209,7 @@ class FlowLayout_45655143 extends Base {
     date = new Date(date);
     
     let tokens = [];
-    let remaining = date.getTime();
+    let remaining = (new Date()).getTime() - date.getTime();
     remaining = Math.floor(remaining / 1000);
     
     const seconds = remaining % 60;

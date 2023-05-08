@@ -1366,9 +1366,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "d2c065d5c8e2c2aa39c75c3794d7a7571f156c0f#170944552",
+  "footerBlobSHA": "b7671fd6a2a50f47c10d6986034e88454e5bbbbc#-1150147016",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "675cafa6a5415d43297016f4c03ecf70ebc5ff84#2133120199",
+    "Project.Controls.FlowLayout_45655143": "e90ec33436a89185155aebbf7d28628ba1d161e8#-145755808",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
     "Project.Controls.FlowLayout_81bde3d0": "92bf42acd4a3797496bd97ec43f955339ab06a9b#192378724"
   },
@@ -1766,7 +1766,7 @@ b1b17b71          }
 01e32c22        "    date = new Date(date);",
 01e32c22        "    ",
 01e32c22        "    let tokens = [];",
-01e32c22        "    let remaining = date.getTime();",
+01e32c22        "    let remaining = (new Date()).getTime() - date.getTime();",
 01e32c22        "    remaining = Math.floor(remaining / 1000);",
 01e32c22        "    ",
 01e32c22        "    const seconds = remaining % 60;",
