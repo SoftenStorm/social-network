@@ -1366,7 +1366,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "3d656f577e4e38470543514ca647077462ca144b#-1758467649",
+  "footerBlobSHA": "923a81c1c6398ee232621bf1137502dcfb45e0f4#679665078",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "52302c7122725c92550216e0e0d61f6a6277eb90#344977937",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
@@ -4742,7 +4742,7 @@ b0a33736    },
         "    internal-fsb-name=\"TextElement 8\"",
         "    internal-fsb-event-no-propagate=\"1\"",
         "    internal-fsb-class=\"TextElement\"",
-        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 8px; font-style: italic; line-height: 1.15em; padding-left: 13px; padding-right: 5px\">— #{DataManipulationHelper.getDataFromNotation(\"Post[\" + i + \"].User.firstname\") #{DataManipulationHelper.getDataFromNotation(\"DataManipulationHelper.getDataFromNotation(\"Post[\" + i + \"].User.lastname\")</div>",
+        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 8px; font-style: italic; line-height: 1.15em; padding-left: 13px; padding-right: 5px\">#{DataManipulationHelper.getDataFromNotation(\"Post[\" + i + \"].User.firstname\")} #{DataManipulationHelper.getDataFromNotation(\"Post[\" + i + \"].User.lastname\")}</div>",
         "",
         "</div>",
         "",
@@ -5122,6 +5122,6 @@ b0a33736    },
   "viewBlobSHADict": {
     "01e32c22": "7b80b379af1047b9550a507db3c0e0a18c807166#1327709764",
     "b0a33736": "d67f2704b1314eb9fa844a6b9c8fe9419f12b769#-656107250",
-    "index": "de2315014f581c72b2219ae3d767812609216e99#1727936209"
+    "index": "773d73eb9b66e9904a1c9829956bee9fd3be0774#-791511478"
   }
 }
