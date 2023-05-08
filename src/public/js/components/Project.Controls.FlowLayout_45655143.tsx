@@ -222,13 +222,14 @@ class FlowLayout_45655143 extends Base {
     
     const hours = remaining % 24;
     remaining = Math.floor(remaining / 24);
-    if (hours != 0) tokens.push(`${hours} ชั่วโมง`);
+    tokens = [`${hours} ชั่วโมง`];
     
     const days = remaining % 31;
     remaining = Math.floor(remaining / 31);
     if (days != 0) tokens.push(`${days} วัน`);
     
     tokens.reverse();
+    tokens.push('ที่ผ่านมา')
     
     if (remaining != 0) {
       tokens = [date.toLocaleString('th-TH', {dateStyle: 'long'})];
@@ -426,7 +427,7 @@ class FlowLayout_45655143 extends Base {
                         .col-12.internal-fsb-element(style={'fontSize': '14px', 'marginBottom': '5px', 'paddingLeft': '15px', 'paddingRight': '85px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].message")))}, internal-fsb-guid="62369e5c")
                         .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '20px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="887e3d09")
                           .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '15px', 'paddingRight': '0px'}, internal-fsb-guid="29674a6c")
-                            | #{this.getDataFromNotation("Post[" + i + "].User.firstname")} #{this.getMoment(i)}
+                            | โดย #{this.getDataFromNotation("Post[" + i + "].User.firstname")} เมื่อ #{this.getMoment(i)}
                           input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="5469cbc2")
                           if this.isUser(data.columns["uid"])
                             Button.-fsb-self-281067ca.btn.btn-sm.internal-fsb-element(onClick=((event) => { window.internalFsbSubmit('281067ca', 'Post', event, ((results) => { this.manipulate('281067ca', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="281067ca")
@@ -469,7 +470,7 @@ class FlowLayout_45655143 extends Base {
                               .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingBottom': '5px', 'paddingRight': '85px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].message")))}, internal-fsb-guid="042480cd")
                               .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="a61277ee")
                                 .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '15px'}, internal-fsb-guid="662c761e")
-                                  | #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].User.firstname")} #{this.getMoment(i, j)}
+                                  | โดย #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].User.firstname")} เมื่อ #{this.getMoment(i, j)}
                                 input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].id"), internal-fsb-guid="53b67855")
                                 if this.isUser(data.columns["uid"])
                                   Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px', 'marginRight': '20px'}, onClick=((event) => { window.internalFsbSubmit('5d65c9a9', 'Comment', event, ((results) => { this.manipulate('5d65c9a9', 'Comment', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="5d65c9a9")
@@ -481,7 +482,7 @@ class FlowLayout_45655143 extends Base {
                                 .col-12.internal-fsb-element(style={'fontSize': '13px', 'paddingBottom': '5px', 'paddingLeft': '0px', 'paddingRight': '70px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].message")))}, internal-fsb-guid="ad85704d")
                                 .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="da00c716")
                                   .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-guid="5a08e178")
-                                    | #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].User.firstname")} #{this.getMoment(i, j, k)}
+                                    | โดย #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].User.firstname")} เมื่อ #{this.getMoment(i, j, k)}
                                   input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].id"), internal-fsb-guid="924b8199")
                                   if this.isUser(data.columns["uid"])
                                     Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px'}, onClick=((event) => { window.internalFsbSubmit('47ebd056', 'Reply', event, ((results) => { this.manipulate('47ebd056', 'Reply', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="47ebd056")

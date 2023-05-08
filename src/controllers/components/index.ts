@@ -154,21 +154,15 @@ class Controller extends Base {
   
   protected async get(data: Input[]): Promise<{[Identifier: string]: HierarchicalDataTable}> {
     return new Promise(async (resolve, reject) => {
-      /* try {
-        resolve(await DatabaseHelper.retrieve(RequestHelper.createInputs({
-            'collection.column': 'abc',
-            'collection.column': 123,
-            'collection.collection.column': null
-          }), ProjectConfigurationHelper.getDataSchema().tables['collection'],
-          this.request.session,   // session variables
-          false,                  // real-time updates
-          false                   // skip permission settings
-        ));
-      } catch(error) {
-        reject(error);
-      } */
       try {
-        resolve(await super.get(data));
+        resolve(Object.assign({}, await DatabaseHelper.retrieve(RequestHelper.createInputs({
+            'Post.active': true,
+            'Post.User.id': null
+          }), ProjectConfigurationHelper.getDataSchema().tables['Post'],
+          this.request.session,   // session variables
+          true,                   // real-time updates
+          false                   // skip permission settings
+        )));
       } catch(error) {
         reject(error);
       }
