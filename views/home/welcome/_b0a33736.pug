@@ -21,7 +21,7 @@ html(lang=headers && headers.language || 'en')
     meta(property="og:description" content=headers && headers.description || '')
     meta(property="og:locale" content=headers && headers.contentLocale || 'en_US')
     include ../_header.pug
-  body
+  body(style="font-family: Inter")
     
     .internal-fsb-begin(internal-fsb-animation="", internal-fsb-guid="0")
       .internal-fsb-begin-layout.internal-fsb-strict-layout
@@ -62,6 +62,7 @@ html(lang=headers && headers.language || 'en')
       function ready(a) { "loading" != document.readyState ? a(new Event('ready')) : document.addEventListener ? document.addEventListener("DOMContentLoaded", a) : (document.onreadystatechange = function (e) { "complete" == document.readyState && a(e); }); }
       ;
       
+    <link internal-fsb-link="true" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" class="internal-fsb-accessory internal-fsb-font">
     script(type="text/javascript").
       window.data = !{JSON.stringify(data)};
     include ../_footer.pug

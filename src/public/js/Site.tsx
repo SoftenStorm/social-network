@@ -6,6 +6,7 @@ import {HTMLHelper} from './helpers/HTMLHelper';
 import {EventHelper} from './helpers/EventHelper';
 import './components/Project.Controls.FlowLayout_45655143';
 import './components/Project.Controls.FlowLayout_5d3e6156';
+import './components/Project.Controls.FlowLayout_6a0e95bb';
 import './components/Project.Controls.FlowLayout_81bde3d0';
 
 declare let React: any;
