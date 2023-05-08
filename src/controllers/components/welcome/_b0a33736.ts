@@ -48,8 +48,8 @@ enum ActionType {
 
 // Auto[Interface]--->
 /*interface HierarchicalDataTable {
-	source: SourceType;
-	group: string;
+  source: SourceType;
+  group: string;
   rows: HierarchicalDataRow[];
   notification?: string;
 }
@@ -84,13 +84,13 @@ interface ValidationInfo {
 // Auto[ClassBegin]--->
 class Controller extends Base {
   constructor(request: Request, response: Response, template: string) {
-  	super(request, response, template);
-  	try {
-	    let [action, schema, data] = this.initialize(request);
-	    this.perform(action, schema, data);
-   	} catch(error) {
-	  	RenderHelper.error(response, error);
-	  }
+    super(request, response, template);
+    try {
+      let [action, schema, data] = this.initialize(request);
+      this.perform(action, schema, data);
+     } catch(error) {
+      RenderHelper.error(response, error);
+    }
   }
   // <---Auto[ClassBegin]
   // Declare class variables and functions here:
@@ -381,15 +381,15 @@ class Controller extends Base {
  	
   // Auto[MergingBegin]--->  
   protected initialize(request: Request): [ActionType, DataTableSchema, Input[]] {
-  	let schema: DataTableSchema = RequestHelper.getSchema(this.pageId, request);
-  	let data: Input[] = [];
-  	let input: Input = null;
-  	
-	  // <---Auto[MergingBegin]
-	  // Auto[Merging]--->
+    let schema: DataTableSchema = RequestHelper.getSchema(this.pageId, request);
+    let data: Input[] = [];
+    let input: Input = null;
+    
+    // <---Auto[MergingBegin]
+    // Auto[Merging]--->
     RequestHelper.registerSubmit("b0a33736", "759b7c95", "update", ["18d7036a","a2e5b0b3","bd54e2da"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "begin"});
-		RequestHelper.registerInput('a2e5b0b3', "document", "User", "firstname");
-		ValidationHelper.registerInput('a2e5b0b3', "firstname", false, "กรุณากรอกชื่อของคุณ", "title", null);
+    RequestHelper.registerInput('a2e5b0b3', "document", "User", "firstname");
+    ValidationHelper.registerInput('a2e5b0b3', "firstname", false, "กรุณากรอกชื่อของคุณ", "title", null);
     for (let input of RequestHelper.getInputs(this.pageId, request, 'a2e5b0b3')) {
     
       // Override data parsing and manipulation of firstname here:
@@ -397,8 +397,8 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('18d7036a', "document", "User", "lastname");
-		ValidationHelper.registerInput('18d7036a', "lastname", false, "กรุณากรอกนามสกุลของคุณ", "title", null);
+    RequestHelper.registerInput('18d7036a', "document", "User", "lastname");
+    ValidationHelper.registerInput('18d7036a', "lastname", false, "กรุณากรอกนามสกุลของคุณ", "title", null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '18d7036a')) {
     
       // Override data parsing and manipulation of lastname here:
@@ -406,8 +406,8 @@ class Controller extends Base {
       
       if (input != null) data.push(input);
     }
-		RequestHelper.registerInput('bd54e2da', "document", "User", "id");
-		ValidationHelper.registerInput('bd54e2da', "id", false, undefined, undefined, null);
+    RequestHelper.registerInput('bd54e2da', "document", "User", "id");
+    ValidationHelper.registerInput('bd54e2da', "id", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, 'bd54e2da')) {
     
       // Override data parsing and manipulation of id here:
@@ -417,13 +417,13 @@ class Controller extends Base {
       if (input != null) data.push(input);
     }
 
-	  // <---Auto[Merging]
-	  
-	  // Auto[MergingEnd]--->
-	  
-  	let action: ActionType = RequestHelper.getAction(this.pageId, request);
-	  return [action, schema, data];
-	}
+    // <---Auto[Merging]
+    
+    // Auto[MergingEnd]--->
+    
+    let action: ActionType = RequestHelper.getAction(this.pageId, request);
+    return [action, schema, data];
+  }
   // <---Auto[MergingEnd]
   
   // Auto[ClassEnd]--->

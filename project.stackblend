@@ -1,9 +1,9 @@
 {
   "animations": {},
   "backEndControllerBlobSHADict": {
-    "01e32c22": "ef2a6380cb34d6e862d4492fd5cba8bc5a017bd9#1547157153",
-    "b0a33736": "7230af51bc6900b93d04270c4f25c75a97b941dd#1042321121",
-    "index": "a6e69148f54121109cabf6f585b3154b716b7b3d#1240875528"
+    "01e32c22": "6c4c5fb4dbd7c30ae92cf61e7adde4cd37d1c9ed#-1730236370",
+    "b0a33736": "7acf9a4d5efc01b6760f3fbc9dfbff9962fc3744#-879853282",
+    "index": "920c51dc8aea6e1000cb133f2318e5d29153b800#1234091427"
   },
   "components": {},
   "controllerBlobSHA": "2c5959392a2624779359336c0c3424ba420b2b10#-1144681990",
@@ -1354,11 +1354,11 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "0e2edcd26683725e801f4415a4a07115e7192c2f#1001562429",
+  "footerBlobSHA": "dc2205ad4702dea53d1cd49c49b686292b9a0c7e#-1719960707",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "e928fb99991200721b9731caaa4c94f5a58e396c#599410380",
-    "Project.Controls.FlowLayout_5d3e6156": "65e4ac0c74c4e90d7d7a4a1ee07703f831a31ff9#-1586838404",
-    "Project.Controls.FlowLayout_81bde3d0": "5febba5123fcb826dfafb426bef65ed0e88534d0#6264584"
+    "Project.Controls.FlowLayout_45655143": "86061a344b45dd1d3a2a73c0520d51e48b86f31f#715302305",
+    "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
+    "Project.Controls.FlowLayout_81bde3d0": "4afa97012f6c5b3039d0719a3a32b7efabf45e2b#748347474"
   },
   "globalSettings": {
     "colorSwatches": [
@@ -1376,9 +1376,9 @@ b1b17b71          }
       null,
       null,
       null,
-      null,
-      null,
-      null,
+      "rgba(0, 43, 255, 1)",
+      "rgba(66, 117, 255, 1)",
+      "rgba(181, 228, 255, 1)",
       null,
       null,
       null,
@@ -1445,7 +1445,7 @@ b1b17b71          }
   "properties": {},
   "routeBlobSHA": "8d906bb18694942a235490cb6d2bb27fdf4669b6#-780131728",
   "services": {},
-  "siteBundleBlobSHA": "2686f6059f1cd700a05fe50be0bde11d6733fd20#1331962728",
+  "siteBundleBlobSHA": "512058d552577db5a9ff506597057dc30516f0f9#-1064049920",
   "sites": {
 01e32c22    "01e32c22": {
 01e32c22      "accessories": {},
@@ -1629,7 +1629,8 @@ b1b17b71          }
 01e32c22      },
 01e32c22      "body": [
 01e32c22        "<body",
-01e32c22        "    class=\"\">",
+01e32c22        "    class=\"\"",
+01e32c22        "    style=\"font-family: Inter\">",
 01e32c22        "<div",
 01e32c22        "    class=\"internal-fsb-begin\"",
 01e32c22        "    internal-fsb-guid=\"0\"",
@@ -1753,7 +1754,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"FlowLayout 5\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"FlowLayout\"",
-01e32c22        "    style=\"-fsb-background-type: linear; -webkit-flex-shrink: 1; border-bottom-color: rgba(0, 43, 255, 1); border-bottom-style: solid; border-bottom-width: 1px; flex-shrink: 1; padding-left: 0px; padding-right: 0px\">",
+01e32c22        "    style=\"-webkit-flex-shrink: 1; background: rgba(242, 242, 242, 1); border-bottom-color: rgba(0, 43, 255, 1); border-bottom-style: solid; border-bottom-width: 1px; flex-shrink: 1; padding-left: 0px; padding-right: 0px\">",
 01e32c22        "<div",
 01e32c22        "    contenteditable=\"true\"",
 01e32c22        "    class=\"internal-fsb-element\"",
@@ -1761,7 +1762,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 2\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"color: rgba(0, 43, 255, 1); font-size: 18px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; text-align: center\">Social Quote</div>",
+01e32c22        "    style=\"color: rgba(0, 43, 255, 1); font-size: 18px; font-weight: 500; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; padding-top: 5px; text-align: center\">Social Quote</div>",
 01e32c22        "</div>",
 01e32c22        "<div",
 01e32c22        "    class=\"internal-fsb-allow-cursor internal-fsb-element internal-fsb-stretch internal-fsb-strict-layout\"",
@@ -1776,7 +1777,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"FlowLayout 7\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"FlowLayout\"",
-01e32c22        "    style=\"border-right-color: rgba(0, 43, 255, 1); border-right-style: solid; border-right-width: 1px; padding-left: 0px; padding-right: 0px\">",
+01e32c22        "    style=\"background: rgba(66, 117, 255, 1); border-right-color: rgba(0, 43, 255, 1); border-right-width: 1px; padding-left: 0px; padding-right: 0px\">",
 01e32c22        "</div>",
 01e32c22        "<div",
 01e32c22        "    class=\"col-9 internal-fsb-allow-cursor internal-fsb-element internal-fsb-strict-layout\"",
@@ -3236,7 +3237,9 @@ b1b17b71          }
 01e32c22      },
 01e32c22      "frequency": null,
 01e32c22      "head": {
-01e32c22        "fonts": {}
+01e32c22        "fonts": {
+01e32c22          "Inter": true
+01e32c22        }
 01e32c22      },
 01e32c22      "id": "01e32c22",
 01e32c22      "image": null,
@@ -4673,7 +4676,7 @@ b0a33736    },
   },
   "version": 1.3,
   "viewBlobSHADict": {
-    "01e32c22": "862a7960f4330b05728c7f0db599a6ea5c269839#-414860916",
+    "01e32c22": "7b80b379af1047b9550a507db3c0e0a18c807166#1327709764",
     "b0a33736": "d67f2704b1314eb9fa844a6b9c8fe9419f12b769#-656107250",
     "index": "7b1d23c498f76d2d16ed3eec75bb06fde65f5828#931942136"
   }
