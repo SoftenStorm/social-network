@@ -387,18 +387,66 @@ class Controller extends Base {
     
     // <---Auto[MergingBegin]
     // Auto[Merging]--->
-    RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","ea9b0569"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] create"});
+    RequestHelper.registerSubmit("01e32c22", "c33d69b3", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[action] fond"});
+    RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","cd9e964b","ea9b0569"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] create"});
     RequestHelper.registerSubmit("01e32c22", "281067ca", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] delete"});
     RequestHelper.registerSubmit("01e32c22", "cc4b29ed", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[action] fond"});
     RequestHelper.registerSubmit("01e32c22", "dc261964", "insert", ["063e86b6","0a824160","0e6227b3","26652008","6c7eaab2","92426ec9","b5b68759","bec0942b","c43cb8c4"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] create"});
     RequestHelper.registerSubmit("01e32c22", "5d65c9a9", "delete", ["53b67855"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] delete"});
     RequestHelper.registerSubmit("01e32c22", "47ebd056", "delete", ["924b8199"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] delete"});
     RequestHelper.registerSubmit("01e32c22", "e0e69546", "insert", ["25ac372b","302e6b73","56a26b1d","87379be8","bc8dc2a4","ccd6346a","e976813d","ec906022"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] create"});
+    RequestHelper.registerInput('8b5b91d8', "document", "Action", "uid");
+    ValidationHelper.registerInput('8b5b91d8', "[action] uid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '8b5b91d8')) {
+      if (input) input.value = request.session['uid'];
+    
+      // Override data parsing and manipulation of [action] uid here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+    RequestHelper.registerInput('a1ce4a26', "document", "Action", "pid");
+    ValidationHelper.registerInput('a1ce4a26', "[action] pid", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'a1ce4a26')) {
+    
+      // Override data parsing and manipulation of [action] pid here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+    RequestHelper.registerInput('036b8078', "document", "Action", "type");
+    ValidationHelper.registerInput('036b8078', "[action] type", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '036b8078')) {
+    
+      // Override data parsing and manipulation of [action] type here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+    RequestHelper.registerInput('c8a316a1', "document", "Action", "createdAt");
+    ValidationHelper.registerInput('c8a316a1', "[action] createdAt", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'c8a316a1')) {
+    
+      // Override data parsing and manipulation of [action] createdAt here:
+      // 
+      input.value = new Date();
+      
+      if (input != null) data.push(input);
+    }
     RequestHelper.registerInput('53063929', "document", "Post", "message");
     ValidationHelper.registerInput('53063929', "[post] message", true, "คุณลืมเขียนข้อความ", undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '53063929')) {
     
       // Override data parsing and manipulation of firstname here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
+    RequestHelper.registerInput('cd9e964b', "document", "Post", "isQuote");
+    ValidationHelper.registerInput('cd9e964b', "[post] isQuote", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, 'cd9e964b')) {
+    
+      // Override data parsing and manipulation of [post] isQuote here:
       // 
       
       if (input != null) data.push(input);

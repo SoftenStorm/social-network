@@ -99,7 +99,8 @@ class FlowLayout_45655143 extends Base {
     TestHelper.identify();
     function ready(a){"loading"!=document.readyState?a(new Event('ready')):document.addEventListener?document.addEventListener("DOMContentLoaded",a):(document.onreadystatechange=function(e){"complete"==document.readyState&&a(e)})};
         
-    DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","ea9b0569"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
+    DataManipulationHelper.register("c33d69b3", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
+    DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","cd9e964b","ea9b0569"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("281067ca", "delete", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("cc4b29ed", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("dc261964", "insert", ["063e86b6","0a824160","0e6227b3","26652008","6c7eaab2","92426ec9","b5b68759","bec0942b","c43cb8c4"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
@@ -185,6 +186,10 @@ class FlowLayout_45655143 extends Base {
   
   private getTotalAction(type: number, i: number): boolean {
     return this.getDataFromNotation('Post[' + i + '].Action', true).filter(row => row.columns['type'] == type).length;
+  }
+  
+  private isQuote(i: number): boolean {
+    return this.getDataFromNotation('Post[' + i + '].isQuote');
   }
   
   // Auto[Merging]--->
@@ -308,15 +313,49 @@ class FlowLayout_45655143 extends Base {
     TestHelper.identify();
     return pug `
       div(style=Object.assign({'MsFlexDirection': 'column', 'MsFlexWrap': 'nowrap', 'WebkitFlexDirection': 'column', 'WebkitFlexWrap': 'nowrap', 'flexDirection': 'column', 'flexWrap': 'nowrap', 'height': '100vh', 'paddingLeft': '0px', 'paddingRight': '0px'}, this.props.forward && this.props.forward.styles || {}), internal-fsb-class="FlowLayout", className="internal-fsb-element internal-fsb-inverse internal-fsb-stretch internal-fsb-strict-layout " + (this.props.forward && this.props.forward.classes || ''), internal-fsb-guid="45655143")
-        .internal-fsb-element.internal-fsb-strict-layout(style={'WebkitFlexShrink': '1', 'background': 'rgba(242, 242, 242, 1)', 'borderBottomColor': 'rgba(0, 43, 255, 1)', 'borderBottomStyle': 'solid', 'borderBottomWidth': '1px', 'flexShrink': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="837621b0")
+        .internal-fsb-element.internal-fsb-strict-layout(style={'WebkitFlexShrink': '1', 'borderBottomColor': 'rgba(66, 117, 255, 1)', 'borderBottomStyle': 'solid', 'borderBottomWidth': '5px', 'flexShrink': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="837621b0")
           .internal-fsb-element(style={'color': 'rgba(0, 43, 255, 1)', 'fontSize': '18px', 'fontWeight': '500', 'paddingBottom': '5px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '5px', 'textAlign': 'center'}, internal-fsb-guid="4d102860")
             | Social Quote
         .internal-fsb-element.internal-fsb-stretch.internal-fsb-strict-layout(style={'MsFlexWrap': 'nowrap', 'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'WebkitFlexWrap': 'nowrap', 'flexBasis': '0px', 'flexGrow': '1', 'flexWrap': 'nowrap', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="10a1ee6a")
-          .col-3.internal-fsb-element.internal-fsb-strict-layout(style={'background': 'rgba(66, 117, 255, 1)', 'borderRightColor': 'rgba(0, 43, 255, 1)', 'borderRightWidth': '1px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="a2677289")
+          .col-3.internal-fsb-element.internal-fsb-inverse.internal-fsb-stretch.internal-fsb-strict-layout(style={'MsFlexDirection': 'column-reverse', 'WebkitFlexDirection': 'column-reverse', 'WebkitJustifyContent': 'start', 'background': 'rgba(66, 117, 255, 1)', 'borderRightColor': 'rgba(0, 43, 255, 1)', 'borderRightWidth': '1px', 'flexDirection': 'column-reverse', 'justifyContent': 'start', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="a2677289")
+            each data, i in this.getDataFromNotation("Post", true, false)
+              if this.isQuote(i)
+                .internal-fsb-element.internal-fsb-strict-layout(style={'marginBottom': '20px', 'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || i), data-fsb-index=i, internal-fsb-class="FlowLayout", internal-fsb-guid="06261965")
+                  .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="828a40e9")
+                    .internal-fsb-element.internal-fsb-strict-layout(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'paddingLeft': '5px', 'paddingRight': '5px', 'paddingTop': '5px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="9a1c0da9")
+                      .internal-fsb-element.internal-fsb-stretch.internal-fsb-strict-layout(style={'MsOverflowX': 'hidden', 'WebkitAlignContent': 'space-between', 'WebkitBorderRadius': '3px 3px 3px 3px', 'alignContent': 'space-between', 'background': 'rgba(255, 255, 255, 1)', 'borderBottomColor': 'rgba(255, 255, 255, 1)', 'borderBottomStyle': 'dashed', 'borderBottomWidth': '1px', 'borderLeftColor': 'rgba(255, 255, 255, 1)', 'borderLeftStyle': 'dashed', 'borderLeftWidth': '1px', 'borderRadius': '3px 3px 3px 3px', 'borderRightColor': 'rgba(255, 255, 255, 1)', 'borderRightStyle': 'dashed', 'borderRightWidth': '1px', 'borderTopColor': 'rgba(255, 255, 255, 1)', 'borderTopStyle': 'dashed', 'borderTopWidth': '1px', 'marginBottom': '10px', 'minHeight': '75px', 'overflowX': 'hidden', 'paddingBottom': '5px', 'paddingLeft': '0px', 'paddingRight': '0px', 'paddingTop': '5px', 'width': '100%'}, internal-fsb-class="FlowLayout", internal-fsb-guid="67ec188c")
+                        .internal-fsb-element(style={'fontSize': '12px', 'lineHeight': '1.15em', 'marginBottom': '5px', 'paddingLeft': '5px', 'paddingRight': '5px', 'width': '100%'}, internal-fsb-guid="33303e95")
+                          .internal-fsb-element(style={'color': 'rgba(181, 228, 255, 1)', 'display': 'inline', 'fontSize': '24px'}, internal-fsb-guid="906544b7")
+                            | “
+                          .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].message")))}, internal-fsb-guid="054e740a")
+                          .internal-fsb-element(style={'color': 'rgba(181, 228, 255, 1)', 'display': 'inline', 'fontSize': '24px'}, internal-fsb-guid="4e62c042")
+                            | ”
+                        .internal-fsb-element.internal-fsb-strict-layout(style={'lineHeight': '1em', 'paddingBottom': '5px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="1caca464")
+                          .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '8px', 'paddingLeft': '5px', 'paddingRight': '5px'}, internal-fsb-guid="28dec2ab")
+                            | #{this.getDataFromNotation("Post[" + i + "].User.firstname")} #{this.getDataFromNotation("Post[" + i + "].createdAt")}
+                        .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '5px', 'paddingRight': '5px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="71221a4b")
+                          input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="8b5b91d8")
+                          input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="a1ce4a26")
+                          input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.hasFondOf(i) ? '0' : '1', internal-fsb-guid="036b8078")
+                          input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="c8a316a1")
+                          Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexShrink': '1', 'flexShrink': '1', 'fontSize': '9px', 'paddingLeft': '5px', 'paddingRight': '5px', 'paddingTop': '4px', 'whiteSpace': 'nowrap', borderBottomColor: (()=>{return (this.hasFondOf(i)) ? '#005eff' : undefined;})(), borderLeftColor: (()=>{return (this.hasFondOf(i)) ? '#005eff' : undefined;})(), borderRightColor: (()=>{return (this.hasFondOf(i)) ? '#005eff' : undefined;})(), borderTopColor: (()=>{return (this.hasFondOf(i)) ? '#005eff' : undefined;})()}, onClick=((event) => { window.internalFsbSubmit('c33d69b3', 'Action', event, ((results) => { this.manipulate('c33d69b3', 'Action', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="c33d69b3")
+                            .internal-fsb-element(style={'display': 'inline-block', color: (()=>{return (this.hasFondOf(i)) ? '#005eff' : undefined;})()}, internal-fsb-guid="9750537b")
+                              | ชื่นชอบ 
+                            .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'display': 'inline-block', 'flexBasis': '0px', 'flexGrow': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-guid="6872b365")
+                              | {this.getTotalAction(1, i)} คน
+                            if this.hasFondOf(i)
+                              .internal-fsb-element(style={'color': 'rgba(0, 94, 255, 1)', 'display': 'inline-block', 'marginLeft': '5px', 'position': 'relative', 'top': '-2px'}, dangerouslySetInnerHTML={__html: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-box2-heart-fill\" viewBox=\"0 0 16 16\">\n<path d=\"M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM8.5 4h6l.5.667V5H1v-.333L1.5 4h6V1h1v3ZM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z\"/>\n</svg>"}, internal-fsb-guid="e4a375ea")
           .col-9.internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '30px', 'paddingRight': '30px', 'paddingTop': '15px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="c6060bb4")
             .internal-fsb-element.internal-fsb-strict-layout(style={'background': 'rgba(255, 255, 255, 1)', 'marginBottom': '15px', 'paddingBottom': '10px', 'paddingLeft': '0px', 'paddingRight': '0px', 'position': 'sticky', 'top': '0px', 'zIndex': '1000'}, internal-fsb-class="FlowLayout", internal-fsb-guid="3ae1734a")
               .col-12.internal-fsb-element.offset-0(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="53063929")
                 textarea.form-control.form-control-sm(style={'FsbCodeLock': '1', 'WebkitBorderRadius': '3px 3px 3px 3px', 'borderRadius': '3px 3px 3px 3px', 'display': 'block', 'width': '100%'}, ref="message", onKeyPress=this.onTextboxKeyPress_53063929.bind(this), placeholder="คุณต้องการบอกอะไรกับชาวโลก?", required=true, rows="2", type="text")
+              label.col-12.internal-fsb-element(style={'fontSize': '11px', 'marginTop': '5px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-guid="87337d62")
+                .container-fluid
+                  .internal-fsb-strict-layout.row
+                    .internal-fsb-element(style={padding: '0px'}, internal-fsb-forward="1", internal-fsb-guid="cd9e964b")
+                      input(style={'display': 'inline-block'}, type="checkbox")
+                    .internal-fsb-element(style={'display': 'inline-block', 'lineHeight': '14px', 'paddingLeft': '5px'}, internal-fsb-guid="b8a27120")
+                      | เพิ่มเข้าไปใน Social Quote
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="18091a36")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="13c65096")
               input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="4d487443")
@@ -327,7 +366,7 @@ class FlowLayout_45655143 extends Base {
               Button.btn.btn-secondary.btn-sm.col-2.internal-fsb-element(style={'FsbCodeLock': '1', 'display': 'none'}, ref="post", onClick=((event) => { window.internalFsbSubmit('66766b99', 'Post', event, ((results) => { this.manipulate('66766b99', 'Post', results); }).bind(this)); }).bind(this), type="button", onSuccess=this.onButtonSuccess_66766b99.bind(this), internal-fsb-guid="66766b99")
                 .internal-fsb-element(internal-fsb-guid="66766b99-text")
                   | Submit
-            .internal-fsb-element.internal-fsb-inverse.internal-fsb-strict-layout(style={'MsFlexDirection': 'column-reverse', 'WebkitFlexDirection': 'column-reverse', 'flexDirection': 'column-reverse', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ac036c3a")
+            .internal-fsb-element.internal-fsb-inverse.internal-fsb-stretch.internal-fsb-strict-layout(style={'MsFlexDirection': 'column-reverse', 'MsFlexWrap': 'wrap-reverse', 'WebkitFlexDirection': 'column-reverse', 'WebkitFlexWrap': 'wrap-reverse', 'flexDirection': 'column-reverse', 'flexWrap': 'wrap-reverse', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ac036c3a")
               each data, i in this.getDataFromNotation("Post", true, false)
                 .internal-fsb-element.internal-fsb-strict-layout(style={'marginBottom': '20px', 'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || i), data-fsb-index=i, internal-fsb-class="FlowLayout", internal-fsb-guid="166e6ba0")
                   .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="0713c8ad")
