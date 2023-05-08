@@ -1366,9 +1366,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "1107da5cff8dac71a8feabeec484126c882f0dd6#-1324708",
+  "footerBlobSHA": "1c0e7f756618889fe29d31ce3c411e804fa4470c#-334662816",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "fe3a87faaa98de71ee18a318cee27119f06612ad#1250657479",
+    "Project.Controls.FlowLayout_45655143": "52302c7122725c92550216e0e0d61f6a6277eb90#344977937",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
     "Project.Controls.FlowLayout_81bde3d0": "4681a78db38023c6d68305fb3b6bd7feaba98bee#-752272619"
   },
@@ -1909,7 +1909,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 7\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"color: rgba(77, 77, 77, 1); display: inline; font-weight: 500; padding-left: 5px; padding-right: 5px\"",
+01e32c22        "    style=\"color: rgba(77, 77, 77, 1); display: inline; font-weight: 500; line-height: 1.15em; padding-left: 5px; padding-right: 5px\"",
 01e32c22        "    internal-fsb-react-data=\"message\">การทำงานในสหรัฐอเมริกาต้องมีความรับผิดชอบสูง</div>",
 01e32c22        "<div",
 01e32c22        "    contenteditable=\"true\"",
@@ -4714,7 +4714,7 @@ b0a33736    },
         "    internal-fsb-name=\"TextElement 7\"",
         "    internal-fsb-event-no-propagate=\"1\"",
         "    internal-fsb-class=\"TextElement\"",
-        "    style=\"display: inline; font-weight: 500; padding-left: 5px; padding-right: 5px\"",
+        "    style=\"display: inline; font-weight: 500; line-height: 1.15em; padding-left: 5px; padding-right: 5px\"",
         "    internal-fsb-react-data=\"message\">การทำงานในสหรัฐอเมริกาต้องมีความรับผิดชอบสูง</div>",
         "<div",
         "    contenteditable=\"true\"",
@@ -5135,6 +5135,6 @@ b0a33736    },
   "viewBlobSHADict": {
     "01e32c22": "7b80b379af1047b9550a507db3c0e0a18c807166#1327709764",
     "b0a33736": "d67f2704b1314eb9fa844a6b9c8fe9419f12b769#-656107250",
-    "index": "baddceb9a2ca2d25e1ad86cc405aa3ad472c9078#900821881"
+    "index": "bc12fdad1601a02f290ee47693d4e8628850d947#1664519402"
   }
 }
