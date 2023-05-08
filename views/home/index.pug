@@ -40,9 +40,13 @@ html(lang=headers && headers.language || 'en')
                         | การทำงานในสหรัฐอเมริกาต้องมีความรับผิดชอบสูง
                       .internal-fsb-element(style={'-fsb-transform': '0.00000000 -19.04762043 0.00000000 -1.00000000 0.00001000 0.00001000 1.00000000 1.00000000 1.00000000', '-moz-transform': 'matrix3d(1, -1.99998e-05, -2.00002e-05, 0, 2.00002e-05, 1, 1.99998e-05, 0, -1.99998e-05, 2.00002e-05, -1, 0, 0, 19.0476, 0, 1)', '-ms-transform': 'matrix3d(1, -1.99998e-05, -2.00002e-05, 0, 2.00002e-05, 1, 1.99998e-05, 0, -1.99998e-05, 2.00002e-05, -1, 0, 0, 19.0476, 0, 1)', '-webkit-transform': 'matrix3d(1, -1.99998e-05, -2.00002e-05, 0, 2.00002e-05, 1, 1.99998e-05, 0, -1.99998e-05, 2.00002e-05, -1, 0, 0, 19.0476, 0, 1)', 'color': 'rgba(181, 228, 255, 1)', 'display': 'inline-block', 'font-size': '24px', 'transform': 'matrix3d(1, -1.99998e-05, -2.00002e-05, 0, 2.00002e-05, 1, 1.99998e-05, 0, -1.99998e-05, 2.00002e-05, -1, 0, 0, 19.0476, 0, 1)'}, internal-fsb-guid="cadbcc68")
                         | ”
-                    .internal-fsb-element.internal-fsb-strict-layout(style={'line-height': '1em', 'padding-bottom': '5px', 'padding-left': '0px', 'padding-right': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="caea5b09")
-                      .internal-fsb-element(style={'-webkit-flex-basis': '0px', '-webkit-flex-grow': '1', 'flex-basis': '0px', 'flex-grow': '1', 'font-size': '8px', 'font-style': 'italic', 'line-height': '1.15em', 'padding-left': '13px', 'padding-right': '5px'}, internal-fsb-guid="beb3997c")
-                        | — @{User.firstname} @{User.lastname}
+                    .internal-fsb-element.internal-fsb-strict-layout(style={'display': 'block', 'font-size': '8px', 'font-style': 'italic', 'line-height': '1.15em', 'padding-bottom': '5px', 'padding-left': '13px', 'padding-right': '5px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="caea5b09")
+                      .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="beb3997c")
+                        | —&nbsp;
+                      .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="b251ec07")
+                        | #{DataManipulationHelper.getDataFromNotation("User.firstname")}
+                      .internal-fsb-element(style={'display': 'inline', 'padding-left': '2px'}, internal-fsb-guid="6c6b9917")
+                        | #{DataManipulationHelper.getDataFromNotation("User.lastname")}
     script(type="text/javascript" src="/js/libraries/polyfills/polyfill.io.js")
     script(type="text/javascript" src="/js/Embed.bundle.js")
     script(type="text/javascript").
