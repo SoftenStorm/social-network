@@ -3,7 +3,7 @@
   "backEndControllerBlobSHADict": {
     "01e32c22": "503aa16ecdf70cf7538d1d37ef1f4aab3d481158#262082020",
     "b0a33736": "7acf9a4d5efc01b6760f3fbc9dfbff9962fc3744#-879853282",
-    "index": "2fe479e4ceb60d9f41d989350cf54e16343ec8c3#1434120969"
+    "index": "a4d41371b5ecb5d56e08adcec428efe2e394dac8#-1261512953"
   },
   "components": {},
   "controllerBlobSHA": "2c5959392a2624779359336c0c3424ba420b2b10#-1144681990",
@@ -1366,7 +1366,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "0450d114966fee36e0e0f05bb6246369ed08788a#1879706147",
+  "footerBlobSHA": "3d656f577e4e38470543514ca647077462ca144b#-1758467649",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "52302c7122725c92550216e0e0d61f6a6277eb90#344977937",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
@@ -4742,7 +4742,7 @@ b0a33736    },
         "    internal-fsb-name=\"TextElement 8\"",
         "    internal-fsb-event-no-propagate=\"1\"",
         "    internal-fsb-class=\"TextElement\"",
-        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 8px; font-style: italic; line-height: 1.15em; padding-left: 13px; padding-right: 5px\">— @{User.firstname} @{User.lastname}</div>",
+        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 8px; font-style: italic; line-height: 1.15em; padding-left: 13px; padding-right: 5px\">— #{DataManipulationHelper.getDataFromNotation(\"Post[\" + i + \"].User.firstname\") #{DataManipulationHelper.getDataFromNotation(\"DataManipulationHelper.getDataFromNotation(\"Post[\" + i + \"].User.lastname\")</div>",
         "",
         "</div>",
         "",
@@ -4822,14 +4822,16 @@ b0a33736    },
           "  protected async get(data: Input[]): Promise<{[Identifier: string]: HierarchicalDataTable}> {",
           "    return new Promise(async (resolve, reject) => {",
           "      try {",
-          "        resolve(Object.assign({}, await DatabaseHelper.retrieve(@{",
+          "        const dataset = await DatabaseHelper.retrieve(@{",
           "            'Post.active': true,",
           "            'Post.User.id': null",
           "          }, 'Post',",
           "          this.request.session,   // session variables",
           "          true,                   // real-time updates",
           "          false                   // skip permission settings",
-          "        )));",
+          "        );",
+          "        dataset['Post'].rows = dataset['Post'].rows.filter(row => row.columns.isQuote);",
+          "        resolve(Object.assign({}, dataset));",
           "      } catch(error) {",
           "        reject(error);",
           "      }",
@@ -5120,6 +5122,6 @@ b0a33736    },
   "viewBlobSHADict": {
     "01e32c22": "7b80b379af1047b9550a507db3c0e0a18c807166#1327709764",
     "b0a33736": "d67f2704b1314eb9fa844a6b9c8fe9419f12b769#-656107250",
-    "index": "daa0bb70ed118e2cfa23a03f4b88fbafc02efd14#-2134457308"
+    "index": "de2315014f581c72b2219ae3d767812609216e99#1727936209"
   }
 }

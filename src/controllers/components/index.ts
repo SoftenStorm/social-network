@@ -155,14 +155,16 @@ class Controller extends Base {
   protected async get(data: Input[]): Promise<{[Identifier: string]: HierarchicalDataTable}> {
     return new Promise(async (resolve, reject) => {
       try {
-        resolve(Object.assign({}, await DatabaseHelper.retrieve(RequestHelper.createInputs({
+        const dataset = await DatabaseHelper.retrieve(RequestHelper.createInputs({
             'Post.active': true,
             'Post.User.id': null
           }), ProjectConfigurationHelper.getDataSchema().tables['Post'],
           this.request.session,   // session variables
           true,                   // real-time updates
           false                   // skip permission settings
-        )));
+        );
+        dataset['Post'].rows = dataset['Post'].rows.filter(row => row.columns.isQuote);
+        resolve(Object.assign({}, dataset));
       } catch(error) {
         reject(error);
       }

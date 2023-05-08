@@ -43,7 +43,7 @@ html(lang=headers && headers.language || 'en')
                           | ”
                       .internal-fsb-element.internal-fsb-strict-layout(style={'display': 'block', 'font-size': '8px', 'font-style': 'italic', 'line-height': '1.15em', 'padding-bottom': '5px', 'padding-left': '0px', 'padding-right': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="caea5b09")
                         .internal-fsb-element(style={'-webkit-flex-basis': '0px', '-webkit-flex-grow': '1', 'flex-basis': '0px', 'flex-grow': '1', 'font-size': '8px', 'font-style': 'italic', 'line-height': '1.15em', 'padding-left': '13px', 'padding-right': '5px'}, internal-fsb-guid="ebeed0eb")
-                          | — @{User.firstname} @{User.lastname}
+                          | — #{DataManipulationHelper.getDataFromNotation("Post[" + i + "].User.firstname") #{DataManipulationHelper.getDataFromNotation("DataManipulationHelper.getDataFromNotation("Post[" + i + "].User.lastname")
     script(type="text/javascript" src="/js/libraries/polyfills/polyfill.io.js")
     script(type="text/javascript" src="/js/Embed.bundle.js")
     script(type="text/javascript").
