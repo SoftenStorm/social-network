@@ -99,7 +99,7 @@ class FlowLayout_45655143 extends Base {
     TestHelper.identify();
     function ready(a){"loading"!=document.readyState?a(new Event('ready')):document.addEventListener?document.addEventListener("DOMContentLoaded",a):(document.onreadystatechange=function(e){"complete"==document.readyState&&a(e)})};
         
-    DataManipulationHelper.register("c33d69b3", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
+    DataManipulationHelper.register("c33d69b3", "upsert", ["036b8078","8b5b91d8","a1ce4a26","c8a316a1"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","cd9e964b","ea9b0569"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("281067ca", "delete", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("cc4b29ed", "upsert", ["01e05bb0","82728a83","96cba469","b32deb04"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
@@ -331,9 +331,9 @@ class FlowLayout_45655143 extends Base {
                           .internal-fsb-element(style={'color': 'rgba(181, 228, 255, 1)', 'display': 'inline', 'fontSize': '24px'}, internal-fsb-guid="4e62c042")
                             | ”
                         .internal-fsb-element.internal-fsb-strict-layout(style={'lineHeight': '1em', 'paddingBottom': '5px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="1caca464")
-                          .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '8px', 'paddingLeft': '5px', 'paddingRight': '5px'}, internal-fsb-guid="28dec2ab")
+                          .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '8px', 'paddingLeft': '13px', 'paddingRight': '5px'}, internal-fsb-guid="28dec2ab")
                             | #{this.getDataFromNotation("Post[" + i + "].User.firstname")} #{this.getDataFromNotation("Post[" + i + "].createdAt")}
-                        .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '5px', 'paddingRight': '5px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="71221a4b")
+                        .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '13px', 'paddingRight': '5px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="71221a4b")
                           input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="8b5b91d8")
                           input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="a1ce4a26")
                           input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.hasFondOf(i) ? '0' : '1', internal-fsb-guid="036b8078")
@@ -342,7 +342,7 @@ class FlowLayout_45655143 extends Base {
                             .internal-fsb-element(style={'display': 'inline-block', color: (()=>{return (this.hasFondOf(i)) ? '#005eff' : undefined;})()}, internal-fsb-guid="9750537b")
                               | ชื่นชอบ 
                             .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'display': 'inline-block', 'flexBasis': '0px', 'flexGrow': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-guid="6872b365")
-                              | {this.getTotalAction(1, i)} คน
+                              | #{this.getTotalAction(1, i)} คน
                             if this.hasFondOf(i)
                               .internal-fsb-element(style={'color': 'rgba(0, 94, 255, 1)', 'display': 'inline-block', 'marginLeft': '5px', 'position': 'relative', 'top': '-2px'}, dangerouslySetInnerHTML={__html: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-box2-heart-fill\" viewBox=\"0 0 16 16\">\n<path d=\"M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM8.5 4h6l.5.667V5H1v-.333L1.5 4h6V1h1v3ZM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z\"/>\n</svg>"}, internal-fsb-guid="e4a375ea")
           .col-9.internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '30px', 'paddingRight': '30px', 'paddingTop': '15px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="c6060bb4")

@@ -1,7 +1,7 @@
 {
   "animations": {},
   "backEndControllerBlobSHADict": {
-    "01e32c22": "aa84b4820dc489351c5a312a9352bfffdb92d5f6#1409493684",
+    "01e32c22": "503aa16ecdf70cf7538d1d37ef1f4aab3d481158#262082020",
     "b0a33736": "7acf9a4d5efc01b6760f3fbc9dfbff9962fc3744#-879853282",
     "index": "920c51dc8aea6e1000cb133f2318e5d29153b800#1234091427"
   },
@@ -1376,9 +1376,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "fd569c4d6a60c4c01c9029bf50d61bfd439000ae#-1458035846",
+  "footerBlobSHA": "4829d357958da067d4100f14f1426b337e51b63b#1781469317",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "1ce0d13a60c585231294bf83f7fbc285e524dba4#-2060748180",
+    "Project.Controls.FlowLayout_45655143": "d5aa982f68a6e01c9b75c658405b671803a3ca7b#497532901",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
     "Project.Controls.FlowLayout_81bde3d0": "4afa97012f6c5b3039d0719a3a32b7efabf45e2b#748347474"
   },
@@ -1890,7 +1890,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 8\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 8px; padding-left: 5px; padding-right: 5px\">@{User.firstname} @{createdAt}</div>",
+01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 8px; padding-left: 13px; padding-right: 5px\">@{User.firstname} @{createdAt}</div>",
 01e32c22        "",
 01e32c22        "</div>",
 01e32c22        "<div",
@@ -1899,7 +1899,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"FlowLayout 1\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"FlowLayout\"",
-01e32c22        "    style=\"padding-left: 5px; padding-right: 5px\">",
+01e32c22        "    style=\"padding-left: 13px; padding-right: 5px\">",
 01e32c22        "<input",
 01e32c22        "    type=\"hidden\"",
 01e32c22        "    class=\"col-12 internal-fsb-element\"",
@@ -1966,7 +1966,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"Button\"",
 01e32c22        "    style=\"-fsb-code-lock: 1; -fsb-inherited-presets: 281067ca; -webkit-flex-shrink: 1; flex-shrink: 1; font-size: 9px; padding-left: 5px; padding-right: 5px; padding-top: 4px; white-space: nowrap\"",
-01e32c22        "    internal-fsb-data-controls=\"01e05bb0 82728a83 96cba469 b32deb04\"",
+01e32c22        "    internal-fsb-data-controls=\"036b8078 8b5b91d8 a1ce4a26 c8a316a1\"",
 01e32c22        "    internal-fsb-data-wizard-type=\"upsert\"",
 01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"\"",
 01e32c22        "    internal-fsb-react-display-statement=\"\"",
@@ -1990,7 +1990,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 8\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; display: inline-block; flex-basis: 0px; flex-grow: 1; padding-left: 0px; padding-right: 0px\">{this.getTotalAction(1, i)} คน</div>",
+01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; display: inline-block; flex-basis: 0px; flex-grow: 1; padding-left: 0px; padding-right: 0px\">#{this.getTotalAction(1, i)} คน</div>",
 01e32c22        "<div",
 01e32c22        "    class=\"internal-fsb-element\"",
 01e32c22        "    internal-fsb-guid=\"e4a375ea\"",
