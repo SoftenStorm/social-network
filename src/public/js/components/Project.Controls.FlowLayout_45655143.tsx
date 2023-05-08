@@ -334,7 +334,7 @@ class FlowLayout_45655143 extends Base {
                             | ”
                         .internal-fsb-element.internal-fsb-strict-layout(style={'lineHeight': '1em', 'paddingBottom': '5px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="1caca464")
                           .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '8px', 'fontStyle': 'italic', 'lineHeight': '1.15em', 'paddingLeft': '13px', 'paddingRight': '5px'}, internal-fsb-guid="28dec2ab")
-                            | — #{this.getDataFromNotation("Post[" + i + "].User.firstname")} #{this.getDataFromNotation("Post[" + i + "].User.lastName")}
+                            | — #{this.getDataFromNotation("Post[" + i + "].User.firstname")} #{this.getDataFromNotation("Post[" + i + "].User.lastname")}
                         .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '13px', 'paddingRight': '5px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="71221a4b")
                           input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="8b5b91d8")
                           input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="a1ce4a26")

@@ -1376,9 +1376,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "5bd375e556c449f42981edab025072ec010b8922#-112161763",
+  "footerBlobSHA": "f7ac242f7f5559be6e40c01f88a8a84be6ec1ff9#-2124497884",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "638a5d16fe5634b8f91d11f28fe15b81dbcce4b7#55636891",
+    "Project.Controls.FlowLayout_45655143": "e008f6b2089471d02a99102574364e181b765420#1020520315",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
     "Project.Controls.FlowLayout_81bde3d0": "92bf42acd4a3797496bd97ec43f955339ab06a9b#192378724"
   },
@@ -1898,7 +1898,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 8\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 8px; font-style: italic; line-height: 1.15em; padding-left: 13px; padding-right: 5px\">— @{User.firstname} @{User.lastName}</div>",
+01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 8px; font-style: italic; line-height: 1.15em; padding-left: 13px; padding-right: 5px\">— @{User.firstname} @{User.lastname}</div>",
 01e32c22        "",
 01e32c22        "</div>",
 01e32c22        "<div",
