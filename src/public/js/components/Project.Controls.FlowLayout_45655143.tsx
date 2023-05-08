@@ -222,20 +222,20 @@ class FlowLayout_45655143 extends Base {
     
     const hours = remaining % 24;
     remaining = Math.floor(remaining / 24);
-    tokens = [`${hours} ชั่วโมง`];
     
     const days = remaining % 31;
     remaining = Math.floor(remaining / 31);
+    
+    if (hours != 0 || days != 0) tokens = [`${hours} ชั่วโมง`];
     if (days != 0) tokens.push(`${days} วัน`);
     
     tokens.reverse();
-    tokens.push('ที่ผ่านมา')
     
     if (remaining != 0) {
       tokens = [date.toLocaleString('th-TH', {dateStyle: 'long'})];
     }
     
-    return tokens.join(' ');
+    return `${tokens.join(' ')}ที่ผ่านมา`;
   }
   
   // Auto[Merging]--->
