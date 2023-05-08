@@ -214,24 +214,24 @@ class FlowLayout_45655143 extends Base {
     
     const seconds = remaining % 60;
     remaining = Math.floor(remaining / 60);
-    tokens.push(`#{seconds} วินาที`);
+    tokens.push(`${seconds} วินาที`);
     
     const minutes = remaining % 60;
     remaining = Math.floor(remaining / 60);
-    if (minutes != 0) tokens.push(`#{minutes} นาที`);
+    if (minutes != 0) tokens.push(`${minutes} นาที`);
     
     const hours = remaining % 24;
     remaining = Math.floor(remaining / 24);
-    if (hours != 0) tokens.push(`#{hours} ชั่วโมง`);
+    if (hours != 0) tokens.push(`${hours} ชั่วโมง`);
     
     const days = remaining % 31;
     remaining = Math.floor(remaining / 31);
-    if (days != 0) tokens.push(`#{days} วัน`);
+    if (days != 0) tokens.push(`${days} วัน`);
     
     tokens.reverse();
     
     if (remaining != 0) {
-      tokens = [date.toString()];
+      tokens = [date.toLocaleString('th-TH', {dateStyle: 'long'})];
     }
     
     return tokens.join(' ');
