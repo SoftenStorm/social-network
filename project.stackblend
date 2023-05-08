@@ -1376,9 +1376,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "4829d357958da067d4100f14f1426b337e51b63b#1781469317",
+  "footerBlobSHA": "602fa9b1dc8494605c6506c1fb730d9064948bf2#1845045212",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_45655143": "d5aa982f68a6e01c9b75c658405b671803a3ca7b#497532901",
+    "Project.Controls.FlowLayout_45655143": "e433ca071d7ca19930ca4d07382ce18e99111c01#1488072167",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
     "Project.Controls.FlowLayout_81bde3d0": "4afa97012f6c5b3039d0719a3a32b7efabf45e2b#748347474"
   },
@@ -1849,7 +1849,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"Rectangle 1\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"Rectangle\"",
-01e32c22        "    style=\"font-size: 12px; line-height: 1.15em; margin-bottom: 5px; padding-left: 5px; padding-right: 5px; width: 100%\">",
+01e32c22        "    style=\"font-size: 14px; line-height: 1.15em; margin-bottom: 5px; padding-left: 5px; padding-right: 5px; width: 100%\">",
 01e32c22        "<div",
 01e32c22        "    contenteditable=\"true\"",
 01e32c22        "    class=\"internal-fsb-element\"",
@@ -1865,7 +1865,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"TextElement 7\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",
-01e32c22        "    style=\"display: inline\"",
+01e32c22        "    style=\"display: inline; font-weight: 600\"",
 01e32c22        "    internal-fsb-react-data=\"message\">ABC</div>",
 01e32c22        "<div",
 01e32c22        "    contenteditable=\"true\"",
@@ -1965,7 +1965,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"[action] fond\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"Button\"",
-01e32c22        "    style=\"-fsb-code-lock: 1; -fsb-inherited-presets: 281067ca; -webkit-flex-shrink: 1; flex-shrink: 1; font-size: 9px; padding-left: 5px; padding-right: 5px; padding-top: 4px; white-space: nowrap\"",
+01e32c22        "    style=\"-fsb-code-lock: 1; -fsb-inherited-presets: 281067ca; -webkit-flex-shrink: 1; flex-shrink: 1; font-size: 13px; padding-left: 10px; padding-right: 10px; white-space: nowrap\"",
 01e32c22        "    internal-fsb-data-controls=\"036b8078 8b5b91d8 a1ce4a26 c8a316a1\"",
 01e32c22        "    internal-fsb-data-wizard-type=\"upsert\"",
 01e32c22        "    internal-fsb-data-wizard-manipulate-into=\"\"",
