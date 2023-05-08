@@ -49,7 +49,7 @@
 6a0e95bb        "    internal-fsb-event-no-propagate=\"1\"",
 6a0e95bb        "    internal-fsb-class=\"Link\"",
 6a0e95bb        "    internal-fsb-reusable-preset-name=\"v1_navigation_menu\"",
-6a0e95bb        "    href=\"/\">",
+6a0e95bb        "    href=\"https://www.softenstorm.com\">",
 6a0e95bb        "<div",
 6a0e95bb        "    contenteditable=\"true\"",
 6a0e95bb        "    internal-fsb-class=\"TextElement\"",
@@ -65,7 +65,7 @@
 6a0e95bb        "    internal-fsb-event-no-propagate=\"1\"",
 6a0e95bb        "    internal-fsb-class=\"Link\"",
 6a0e95bb        "    style=\"-fsb-inherited-presets: 7e3024a9\"",
-6a0e95bb        "    href=\"/livebook-dictionary\">",
+6a0e95bb        "    href=\"https://www.softenstorm.com/livebook-dictionary\">",
 6a0e95bb        "<div",
 6a0e95bb        "    contenteditable=\"true\"",
 6a0e95bb        "    internal-fsb-class=\"TextElement\"",
@@ -81,7 +81,7 @@
 6a0e95bb        "    internal-fsb-event-no-propagate=\"1\"",
 6a0e95bb        "    internal-fsb-class=\"Link\"",
 6a0e95bb        "    style=\"-fsb-inherited-presets: 7e3024a9\"",
-6a0e95bb        "    href=\"/stackblend-studio-suite\">",
+6a0e95bb        "    href=\"https://www.softenstorm.com/stackblend-studio-suite\">",
 6a0e95bb        "<div",
 6a0e95bb        "    contenteditable=\"true\"",
 6a0e95bb        "    internal-fsb-class=\"TextElement\"",
@@ -113,7 +113,7 @@
 6a0e95bb        "    internal-fsb-event-no-propagate=\"1\"",
 6a0e95bb        "    internal-fsb-class=\"Link\"",
 6a0e95bb        "    style=\"-fsb-inherited-presets: 7e3024a9\"",
-6a0e95bb        "    href=\"/blog/categories/all\">",
+6a0e95bb        "    href=\"https://www.softenstorm.com/blog/categories/all\">",
 6a0e95bb        "<div",
 6a0e95bb        "    contenteditable=\"true\"",
 6a0e95bb        "    internal-fsb-class=\"TextElement\"",
@@ -1638,11 +1638,11 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "310f5686189f879ce8767b04d67382bba926ad06#-1590185715",
+  "footerBlobSHA": "6cf793af2be990b2e3d95086a72ed4ca1c00be41#120921120",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_45655143": "a593fc6b70ec8408ffa7c6c8b82eddf39fcf11fa#-1273237394",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
-    "Project.Controls.FlowLayout_6a0e95bb": "3efc1b25b1ea19e3bdc70d539dec2329f40b4f3a#1102612612",
+    "Project.Controls.FlowLayout_6a0e95bb": "a3515796262caafb4224531408db04c2740fa20d#2094296799",
     "Project.Controls.FlowLayout_81bde3d0": "4681a78db38023c6d68305fb3b6bd7feaba98bee#-752272619"
   },
   "globalSettings": {

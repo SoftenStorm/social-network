@@ -173,19 +173,19 @@ class FlowLayout_6a0e95bb extends Base {
             div
               | SOFTENSTORM
           .col-12.col-md-9.col-sm-7.internal-fsb-element.offset-0(style={'paddingLeft': '0px', 'paddingRight': '0px', 'textAlign': 'right'}, internal-fsb-guid="9ae7a9e1")
-            a.-fsb-self-7e3024a9.internal-fsb-element(href="/", internal-fsb-guid="7e3024a9")
+            a.-fsb-self-7e3024a9.internal-fsb-element(href="https://www.softenstorm.com", internal-fsb-guid="7e3024a9")
               .internal-fsb-element(internal-fsb-guid="280818b1")
                 | Home
-            a.-fsb-preset-7e3024a9.internal-fsb-element(style={'FsbInheritedPresets': '7e3024a9'}, href="/livebook-dictionary", internal-fsb-guid="9e4c1b91")
+            a.-fsb-preset-7e3024a9.internal-fsb-element(style={'FsbInheritedPresets': '7e3024a9'}, href="https://www.softenstorm.com/livebook-dictionary", internal-fsb-guid="9e4c1b91")
               .internal-fsb-element(internal-fsb-guid="1a9dd50a")
                 | LiveBook Dictionary
-            a.-fsb-preset-7e3024a9.internal-fsb-element(style={'FsbInheritedPresets': '7e3024a9'}, href="/stackblend-studio-suite", internal-fsb-guid="68812c50")
+            a.-fsb-preset-7e3024a9.internal-fsb-element(style={'FsbInheritedPresets': '7e3024a9'}, href="https://www.softenstorm.com/stackblend-studio-suite", internal-fsb-guid="68812c50")
               .internal-fsb-element(internal-fsb-guid="10a10128")
                 | StackBlend Studio Suite
             a.-fsb-preset-7e3024a9.internal-fsb-element(style={'FsbInheritedPresets': '7e3024a9'}, href="https://www.matchflutter.com", internal-fsb-guid="a2a98de0")
               .internal-fsb-element(internal-fsb-guid="366830d4")
                 | Workplace Ethics
-            a.-fsb-preset-7e3024a9.internal-fsb-element(style={'FsbInheritedPresets': '7e3024a9'}, href="/blog/categories/all", internal-fsb-guid="995989e3")
+            a.-fsb-preset-7e3024a9.internal-fsb-element(style={'FsbInheritedPresets': '7e3024a9'}, href="https://www.softenstorm.com/blog/categories/all", internal-fsb-guid="995989e3")
               .internal-fsb-element(internal-fsb-guid="3446e432")
                 | Blog
     `
