@@ -425,7 +425,7 @@ class FlowLayout_45655143 extends Base {
                       .internal-fsb-element.internal-fsb-stretch.internal-fsb-strict-layout(style={'WebkitAlignContent': 'space-between', 'alignContent': 'space-between', 'marginBottom': '10px', 'minHeight': '75px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="b2ae447c")
                         .col-12.internal-fsb-element(style={'fontSize': '14px', 'marginBottom': '5px', 'paddingLeft': '15px', 'paddingRight': '85px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].message")))}, internal-fsb-guid="62369e5c")
                         .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '20px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="887e3d09")
-                          .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'paddingLeft': '15px', 'paddingRight': '0px'}, internal-fsb-guid="29674a6c")
+                          .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '15px', 'paddingRight': '0px'}, internal-fsb-guid="29674a6c")
                             | #{this.getDataFromNotation("Post[" + i + "].User.firstname")} #{this.getMoment(i)}
                           input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="5469cbc2")
                           if this.isUser(data.columns["uid"])
@@ -468,7 +468,7 @@ class FlowLayout_45655143 extends Base {
                             .internal-fsb-element.internal-fsb-strict-layout(style={'borderBottomColor': 'rgba(242, 242, 242, 1)', 'borderBottomStyle': 'solid', 'borderBottomWidth': '1px', 'paddingBottom': '10px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="7306d9e2")
                               .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingBottom': '5px', 'paddingRight': '85px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].message")))}, internal-fsb-guid="042480cd")
                               .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="a61277ee")
-                                .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'paddingLeft': '15px'}, internal-fsb-guid="662c761e")
+                                .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '15px'}, internal-fsb-guid="662c761e")
                                   | #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].User.firstname")} #{this.getMoment(i, j)}
                                 input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].id"), internal-fsb-guid="53b67855")
                                 if this.isUser(data.columns["uid"])
@@ -480,7 +480,7 @@ class FlowLayout_45655143 extends Base {
                               .-fsb-self-442b18b5.col-11.internal-fsb-element.internal-fsb-strict-layout.offset-1(key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || k), data-fsb-index=k, internal-fsb-class="FlowLayout", internal-fsb-guid="442b18b5")
                                 .col-12.internal-fsb-element(style={'fontSize': '13px', 'paddingBottom': '5px', 'paddingLeft': '0px', 'paddingRight': '70px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].message")))}, internal-fsb-guid="ad85704d")
                                 .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="da00c716")
-                                  .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-guid="5a08e178")
+                                  .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-guid="5a08e178")
                                     | #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].User.firstname")} #{this.getMoment(i, j, k)}
                                   input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].id"), internal-fsb-guid="924b8199")
                                   if this.isUser(data.columns["uid"])
