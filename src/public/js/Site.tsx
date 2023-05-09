@@ -4,6 +4,7 @@
 import {Project, DeclarationHelper} from './helpers/DeclarationHelper';
 import {HTMLHelper} from './helpers/HTMLHelper';
 import {EventHelper} from './helpers/EventHelper';
+import './components/Project.Controls.FlowLayout_19c1ac5c';
 import './components/Project.Controls.FlowLayout_45655143';
 import './components/Project.Controls.FlowLayout_5d3e6156';
 import './components/Project.Controls.FlowLayout_81bde3d0';
