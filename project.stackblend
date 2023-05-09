@@ -3,7 +3,7 @@
   "backEndControllerBlobSHADict": {
     "01e32c22": "503aa16ecdf70cf7538d1d37ef1f4aab3d481158#262082020",
     "b0a33736": "7acf9a4d5efc01b6760f3fbc9dfbff9962fc3744#-879853282",
-    "index": "a4d41371b5ecb5d56e08adcec428efe2e394dac8#-1261512953"
+    "index": "a6bdac56b21f61087d7740c42803803310004661#-2135141068"
   },
   "components": {
 8c9ae8bc    "8c9ae8bc": {
@@ -155,10 +155,10 @@
     "src/controllers/components/home/feed/_01e32c22.ts",
     "src/controllers/components/welcome/_b0a33736.ts",
     "src/controllers/components/index.ts",
+    "src/public/js/components/Project.Controls.FlowLayout_19c1ac5c.tsx",
     "src/public/js/components/Project.Controls.FlowLayout_45655143.tsx",
     "src/public/js/components/Project.Controls.FlowLayout_5d3e6156.tsx",
     "src/public/js/components/Project.Controls.FlowLayout_81bde3d0.tsx",
-    "src/public/js/components/Project.Controls.FlowLayout_19c1ac5c.tsx",
     "views/home/home/feed/_01e32c22.pug",
     "views/home/welcome/_b0a33736.pug",
     "views/home/index.pug"
@@ -1511,9 +1511,9 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "64c5a8c9a997e29d378e1e3a3bb9f410bb19327b#-768279312",
+  "footerBlobSHA": "d8b351d60d241fc3e61d7ccf8a97788048ed7a06#-1495493200",
   "frontEndComponentsBlobSHADict": {
-    "Project.Controls.FlowLayout_19c1ac5c": "98b561ee3e50638b623f0df8befbcadbe74fd86d#237159728",
+    "Project.Controls.FlowLayout_19c1ac5c": "d21893ebbe2dff4e36894017bc9b5b255bd228f3#-1303237539",
     "Project.Controls.FlowLayout_45655143": "7c006682be84d9a94a2dda5fae537bf9160fc0c8#1392091124",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
     "Project.Controls.FlowLayout_81bde3d0": "4681a78db38023c6d68305fb3b6bd7feaba98bee#-752272619"
@@ -4947,8 +4947,7 @@ b0a33736    },
         "    internal-fsb-class=\"FlowLayout\"",
         "    style=\"color: rgba(255, 255, 255, 1); padding-left: 0px; padding-right: 0px\"",
         "    internal-fsb-react-data=\"Post\"",
-        "    internal-fsb-react-display-logic=\"statement\"",
-        "    internal-fsb-react-display-statement=\"this.isQuote(i)\"",
+        "    internal-fsb-react-display-statement=\"\"",
         "    internal-fsb-ssr-data=\"Post\">",
         "<div",
         "    class=\"internal-fsb-allow-cursor internal-fsb-element internal-fsb-strict-layout\"",
@@ -5122,13 +5121,13 @@ b0a33736    },
           "      try {",
           "        const dataset = await DatabaseHelper.retrieve(@{",
           "            'Post.active': true,",
+          "            'Post.isQuote': true,",
           "            'Post.User.id': null",
           "          }, 'Post',",
           "          this.request.session,   // session variables",
           "          true,                   // real-time updates",
           "          false                   // skip permission settings",
           "        );",
-          "        dataset['Post'].rows = dataset['Post'].rows.filter(row => row.columns.isQuote);",
           "        resolve(Object.assign({}, dataset));",
           "      } catch(error) {",
           "        reject(error);",
