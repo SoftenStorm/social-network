@@ -239,6 +239,18 @@ class FlowLayout_45655143 extends Base {
   }
   
   // Auto[Merging]--->
+  protected onTextElementClick_4d102860(event: Event) {
+
+    // Handle the event of onTextElementClick (TextElement 2) here:
+    // 
+    // const target = EventHelper.getCurrentElement(event); /* current invoking element */
+    // const element1 = HTMLHelper.getElementById('ID');    /* accessing an element */
+    // const control1 = ReactDOM.findDOMNode(this.refs.ID); /* accessing a component */
+    // 
+    window.location = 'https://www.matchflutter.com';
+    
+  }
+
   protected onTextboxKeyPress_53063929(event: Event) {
 
     // Handle the event of onTextboxKeyPress (firstname) here:
@@ -360,7 +372,7 @@ class FlowLayout_45655143 extends Base {
     return pug `
       div(style=Object.assign({'MsFlexDirection': 'column', 'MsFlexWrap': 'nowrap', 'WebkitFlexDirection': 'column', 'WebkitFlexWrap': 'nowrap', 'flexDirection': 'column', 'flexWrap': 'nowrap', 'height': '100vh', 'paddingLeft': '0px', 'paddingRight': '0px'}, this.props.forward && this.props.forward.styles || {}), internal-fsb-class="FlowLayout", className="internal-fsb-element internal-fsb-inverse internal-fsb-stretch internal-fsb-strict-layout " + (this.props.forward && this.props.forward.classes || ''), internal-fsb-guid="45655143")
         .internal-fsb-element.internal-fsb-strict-layout(style={'WebkitFlexShrink': '1', 'borderBottomColor': 'rgba(66, 117, 255, 1)', 'borderBottomStyle': 'solid', 'borderBottomWidth': '5px', 'flexShrink': '1', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="837621b0")
-          .internal-fsb-element(style={'color': 'rgba(0, 43, 255, 1)', 'fontSize': '18px', 'fontWeight': '500', 'lineHeight': '20px', 'paddingBottom': '5px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '5px', 'textAlign': 'center'}, internal-fsb-guid="4d102860")
+          .internal-fsb-element(style={'color': 'rgba(0, 43, 255, 1)', 'cursor': 'default', 'fontSize': '18px', 'fontWeight': '500', 'lineHeight': '20px', 'paddingBottom': '5px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '5px', 'textAlign': 'center'}, onClick=this.onTextElementClick_4d102860.bind(this), internal-fsb-guid="4d102860")
             | MatchFlutter
           .internal-fsb-element(style={'color': 'rgba(77, 77, 77, 1)', 'display': 'inline-block', 'fontSize': '12px', 'fontWeight': '400', 'paddingBottom': '5px', 'paddingTop': '7px'}, internal-fsb-guid="2d1a5e27")
             | match workplace quotes that flutter you
@@ -368,7 +380,7 @@ class FlowLayout_45655143 extends Base {
           .col-3.internal-fsb-element.internal-fsb-inverse.internal-fsb-stretch.internal-fsb-strict-layout(style={'MsFlexDirection': 'column-reverse', 'MsOverflowY': 'auto', 'WebkitFlexDirection': 'column-reverse', 'WebkitJustifyContent': 'start', 'background': 'rgba(66, 117, 255, 1)', 'borderRightColor': 'rgba(0, 43, 255, 1)', 'borderRightWidth': '1px', 'flexDirection': 'column-reverse', 'justifyContent': 'start', 'overflowY': 'auto', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="a2677289")
             each data, i in this.getDataFromNotation("Post", true, false)
               if this.isQuote(i)
-                .internal-fsb-element.internal-fsb-strict-layout(style={'marginBottom': '20px', 'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || i), data-fsb-index=i, internal-fsb-class="FlowLayout", internal-fsb-guid="06261965")
+                .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || i), data-fsb-index=i, internal-fsb-class="FlowLayout", internal-fsb-guid="06261965")
                   .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="828a40e9")
                     .internal-fsb-element.internal-fsb-strict-layout(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'paddingLeft': '7px', 'paddingRight': '7px', 'paddingTop': '5px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="9a1c0da9")
                       .internal-fsb-element.internal-fsb-stretch.internal-fsb-strict-layout(style={'MsOverflowX': 'hidden', 'WebkitAlignContent': 'space-between', 'WebkitBorderRadius': '3px 3px 3px 3px', 'alignContent': 'space-between', 'background': 'rgba(255, 255, 255, 1)', 'borderBottomColor': 'rgba(255, 255, 255, 1)', 'borderBottomStyle': 'dashed', 'borderBottomWidth': '1px', 'borderLeftColor': 'rgba(255, 255, 255, 1)', 'borderLeftStyle': 'dashed', 'borderLeftWidth': '1px', 'borderRadius': '3px 3px 3px 3px', 'borderRightColor': 'rgba(255, 255, 255, 1)', 'borderRightStyle': 'dashed', 'borderRightWidth': '1px', 'borderTopColor': 'rgba(255, 255, 255, 1)', 'borderTopStyle': 'dashed', 'borderTopWidth': '1px', 'minHeight': '75px', 'overflowX': 'hidden', 'paddingBottom': '5px', 'paddingLeft': '0px', 'paddingRight': '0px', 'paddingTop': '5px', 'width': '100%'}, internal-fsb-class="FlowLayout", internal-fsb-guid="67ec188c")
