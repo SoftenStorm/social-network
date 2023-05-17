@@ -147,6 +147,9 @@
 8c9ae8bc      "klass": "FlowLayout_8c9ae8bc",
 8c9ae8bc      "name": "Header",
 8c9ae8bc      "namespace": "Project.Controls",
+8c9ae8bc      "references": [
+8c9ae8bc        "8c9ae8bc"
+8c9ae8bc      ],
 8c9ae8bc      "state": "create"
 8c9ae8bc    }
   },
@@ -1546,7 +1549,7 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "24f2966f14ba6c6c6c6f32208fc15df25ee47761#995775782",
+  "footerBlobSHA": "09f2a2806dc0c7ec13f15a0b457f7d3ef57c07fa#-1139551385",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_19c1ac5c": "d21893ebbe2dff4e36894017bc9b5b255bd228f3#-1303237539",
     "Project.Controls.FlowLayout_45655143": "4303f583d6114f58d5248115dab1a10c2325b0c5#-1509177809",
@@ -1595,8 +1598,9 @@ b1b17b71          }
     "currentActiveLayerRemovable": true,
     "currentActiveLayerToolAvailable": true,
     "currentMode": "site",
-    "customLocalizedStrings": "Add to the list of Social Quote~###~b8a27120~:::~เพิ่มเข้าไปใน Social Quote~;;;~Already have an account?~###~982c997c~:::~มีสมาชิกอยู่แล้ว?~;;;~By~###~0e576485~:::~โดย ~;;;~Confirm~###~38be5754~:::~ยืนยันรหัสผ่าน~;;;~Delete~###~cb9e907d~:::~ลบ~;;;~Don't have a account?~###~8138a7c8~:::~ยังไม่มีสมาชิก?~;;;~E-mail~###~d07822a9~:::~อีเมล์~;;;~Login~###~4890b3d6~:::~เข้าสู่ระบบ~;;;~Logout~###~a989aab8-text~:::~ออกจากระบบ~;;;~Love~###~38be6125~:::~ชื่นชอบ~;;;~Password~###~7a8498de~:::~รหัสผ่าน~;;;~Register~###~b011a65a-text~:::~สมัครเลย~;;;~There doesn't have any of comment.~###~c312e749~:::~ตอนนี้ยังไม่มีความเห็นใดๆ~;;;~among~###~ac71a3c1~:::~จำนวนผู้ที่ชื่นชอบ ~;;;~match workplace quotes that flutter you~###~2d1a5e27~:::~ที่แห่งใหม่สำหรับนักทำงาน~;;;~people~###~9913e167~:::~ คน~;;;~since~###~ccc0e885~:::~ เมื่อ ",
-    "defaultLanguage": "",
+    "customLocalizedStrings": "Add to the list of Social Quote~###~b8a27120~:::~เพิ่มเข้าไปใน Social Quote~;;;~Already have an account?~###~982c997c~:::~มีสมาชิกอยู่แล้ว?~;;;~By~###~0e576485~:::~โดย ~;;;~Confirm~###~38be5754~:::~ยืนยันรหัสผ่าน~;;;~Delete~###~cb9e907d~:::~ลบ~;;;~Don't have a account?~###~8138a7c8~:::~ยังไม่มีสมาชิก?~;;;~E-mail~###~d07822a9~:::~อีเมล์~;;;~Login~###~4890b3d6~:::~เข้าสู่ระบบ~;;;~Logout~###~a989aab8-text~:::~ออกจากระบบ~;;;~Love~###~38be6125~:::~ชื่นชอบ~;;;~Password~###~7a8498de~:::~รหัสผ่าน~;;;~Register~###~b011a65a-text~:::~สมัครเลย~;;;~There doesn't have any of comment.~###~c312e749~:::~ตอนนี้ยังไม่มีความเห็นใดๆ~;;;~among~###~ac71a3c1~:::~จำนวนผู้ที่ชื่นชอบ ~;;;~match workplace quotes that flutter you~###~b5c9b85d~:::~ที่แห่งใหม่สำหรับนักทำงาน~;;;~people~###~9913e167~:::~ คน~;;;~since~###~ccc0e885~:::~ เมื่อ ",
+    "defaultLanguage": "en",
+    "defaultLocalizedLanguage": "th",
     "editingAnimationID": null,
     "editingComponentID": null,
     "editingKeyframeID": null,
