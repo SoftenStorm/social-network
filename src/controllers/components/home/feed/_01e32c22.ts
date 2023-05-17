@@ -366,6 +366,13 @@ class Controller extends Base {
         const options = RequestHelper.getOptions(this.pageId, this.request); /* submit options */
         const name = options.name;                                           /* button name */
         
+        if (name == 'logout') {
+          this.request.session.uid = null;
+          this.request.session.save(() => {
+            resolve('/');
+          });
+        }
+        
         // You may generate data and schema on the fly using:
         //
         // data = RequestHelper.createInputs({...});

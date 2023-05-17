@@ -97,6 +97,11 @@ class Controller extends Base {
   // Declare class variables and functions here:
   //
   protected validate(data: Input[]): void {
+    if (this.request.session.uid) {
+      this.response.redirect('/home/feed');
+      return;
+    }
+    
   	// The message of thrown error will be the validation message.
   	//
  		ValidationHelper.validate(data);
