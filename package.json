@@ -32,14 +32,9 @@
     "watch-debug": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\""
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@babel/runtime": "^7.0.0-beta.55",
-    "@socket.io/redis-adapter": "^8.0.0",
-    "@types/socket.io": "^2.1.11",
-=======
     "@babel/runtime": "^7.20.7",
     "@socket.io/redis-adapter": "^8.0.0",
->>>>>>> 431af55ef4f174e717ef837055521a06c60eb999
+    "@types/socket.io": "^2.1.11",
     "amd-module": "0.0.20151203",
     "assert": "^2.0.0",
     "async": "^3.1.0",
