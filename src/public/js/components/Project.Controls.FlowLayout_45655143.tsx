@@ -219,7 +219,7 @@ class FlowLayout_45655143 extends Base {
     
     const minutes = remaining % 60;
     remaining = Math.floor(remaining / 60);
-    if (minutes != 0) tokens.push(`${minutes} minute${seconds > 1 ? 's' : ''}`);
+    if (minutes != 0) tokens.push(`${minutes} minute${minutes > 1 ? 's' : ''}`);
     
     const hours = remaining % 24;
     remaining = Math.floor(remaining / 24);
@@ -227,8 +227,8 @@ class FlowLayout_45655143 extends Base {
     const days = remaining % 31;
     remaining = Math.floor(remaining / 31);
     
-    if (hours != 0 || days != 0) tokens = [`${hours} hour${seconds > 1 ? 's' : ''}`];
-    if (days != 0) tokens.push(`${days} day${seconds > 1 ? 's' : ''}`);
+    if (hours != 0 || days != 0) tokens = [`${hours} hour${hours > 1 ? 's' : ''}`];
+    if (days != 0) tokens.push(`${days} day${days > 1 ? 's' : ''}`);
     
     tokens.reverse();
     
