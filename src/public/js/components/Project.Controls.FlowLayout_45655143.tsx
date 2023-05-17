@@ -99,6 +99,7 @@ class FlowLayout_45655143 extends Base {
     TestHelper.identify();
     function ready(a){"loading"!=document.readyState?a(new Event('ready')):document.addEventListener?document.addEventListener("DOMContentLoaded",a):(document.onreadystatechange=function(e){"complete"==document.readyState&&a(e)})};
         
+    DataManipulationHelper.register("a989aab8", "navigate", ["63bd8444"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("c33d69b3", "upsert", ["036b8078","8b5b91d8","a1ce4a26","c8a316a1"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","cd9e964b","ea9b0569"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
     DataManipulationHelper.register("281067ca", "delete", ["5469cbc2"], {initClass: null, submitCrossType: null, enabledRealTimeUpdate: false, manipulateInto: () => { return null; }});
@@ -376,7 +377,8 @@ class FlowLayout_45655143 extends Base {
             | MatchFlutter
           .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'color': 'rgba(77, 77, 77, 1)', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '12px', 'fontWeight': '400', 'paddingBottom': '5px', 'paddingTop': '7px'}, internal-fsb-guid="2d1a5e27")
             | match workplace quotes that flutter you
-          Button.btn.btn-primary.internal-fsb-element(style={'fontSize': '12px', 'marginBottom': '3px', 'marginTop': '3px', 'paddingBottom': '0px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '0px'}, type="button", internal-fsb-guid="a989aab8")
+          Button.btn.btn-primary.internal-fsb-element(style={'fontSize': '12px', 'marginBottom': '3px', 'marginTop': '3px', 'paddingBottom': '0px', 'paddingLeft': '15px', 'paddingRight': '15px', 'paddingTop': '0px'}, onClick=((event) => { window.internalFsbSubmit('a989aab8', '', event, ((results) => { this.manipulate('a989aab8', '', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="a989aab8")
+            input.col-12.internal-fsb-element(type="hidden", internal-fsb-guid="63bd8444")
             .internal-fsb-element(internal-fsb-guid="a989aab8-text")
               | Logout
         .internal-fsb-element.internal-fsb-stretch.internal-fsb-strict-layout(style={'MsFlexWrap': 'nowrap', 'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'WebkitFlexWrap': 'nowrap', 'flexBasis': '0px', 'flexGrow': '1', 'flexWrap': 'nowrap', 'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="10a1ee6a")

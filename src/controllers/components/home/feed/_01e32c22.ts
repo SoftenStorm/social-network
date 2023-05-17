@@ -394,6 +394,7 @@ class Controller extends Base {
     
     // <---Auto[MergingBegin]
     // Auto[Merging]--->
+    RequestHelper.registerSubmit("01e32c22", "a989aab8", "navigate", ["63bd8444"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "logout"});
     RequestHelper.registerSubmit("01e32c22", "c33d69b3", "upsert", ["036b8078","8b5b91d8","a1ce4a26","c8a316a1"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[action] fond"});
     RequestHelper.registerSubmit("01e32c22", "66766b99", "insert", ["03168663","13c65096","18091a36","382a7358","4d487443","53063929","5a318376","cd9e964b","ea9b0569"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] create"});
     RequestHelper.registerSubmit("01e32c22", "281067ca", "delete", ["5469cbc2"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[post] delete"});
@@ -402,6 +403,15 @@ class Controller extends Base {
     RequestHelper.registerSubmit("01e32c22", "5d65c9a9", "delete", ["53b67855"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] delete"});
     RequestHelper.registerSubmit("01e32c22", "47ebd056", "delete", ["924b8199"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] delete"});
     RequestHelper.registerSubmit("01e32c22", "e0e69546", "insert", ["25ac372b","302e6b73","56a26b1d","87379be8","bc8dc2a4","ccd6346a","e976813d","ec906022"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] create"});
+    RequestHelper.registerInput('63bd8444', undefined, undefined, undefined);
+    ValidationHelper.registerInput('63bd8444', "Hidden 1", false, undefined, undefined, null);
+    for (let input of RequestHelper.getInputs(this.pageId, request, '63bd8444')) {
+    
+      // Override data parsing and manipulation of Hidden 1 here:
+      // 
+      
+      if (input != null) data.push(input);
+    }
     RequestHelper.registerInput('8b5b91d8', "document", "Action", "uid");
     ValidationHelper.registerInput('8b5b91d8', "[action] uid", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '8b5b91d8')) {
