@@ -463,7 +463,7 @@ class FlowLayout_45655143 extends Base {
                           .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '13px', 'lineHeight': '26px', 'paddingLeft': '8px', 'paddingRight': '0px'}, internal-fsb-guid="de629680")
                             .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('among')}, internal-fsb-guid="ac71a3c1")
                             .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="ad8e1aac")
-                              | #{this.getTotalAction(1, i)} 
+                              |  #{this.getTotalAction(1, i)} 
                             .col-12.internal-fsb-element(style={'display': 'inline', 'paddingLeft': '0px'}, dangerouslySetInnerHTML={__html: loc('people')}, internal-fsb-guid="9913e167")
                       .-fsb-preset-bb841183.internal-fsb-element.internal-fsb-strict-layout(style={'FsbInheritedPresets': 'bb841183', 'paddingLeft': '15px', 'paddingRight': '15px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="ed431ea8")
                         input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", internal-fsb-guid="bec0942b")
@@ -504,7 +504,7 @@ class FlowLayout_45655143 extends Base {
                               .-fsb-self-442b18b5.col-11.internal-fsb-element.internal-fsb-strict-layout.offset-1(key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || k), data-fsb-index=k, internal-fsb-class="FlowLayout", internal-fsb-guid="442b18b5")
                                 .col-12.internal-fsb-element(style={'fontSize': '13px', 'paddingBottom': '5px', 'paddingLeft': '0px', 'paddingRight': '70px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].message")))}, internal-fsb-guid="ad85704d")
                                 .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="da00c716")
-                                  .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '15px'}, internal-fsb-guid="da39581e")
+                                  .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px'}, internal-fsb-guid="da39581e")
                                     .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('By')}, internal-fsb-guid="e6b66080")
                                     .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="a063ac4c")
                                       |  #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].User.firstname")} 
