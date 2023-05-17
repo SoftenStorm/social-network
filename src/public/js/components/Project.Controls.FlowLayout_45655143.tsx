@@ -443,10 +443,10 @@ class FlowLayout_45655143 extends Base {
                           .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '15px'}, internal-fsb-guid="6116c8ae")
                             .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('By')}, internal-fsb-guid="1ea25dc3")
                             .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="b56a9071")
-                              | #{this.getDataFromNotation("Post[" + i + "].User.firstname")}
+                              |  #{this.getDataFromNotation("Post[" + i + "].User.firstname")} 
                             .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('since')}, internal-fsb-guid="98a80eb7")
                             .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="9d43007e")
-                              | #{this.getMoment(i)}
+                              |  #{this.getMoment(i)}
                           input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].id"), internal-fsb-guid="5469cbc2")
                           if this.isUser(data.columns["uid"])
                             Button.-fsb-self-281067ca.btn.btn-sm.internal-fsb-element(onClick=((event) => { window.internalFsbSubmit('281067ca', 'Post', event, ((results) => { this.manipulate('281067ca', 'Post', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="281067ca")
@@ -488,13 +488,13 @@ class FlowLayout_45655143 extends Base {
                             .internal-fsb-element.internal-fsb-strict-layout(style={'borderBottomColor': 'rgba(242, 242, 242, 1)', 'borderBottomStyle': 'solid', 'borderBottomWidth': '1px', 'paddingBottom': '10px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="7306d9e2")
                               .col-12.internal-fsb-element(style={'fontSize': '14px', 'paddingBottom': '5px', 'paddingRight': '85px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].message")))}, internal-fsb-guid="042480cd")
                               .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="a61277ee")
-                                .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '15px'}, internal-fsb-guid="e2eecd36")
-                                  .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('By')}, internal-fsb-guid="662c761e")
-                                  .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="b935a84c")
-                                    | #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].User.firstname")}
-                                  .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('since')}, internal-fsb-guid="7411597b")
-                                  .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="abb54aae")
-                                    | #{this.getMoment(i, j)}
+                                .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '15px'}, internal-fsb-guid="17ec4466")
+                                  .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('By')}, internal-fsb-guid="42cc0d97")
+                                  .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="4b8e7355")
+                                    |  #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].User.firstname")} 
+                                  .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('since')}, internal-fsb-guid="77bba957")
+                                  .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="eb90a1ae")
+                                    |  #{this.getMoment(i, j)}
                                 input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].id"), internal-fsb-guid="53b67855")
                                 if this.isUser(data.columns["uid"])
                                   Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px', 'marginRight': '20px'}, onClick=((event) => { window.internalFsbSubmit('5d65c9a9', 'Comment', event, ((results) => { this.manipulate('5d65c9a9', 'Comment', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="5d65c9a9")
@@ -504,13 +504,13 @@ class FlowLayout_45655143 extends Base {
                               .-fsb-self-442b18b5.col-11.internal-fsb-element.internal-fsb-strict-layout.offset-1(key="item_" + (data && data.keys && Object.keys(data.keys).map((key)=>{return key + ":" + data.keys[key];}).join("_") || k), data-fsb-index=k, internal-fsb-class="FlowLayout", internal-fsb-guid="442b18b5")
                                 .col-12.internal-fsb-element(style={'fontSize': '13px', 'paddingBottom': '5px', 'paddingLeft': '0px', 'paddingRight': '70px'}, dangerouslySetInnerHTML={__html: CodeHelper.escape(CodeHelper.toSecuredDataString(this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].message")))}, internal-fsb-guid="ad85704d")
                                 .internal-fsb-element.internal-fsb-strict-layout(style={'paddingLeft': '0px', 'paddingRight': '0px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="da00c716")
-                                  .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px'}, internal-fsb-guid="e784749e")
-                                    .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('By')}, internal-fsb-guid="0e576485")
-                                    .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="95d752d0")
-                                      | #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].User.firstname")}
-                                    .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('since')}, internal-fsb-guid="ccc0e885")
-                                    .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="9e8958b5")
-                                      | #{this.getMoment(i, j, k)}
+                                  .internal-fsb-element(style={'WebkitFlexBasis': '0px', 'WebkitFlexGrow': '1', 'flexBasis': '0px', 'flexGrow': '1', 'fontSize': '11px', 'paddingLeft': '15px'}, internal-fsb-guid="da39581e")
+                                    .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('By')}, internal-fsb-guid="e6b66080")
+                                    .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="a063ac4c")
+                                      |  #{this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].User.firstname")} 
+                                    .internal-fsb-element(style={'display': 'inline'}, dangerouslySetInnerHTML={__html: loc('since')}, internal-fsb-guid="1c99e682")
+                                    .internal-fsb-element(style={'display': 'inline'}, internal-fsb-guid="52ca8208")
+                                      |  #{this.getMoment(i, j, k)}
                                   input.col-12.internal-fsb-element(style={'FsbCodeLock': '1'}, type="hidden", value=this.getDataFromNotation("Post[" + i + "].Comment[" + j + "].Reply[" + k + "].id"), internal-fsb-guid="924b8199")
                                   if this.isUser(data.columns["uid"])
                                     Button.-fsb-preset-281067ca.btn.btn-sm.internal-fsb-element(style={'FsbCodeLock': '1', 'FsbInheritedPresets': '281067ca', 'WebkitFlexBasis': '50px', 'flexBasis': '50px', 'fontSize': '13px'}, onClick=((event) => { window.internalFsbSubmit('47ebd056', 'Reply', event, ((results) => { this.manipulate('47ebd056', 'Reply', results); }).bind(this)); }).bind(this), type="button", internal-fsb-guid="47ebd056")
