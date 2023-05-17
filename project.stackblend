@@ -1,7 +1,7 @@
 {
   "animations": {},
   "backEndControllerBlobSHADict": {
-    "01e32c22": "e740176a61f7af50136fdd106a52f13c2d2b79ed#-417438826",
+    "01e32c22": "057666796710e7dc139f2127455fb822ac999c8f#547105275",
     "b0a33736": "7acf9a4d5efc01b6760f3fbc9dfbff9962fc3744#-879853282",
     "index": "27da99c73791dc952c7688bf688d3fff734acf5c#2061254996"
   },
@@ -846,6 +846,41 @@
       "</body>"
     ],
     "schema": {
+      "": {
+        "columns": {
+          "": {
+            "fieldType": null,
+            "guid": 1801879306186622,
+            "modifyingPermission": null,
+            "name": "",
+            "required": false,
+            "retrievingPermission": null,
+            "unique": false,
+            "url": null,
+            "verb": null
+          }
+        },
+        "group": "",
+        "guid": 6317261602942346,
+        "keys": {
+          "id": {
+            "fieldType": "auto",
+            "guid": 3247627609821877,
+            "modifyingPermission": null,
+            "name": "id",
+            "required": true,
+            "retrievingPermission": null,
+            "unique": true,
+            "url": null,
+            "verb": null
+          }
+        },
+        "modifyingPermission": null,
+        "pseudo": true,
+        "relations": {},
+        "retrievingPermission": null,
+        "source": "document"
+      },
       "Action": {
         "columns": {
 de0604b7          "createdAt": {
@@ -1511,10 +1546,10 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "12fd296aeb7eee844b650c8fd0cd595a2a1c928f#-1326689404",
+  "footerBlobSHA": "480befbf0850537cee4b6d998670607b762f2f99#-1063025247",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_19c1ac5c": "d21893ebbe2dff4e36894017bc9b5b255bd228f3#-1303237539",
-    "Project.Controls.FlowLayout_45655143": "fc2d6565fd5b3cbe0c94becbf95db02c0c45085f#1854975788",
+    "Project.Controls.FlowLayout_45655143": "e3683c08d147da0ac0bc5a4fbe955e2bc93627dc#1102811116",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
     "Project.Controls.FlowLayout_81bde3d0": "4681a78db38023c6d68305fb3b6bd7feaba98bee#-752272619"
   },
@@ -1730,6 +1765,13 @@ b1b17b71          }
 01e32c22          "required": "true",
 01e32c22          "sourceColumn": "message",
 01e32c22          "sourceName": "Reply",
+01e32c22          "sourceType": "document",
+01e32c22          "validationFormat": null
+01e32c22        },
+01e32c22        "6169508370578443": {
+01e32c22          "required": null,
+01e32c22          "sourceColumn": "field",
+01e32c22          "sourceName": "Info",
 01e32c22          "sourceType": "document",
 01e32c22          "validationFormat": null
 01e32c22        },
@@ -2020,7 +2062,10 @@ b1b17b71          }
 01e32c22        "    internal-fsb-guid=\"63bd8444\"",
 01e32c22        "    internal-fsb-name=\"Hidden 1\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
-01e32c22        "    internal-fsb-class=\"Hidden\">",
+01e32c22        "    internal-fsb-class=\"Hidden\"",
+01e32c22        "    internal-fsb-data-source-type=\"document\"",
+01e32c22        "    internal-fsb-data-source-name=\"Info\"",
+01e32c22        "    internal-fsb-data-source-column=\"field\">",
 01e32c22        "<div",
 01e32c22        "    contenteditable=\"true\"",
 01e32c22        "    internal-fsb-class=\"TextElement\"",

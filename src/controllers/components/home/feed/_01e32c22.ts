@@ -403,7 +403,7 @@ class Controller extends Base {
     RequestHelper.registerSubmit("01e32c22", "5d65c9a9", "delete", ["53b67855"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[comment] delete"});
     RequestHelper.registerSubmit("01e32c22", "47ebd056", "delete", ["924b8199"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] delete"});
     RequestHelper.registerSubmit("01e32c22", "e0e69546", "insert", ["25ac372b","302e6b73","56a26b1d","87379be8","bc8dc2a4","ccd6346a","e976813d","ec906022"], {initClass: null, crossRelationUpsert: false, enabledRealTimeUpdate: false, name: "[reply] create"});
-    RequestHelper.registerInput('63bd8444', undefined, undefined, undefined);
+    RequestHelper.registerInput('63bd8444', "document", "Info", "field");
     ValidationHelper.registerInput('63bd8444', "Hidden 1", false, undefined, undefined, null);
     for (let input of RequestHelper.getInputs(this.pageId, request, '63bd8444')) {
     
