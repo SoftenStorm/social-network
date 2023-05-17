@@ -7,8 +7,13 @@ import {ActionType, HierarchicalDataRow} from "./DatabaseHelper";
 import {Md5} from "md5-typescript";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
+<<<<<<< HEAD
+import { RedisAdapter } from "@socket.io/redis-adapter";
+import { createClient } from "ioredis";
+=======
 import {RedisAdapter} from "@socket.io/redis-adapter";
 import {createClient} from "ioredis";
+>>>>>>> 431af55ef4f174e717ef837055521a06c60eb999
 
 const ACTIONS = [ActionType.Insert, ActionType.Update, ActionType.Upsert, ActionType.Delete];
 
@@ -415,6 +420,136 @@ const NotificationHelper = {
     }
   },
   notifyUpdates: (action: ActionType, schema: DataTableSchema, results: HierarchicalDataRow[]) => {
+<<<<<<< HEAD
+  	// Use the official multiple nodes of Socket.IO for notifying updates.
+  	// 
+  	// Socket.IO Official Reference: https://socket.io/docs/v3/using-multiple-nodes/
+  	// Heroku Session Affinity Reference: https://devcenter.heroku.com/articles/session-affinity
+  	// 
+  	NotificationHelper.notifyUpdatesUsingMultipleNodesOfSocketIO(action, schema, results);
+  	
+  	if (adapter != null) {
+  		adapter.serverSideEmit([JSON.stringify({
+	  		action: ACTIONS.indexOf(action),
+	  		schema: schema.group,
+	  		results: results
+	  	})]);
+	  }
+  },
+  notifyUpdatesUsingMultipleNodesOfSocketIO: (action: ActionType, schema: DataTableSchema, results: HierarchicalDataRow[]) => {
+  	// Use the official multiple nodes of Socket.IO for notifying updates.
+  	// 
+  	// Socket.IO Official Reference: https://socket.io/docs/v3/using-multiple-nodes/
+  	// Heroku Session Affinity Reference: https://devcenter.heroku.com/articles/session-affinity
+  	// 
+  	if (socket == null) return;
+  	
+  	const identities = NotificationHelper.getUniqueListOfIdentities(action, schema, results);
+  	
+  	for (const identity in identities) {
+			if (identities.hasOwnProperty(identity)) {
+				for (const sessionId of identities[identity].sessions) {
+					NotificationHelper.recursiveTagDerivableSubsequenceNotification(schema, identities[identity].results, sessionId);
+		  	}
+			}
+  	}
+  	
+  	switch (action) {
+  		case ActionType.Insert:
+  			for (const identity in identities) {
+  				if (identities.hasOwnProperty(identity)) {
+  					for (const socket of identities[identity].listeners) {
+  						socket.emit("insert_" + identity, {
+			  				id: identity,
+			  				results: identities[identity].results
+			  			});
+  					}
+		  		}
+	  		}
+  			break;
+  		case ActionType.Update:
+  			for (const identity in identities) {
+	  			if (identities.hasOwnProperty(identity)) {
+	  				for (const socket of identities[identity].listeners) {
+  						socket.emit("update_" + identity, {
+			  				id: identity,
+			  				results: identities[identity].results
+			  			});
+			  		}
+		  		}
+	  		}
+  			break;
+  		case ActionType.Upsert:
+  			for (const identity in identities) {
+	  			if (identities.hasOwnProperty(identity)) {
+		  			for (const socket of identities[identity].listeners) {
+  						socket.emit("upsert_" + identity, {
+			  				id: identity,
+			  				results: identities[identity].results
+		  				});
+		  			}
+		  		}
+	  		}
+  			break;
+  		case ActionType.Delete:
+  			for (const identity in identities) {
+	  			if (identities.hasOwnProperty(identity)) {
+		  			for (const socket of identities[identity].listeners) {
+  						socket.emit("delete_" + identity, {
+			  				id: identity,
+			  				results: identities[identity].results
+		  				});
+		  			}
+		  		}
+	  		}
+  			break;
+  	}
+  },
+  listenUpdatesUsingMultipleNodesOfSocketIO: () => {
+  	// Use the official multiple nodes of Socket.IO for notifying updates.
+  	// 
+  	// Socket.IO Official Reference: https://socket.io/docs/v3/using-multiple-nodes/
+  	// Heroku Session Affinity Reference: https://devcenter.heroku.com/articles/session-affinity
+  	// 
+		if (process.env[process.env.VOLATILE_MEMORY_KEY]) {
+			const redisConnectionURL = process.env[process.env.VOLATILE_MEMORY_KEY];
+			const pubClient = createClient(redisConnectionURL);
+			const subClient = pubClient.duplicate();
+			
+			pubClient.on("error", (err) => {
+			  console.log(err.message);
+			});
+			subClient.on("error", (err) => {
+			  console.log(err.message);
+			});
+			
+			adapter = new RedisAdapter({
+			  name: 'node',
+			  sockets: {
+			    get: () => { return null; },
+			    set: () => { return null; }
+			  },
+			  _ids: 0,
+			  server: {
+			    encoder: {
+			      encode: (value) => { return value; }
+			    }
+			  },
+			  _onServerSideEmit: (_message: any) => {
+			    try {
+  			    const message = JSON.parse(_message);
+  		  		const action = ACTIONS[message.action];
+  		  		const schema = SchemaHelper.getDataTableSchemaFromNotation(message.schema);
+  		  		const results = message.results;
+  		  		
+  		  		NotificationHelper.notifyUpdatesUsingMultipleNodesOfSocketIO(action, schema, results);
+  		  	} catch(error) {
+  		  	  console.log(error, _message);
+  		  	}
+		  	}
+			}, pubClient, subClient);
+		}
+=======
     // Use the official multiple nodes of Socket.IO for notifying updates.
     // 
     // Socket.IO Official Reference: https://socket.io/docs/v3/using-multiple-nodes/
@@ -546,6 +681,7 @@ const NotificationHelper = {
         }
       }, pubClient, subClient);
     }
+>>>>>>> 431af55ef4f174e717ef837055521a06c60eb999
   }
 };
 

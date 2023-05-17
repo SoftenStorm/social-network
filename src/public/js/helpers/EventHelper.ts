@@ -5,10 +5,10 @@ const EventHelper = {
   cancel: (event: any) => {
     event.preventDefault();
     event.stopPropagation();
-    
+
     return false;
   },
-  
+
   getCurrentElement: (event: any) => {
     return (event as any).currentTarget;
   },

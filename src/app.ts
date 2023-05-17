@@ -5,10 +5,7 @@ import session from "express-session";
 import bodyParser from "body-parser";
 import lusca from "lusca";
 import mongo from "connect-mongo";
-import flash from "express-flash";
 import path from "path";
-import passport from "passport";
-import bluebird from "bluebird";
 import cors from "cors";
 import errorHandler from "errorhandler";
 import dotenv from "dotenv";
@@ -25,11 +22,11 @@ if (["development", "staging", "production"].indexOf(process.env.NODE_ENV) == -1
 const app = express();
 
 if (["development", "staging", "production"].indexOf(process.env.NODE_ENV) == -1) {
-	app.use(secure);
-	app.enable("trust proxy");
+  app.use(secure);
+  app.enable("trust proxy");
 } else {
-	// app.use(secure);
-	// app.enable("trust proxy");
+  // app.use(secure);
+  // app.enable("trust proxy");
 }
 
 // Express configuration
@@ -41,13 +38,13 @@ if (["development", "staging", "production"].indexOf(process.env.NODE_ENV) == -1
     saveUninitialized: true,
     secret: process.env.SESSION_SECRET,
     store: process.env.DOCUMENT_DATABASE_KEY && new MongoStore({
-        url: process.env[process.env.DOCUMENT_DATABASE_KEY],
-        autoReconnect: true,
-        mongoOptions: {
-        	useUnifiedTopology: true
-        }
+      url: process.env[process.env.DOCUMENT_DATABASE_KEY],
+      autoReconnect: true,
+      mongoOptions: {
+        useUnifiedTopology: true
+      }
     }) || null,
-    cookie: { secure: true }
+    cookie: {secure: true}
   }));
 } else {
   app.use(session({
@@ -55,11 +52,11 @@ if (["development", "staging", "production"].indexOf(process.env.NODE_ENV) == -1
     saveUninitialized: true,
     secret: process.env.SESSION_SECRET,
     store: process.env.DOCUMENT_DATABASE_KEY && new MongoStore({
-				url: process.env[process.env.DOCUMENT_DATABASE_KEY],
-				autoReconnect: true,
-        mongoOptions: {
-        	useUnifiedTopology: true
-        }
+      url: process.env[process.env.DOCUMENT_DATABASE_KEY],
+      autoReconnect: true,
+      mongoOptions: {
+        useUnifiedTopology: true
+      }
     }) || null,
     cookie: {}
   }));
@@ -72,29 +69,25 @@ app.use(bodyParser.json({limit: "50mb"}));
 app.use(bodyParser.urlencoded({limit: "50mb", extended: true}));
 
 if (["development", "staging", "production"].indexOf(process.env.NODE_ENV) == -1) {
-	// app.use(lusca.xframe("SAMEORIGIN"));
+  // app.use(lusca.xframe("SAMEORIGIN"));
 } else {
-	app.use(lusca.xframe("SAMEORIGIN"));
+  app.use(lusca.xframe("SAMEORIGIN"));
 }
 
 app.use(lusca.xssProtection(true));
-app.use((req, res, next) => {
-    res.locals.user = req.user;
-    next();
-});
 
 // CORS configuration
 // 
 if (["development", "staging", "production"].indexOf(process.env.NODE_ENV) == -1) {
-	app.use(cors());
+  app.use(cors());
 } else {
-	// app.use(cors());
+  // app.use(cors());
 }
 
 // Cache configuration
 // 
 app.use(
-    express.static(path.join(__dirname, "public"), { maxAge: 0 })
+  express.static(path.join(__dirname, "public"), {maxAge: 0})
 );
 
 // Error handler
@@ -109,20 +102,20 @@ app.get('/js/libraries/polyfills/polyfill.io.js', (req, res) => {
     uaString: req.get('User-Agent'),
     minify: true,
     features: {
-      'es5': { flags: ['gated'] },
-      'es6': { flags: ['gated'] },
-      'es7': { flags: ['gated'] }
+      'es5': {flags: ['gated']},
+      'es6': {flags: ['gated']},
+      'es7': {flags: ['gated']}
     }
   }).then(function(bundle) {
     res.set('Content-Type', 'text/javascript');
-  	res.send(Buffer.from(bundle));
+    res.send(Buffer.from(bundle));
   });
 });
 
 // Serve sitemap.xml
 app.get("/sitemap.xml", (req, res) => {
   res.set('Content-Type', 'text/xml');
-	res.send(SitemapHelper.generateXMLDocument());
+  res.send(SitemapHelper.generateXMLDocument());
 });
 
 // StackBlend code editor's endpoint
@@ -130,19 +123,19 @@ app.get("/sitemap.xml", (req, res) => {
 import * as endpoint from "./controllers/Endpoint";
 
 if (["development", "staging", "production"].indexOf(process.env.NODE_ENV) == -1) {
-	endpoint.clearRecentError();
-	app.post("/endpoint/update/content", endpoint.updateContent);
-	app.post("/endpoint/reset/content", endpoint.resetContent);
-	app.post("/endpoint/pull/content", endpoint.pullContent);
-	app.get("/endpoint/recent/error", endpoint.getRecentError);
-	
-	app.use((err, req, res, next) => {
+  endpoint.clearRecentError();
+  app.post("/endpoint/update/content", endpoint.updateContent);
+  app.post("/endpoint/reset/content", endpoint.resetContent);
+  app.post("/endpoint/pull/content", endpoint.pullContent);
+  app.get("/endpoint/recent/error", endpoint.getRecentError);
+
+  app.use((err, req, res, next) => {
     endpoint.addRecentError(err);
     next();
   });
   process.on("uncaughtException", (err) => {
-  	endpoint.addRecentError(err);
-	});
+    endpoint.addRecentError(err);
+  });
 }
 
 export default app;

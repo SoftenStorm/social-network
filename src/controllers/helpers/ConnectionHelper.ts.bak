@@ -21,6 +21,46 @@ if (["staging", "production"].indexOf(process.env.NODE_ENV) == -1) {
 }
 
 if (process.env.VOLATILE_MEMORY_KEY) {
+<<<<<<< HEAD
+	const connectionURL = new URL(process.env[process.env.VOLATILE_MEMORY_KEY]);
+	const _default = redis.createClient({
+		host     : connectionURL.host.split(':')[0],
+	  user     : connectionURL.username,
+	  password : connectionURL.password,
+	  port     : connectionURL.port
+	});
+	
+	VolatileMemoryClient = {
+		default: _default,
+		get: (key: any): Promise<any> => {
+			return new Promise(async (resolve, reject) => {
+				_default.get(key, (error, reply) => {
+					if (error) reject(error);
+					else resolve(reply);
+				});
+			});
+		},
+		set: (key: any, value: any): Promise<any> => {
+			return new Promise(async (resolve, reject) => {
+				_default.set(key, value, (error, reply) => {
+					if (error) reject(error);
+					else resolve(reply);
+				});
+			});
+		},
+		del: (key: any): Promise<any> => {
+			return new Promise(async (resolve, reject) => {
+				_default.del(key, (error, reply) => {
+					if (error) reject(error);
+					else resolve(reply);
+				});
+			});
+		},
+		quit: () => {
+		  _default.quit();
+		}
+	};
+=======
   const connectionURL = new URL(process.env[process.env.VOLATILE_MEMORY_KEY]);
   const _default = redis.createClient({
     host: connectionURL.host.split(':')[0],
@@ -59,6 +99,7 @@ if (process.env.VOLATILE_MEMORY_KEY) {
       _default.quit();
     }
   };
+>>>>>>> 431af55ef4f174e717ef837055521a06c60eb999
 }
 if (process.env.RELATIONAL_DATABASE_KEY) {
   RelationalDatabaseORMClient = new Sequelize(process.env[process.env.RELATIONAL_DATABASE_KEY], {
