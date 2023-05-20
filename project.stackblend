@@ -1,7 +1,7 @@
 {
   "animations": {},
   "backEndControllerBlobSHADict": {
-    "01e32c22": "057666796710e7dc139f2127455fb822ac999c8f#547105275",
+    "01e32c22": "5fffe22508f175330aa081b889561b63d7c5b3d0#353838137",
     "b0a33736": "7acf9a4d5efc01b6760f3fbc9dfbff9962fc3744#-879853282",
     "index": "27da99c73791dc952c7688bf688d3fff734acf5c#2061254996"
   },
@@ -1514,10 +1514,10 @@ b1b17b71          }
       }
     }
   },
-  "footerBlobSHA": "6a105c1d421e44cea50883d758bf3ccab3e66869#-612194201",
+  "footerBlobSHA": "932e246fca51b73cf2d57fa7ac2b23083bf26e75#1787053556",
   "frontEndComponentsBlobSHADict": {
     "Project.Controls.FlowLayout_19c1ac5c": "d21893ebbe2dff4e36894017bc9b5b255bd228f3#-1303237539",
-    "Project.Controls.FlowLayout_45655143": "8cec6bea135d3762835c609be495b3519c40b722#-903653220",
+    "Project.Controls.FlowLayout_45655143": "c2f14f1513e170ecef0050c2e7261f42c4e27e65#2029567672",
     "Project.Controls.FlowLayout_5d3e6156": "1b9c2bd36e251027b9276252e643cfc548f93604#1920106587",
     "Project.Controls.FlowLayout_81bde3d0": "ba884c752fad0f281c1192bd86a5e6c523b55eec#2142610535"
   },
@@ -1609,7 +1609,7 @@ b1b17b71          }
     "popups": [],
     "preview": null
   },
-  "headerBlobSHA": "ef0716965264b798a137902ae825eef51bb75526#788141751",
+  "headerBlobSHA": "b5f0c6ccd548f782df17a3b3b63eddcb479b1b8e#-1508580681",
   "popups": {},
   "properties": {},
   "routeBlobSHA": "8d906bb18694942a235490cb6d2bb27fdf4669b6#-780131728",
@@ -2835,7 +2835,7 @@ b1b17b71          }
 01e32c22        "    internal-fsb-name=\"Rectangle 1\"",
 01e32c22        "    internal-fsb-event-no-propagate=\"1\"",
 01e32c22        "    internal-fsb-class=\"Rectangle\"",
-01e32c22        "    style=\"-webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 13px; line-height: 26px; padding-left: 8px; padding-right: 0px\">",
+01e32c22        "    style=\"-ms-overflow-x: hidden; -ms-text-overflow: ellipsis; -webkit-flex-basis: 0px; -webkit-flex-grow: 1; flex-basis: 0px; flex-grow: 1; font-size: 13px; line-height: 26px; overflow-x: hidden; padding-left: 8px; padding-right: 0px; text-overflow: ellipsis; white-space: nowrap\">",
 01e32c22        "<div",
 01e32c22        "    contenteditable=\"true\"",
 01e32c22        "    class=\"internal-fsb-element\"",
@@ -3788,7 +3788,7 @@ b1b17b71          }
 01e32c22          "        // schema = SchemaHelper.getDataTableSchemaFromNotation('collection');",
 01e32c22          "        // ",
 01e32c22          "        ",
-01e32c22          "        resolve(await DatabaseHelper.insert(data, schema, options.crossRelationUpsert, this.request.session));",
+01e32c22          "        resolve(await DatabaseHelper.insert(data, schema, options.crossRelationUpsert, this.request.session, true));",
 01e32c22          "      } catch(error) {",
 01e32c22          "        reject(error);",
 01e32c22          "      }",

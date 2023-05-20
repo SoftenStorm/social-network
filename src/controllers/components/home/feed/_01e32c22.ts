@@ -277,7 +277,7 @@ class Controller extends Base {
         // schema = SchemaHelper.getDataTableSchemaFromNotation('collection');
         // 
         
-        resolve(await DatabaseHelper.insert(data, schema, options.crossRelationUpsert, this.request.session));
+        resolve(await DatabaseHelper.insert(data, schema, options.crossRelationUpsert, this.request.session, true));
       } catch(error) {
         reject(error);
       }
