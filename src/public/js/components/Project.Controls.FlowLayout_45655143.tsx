@@ -530,7 +530,7 @@ class FlowLayout_45655143 extends Base {
                                   | Submit
             .internal-fsb-element.internal-fsb-strict-layout(style={'paddingBottom': '30px', 'paddingTop': '30px'}, internal-fsb-class="FlowLayout", internal-fsb-guid="b90da60d")
               .col-12.internal-fsb-element(style={'fontSize': '13px', 'fontWeight': '300', 'textAlign': 'center'}, internal-fsb-guid="482ba43a")
-                | ©2020 by SoftenStorm
+                | ©2023 by SoftenStorm
               a.internal-fsb-element(style={'MozTextDecorationLine': 'none', 'WebkitTextDecorationLine': 'none', 'color': 'rgba(33, 33, 33, 1)', 'fontSize': '13px', 'fontWeight': '300', 'textAlign': 'center', 'textDecorationLine': 'none', 'width': '100vw'}, href="https://www.stackblend.org", internal-fsb-guid="26418cdb")
                 .internal-fsb-element(internal-fsb-guid="e6418129")
                   | Designed in StackBlend Studio
